@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Table attributes" />
+    <title>Table attributes</title>
+  </head>
+  <body>
+    <h2>Table - Attributes</h2>
+    <h3>Normal table without border</h3>
+    <table>
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Chennai</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jack</td>
+        <td>Bangalore</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Prince</td>
+        <td>Mumbai</td>
+      </tr>
+    </table>
+
+    <hr />
+    <h3>Normal table with border</h3>
+    <table border="1">
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Chennai</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jack</td>
+        <td>Bangalore</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Prince</td>
+        <td>Mumbai</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h3>Table with width</h3>
+    <table border="1" width="75%">
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Chennai</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jack</td>
+        <td>Bangalore</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Prince</td>
+        <td>Mumbai</td>
+      </tr>
+    </table>
+    <hr />
+
+    <!-- cellspacing => creates space between the cells -->
+    <h3>Table with cellspacing</h3>
+    <table border="1" width="75%" cellspacing="10px">
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Chennai</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jack</td>
+        <td>Bangalore</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Prince</td>
+        <td>Mumbai</td>
+      </tr>
+    </table>
+
+    <!-- cellpadding => creates space inside the cell -->
+    <h3>Table with cellpadding</h3>
+    <table border="1" width="50%" cellpadding="20px">
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td>Chennai</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jack</td>
+        <td>Bangalore</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Prince</td>
+        <td>Mumbai</td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <h3>Table with colspan</h3>
+    <table border="1" width="50%">
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td colspan="2">John / Chennai</td>
+        <!-- <td>Chennai</td> -->
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jack</td>
+        <td>Bangalore</td>
+      </tr>
+      <tr>
+        <td colspan="3">3 / Prince / Mumbai</td>
+        <!-- <td>Prince / Mumbai</td> -->
+        <!-- <td>Mumbai</td> -->
+      </tr>
+    </table>
+
+    <hr />
+
+    <h3>Table with rowspan</h3>
+    <table border="1" width="50%">
+      <tr>
+        <th>S.No.</th>
+        <th>Name</th>
+        <th>City</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>John</td>
+        <td rowspan="3">Chennai / Bangalore / Mumbai</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jack</td>
+        <!-- <td>Bangalore / Mumbai</td> -->
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Prince</td>
+        <!-- <td>Mumbai</td> -->
+      </tr>
+    </table>
+
+    <hr />
+    <h2>Pricing Table</h2>
+    <table border="1" width="50%" cellpadding="8px">
+      <tr>
+        <th>S.No.</th>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>TV</td>
+        <td>4</td>
+        <td>10000</td>
+        <td>40000</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Laptop</td>
+        <td>1</td>
+        <td>50000</td>
+        <td>50000</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Mobile</td>
+        <td>10</td>
+        <td>20000</td>
+        <td>200000</td>
+      </tr>
+      <tr>
+        <td colspan="4">Grand Total:</td>
+        <td>290000</td>
+      </tr>
+    </table>
+  </body>
+</html>
