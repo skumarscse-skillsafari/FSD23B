@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="HTML - Form" />
+    <title>HTML - Form</title>
+  </head>
+  <body>
+    <h2>HTML - Form</h2>
+    <!-- 
+        Form => Get the details or information from the user
+        1. Single line data => name, email, password, dob
+        2. Multiline data => address, description
+        3. Yes or No data => Gender, opting services
+        4. Options => Among many options select one or more
+
+        1. input => text, email, password, checkbox, radio
+        2. textarea
+        3. Select
+
+        <form action="#" method="GET/POST">
+
+        </form>
+     -->
+    <form action="#">
+      <table>
+        <tr>
+          <td>
+            <label for="fullname"><strong>Enter your Fullname:</strong></label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="fullName"
+              id="fullname"
+              placeholder="Enter your fullname"
+              autocomplete="off"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email"><strong>Enter your Email:</strong></label>
+          </td>
+          <td>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              autocomplete="off"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password"><strong>Enter password:</strong></label>
+          </td>
+          <td>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="mobilenumber"
+              ><strong>Enter your mobile number:</strong></label
+            >
+          </td>
+          <td>
+            <input
+              type="number"
+              name="mobilenumber"
+              id="mobilenumber"
+              placeholder="Enter your mobile number"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="dob"><strong>DOB:</strong></label>
+          </td>
+          <td><input type="date" name="dob" id="dob" /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="address"><strong>Enter your address:</strong></label>
+          </td>
+          <td>
+            <textarea
+              name="address"
+              id="address"
+              cols="21"
+              rows="3"
+              placeholder="Enter your address"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Register" /></td>
+          <td><input type="reset" value="Clear" /></td>
+        </tr>
+      </table>
+
+      <!-- 
+        ?fullName=John
+        &email=john%40skillsafari.in
+        &password=123456
+        &mobilenumber=9876543210
+        &dob=2023-05-08
+        &address=ABC%2C+Chennai+-+600+008.#
+       -->
+    </form>
+  </body>
+</html>
