@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Webpage Layout" />
+    <title>Webpage Layout</title>
+  </head>
+  <body>
+    <!-- 
+        Webpage Layout
+        1. header => <header>...</header>
+        2. navbar => <nav>...</nav>
+        3. section => <section>...</section> => <div>...</div>
+        4. footer => <footer>...</footer>
+
+        <aside>...</aside>
+     -->
+    <header>
+      <h2>Website Layout</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <section id="about">
+      <h2>About Section</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas
+        ipsa perferendis id. Vel tempore officia quam qui nobis veritatis alias
+        voluptatum numquam sapiente labore.
+      </p>
+      <img
+        src="./images/image-one.jpg"
+        alt="image-one"
+        height="200px"
+        width="200px"
+      />
+    </section>
+    <hr />
+    <section id="projects">
+      <h2>Projects Section</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas
+        ipsa perferendis id. Vel tempore officia quam qui nobis veritatis alias
+        voluptatum numquam sapiente labore.
+      </p>
+      <img
+        src="./images/image-two.jpg"
+        alt="image-one"
+        height="200px"
+        width="200px"
+      />
+    </section>
+    <hr />
+    <section id="services">
+      <h2>Services Section</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet quas
+        ipsa perferendis id. Vel tempore officia quam qui nobis veritatis alias
+        voluptatum numquam sapiente labore.
+      </p>
+      <img
+        src="./images/image-three.jpg"
+        alt="image-one"
+        height="200px"
+        width="200px"
+      />
+    </section>
+    <hr />
+    <section id="contact">
+      <h2>Contact Section</h2>
+      <p>Feel free to contact us:</p>
+      <form action="#">
+        <p>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter username"
+          />
+        </p>
+        <p>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email"
+          />
+        </p>
+        <p>
+          <textarea name="meassage" id="message" cols="21" rows="3"></textarea>
+        </p>
+        <p>
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Clear" />
+        </p>
+      </form>
+    </section>
+    <hr />
+
+    <footer>
+      <p>Copyright &copy; 2023. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
