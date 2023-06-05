@@ -1,0 +1,18 @@
+h2 {
+  color: green;
+  text-transform: uppercase;
+}
+
+p {
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-align: center;
+}
+
+img {
+  height: 200px;
+  width: 200px;
+  border: 5px double red;
+}
