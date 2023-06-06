@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Class Selector" />
+    <title>Class Selector</title>
+    <style>
+      /* Class Selector => Group the elements based on some common name and apply css properties
+      // Ex: class = "demo"
+      // One element may have more than one class value
+      // Ex: class = "demo border"
+        Syntax
+        .classAttributeValue {
+            property-1 : propertyValue-1;
+            property-2 : propertyValue-2;
+            .
+            .
+            .
+            property-N : propertyValue-N;
+        }
+        */
+
+      .demo {
+        color: red;
+      }
+
+      .demo-2 {
+        color: green;
+      }
+
+      .demo,
+      .demo-2 {
+        text-decoration: underline;
+      }
+
+      p {
+        color: blue;
+      }
+      /* Combination of both type and class selector => Specificity */
+      p.border,
+      p.demo-2 {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="demo-2">Class Selector</h2>
+    <div>
+      <h2 class="demo border">Heading Two</h2>
+      <p class="demo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+        unde!
+      </p>
+    </div>
+    <p class="border">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet odio ipsam
+      veritatis nemo praesentium architecto non accusantium, laboriosam dolor
+      labore!
+    </p>
+    <div>
+      <h3 class="demo">Heading Three</h3>
+      <p class="demo-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
+        expedita.
+      </p>
+    </div>
+  </body>
+</html>

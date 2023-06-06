@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="ID Selector" />
+    <title>ID Selector</title>
+    <style>
+      /* 
+         id selector => Add a unique value to an element using "id" attribute and apply css properties
+         Ex: id = "para"
+         Preference order:
+         1. id
+         2. class
+         3. type
+          
+         id Vs class
+         1. ID has higher preference
+         class:
+         1. class attribute values can be repeated
+         2. class attribute can have more than one value
+         Ex: class = "demo", class = "demo para demo-2"
+
+         id:
+         1. id attribute value must br unique
+         2. id attribute can have only one value
+         Ex: id = "para"
+         Syntax
+         #idAttributeValue {
+            property-1 : propertyValue-1;
+            property-2 : propertyValue-2;
+            .
+            .
+            .
+            property-N : propertyValue-N;
+         }
+        */
+      #para,
+      #list-items {
+        color: green;
+      }
+
+      /* Combination of type and id selector */
+      li#list-items {
+        text-transform: uppercase;
+      }
+
+      /* id has higher preference */
+      #para-1 {
+        color: red;
+      }
+
+      .para-1 {
+        color: blue;
+      }
+
+      h2 {
+        color: crimson;
+      }
+
+      #head {
+        color: darkorange;
+      }
+
+      .heading {
+        color: forestgreen;
+      }
+
+      /* h2#head {
+        text-decoration: line-through;
+      } */
+    </style>
+  </head>
+  <body>
+    <h2>ID Selector</h2>
+    <ul class="list">
+      <li>Home</li>
+      <li>About</li>
+      <li id="list-items">Projects</li>
+      <li>Contact</li>
+    </ul>
+    <hr />
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quaerat.</p>
+    <div class="container">
+      <h2>Heading Two</h2>
+      <p id="para">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio,
+        blanditiis?
+      </p>
+    </div>
+    <hr />
+    <p id="para-1" class="para-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+      quaerat!
+    </p>
+    <hr />
+    <h2 id="head" class="heading">This is heading two</h2>
+  </body>
+</html>
