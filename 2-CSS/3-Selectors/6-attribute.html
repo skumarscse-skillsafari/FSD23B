@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Attribute Selector" />
+    <title>Attribute Selector</title>
+    <style>
+      /* 
+        Attribute selector => Select the element based on attributes
+        Syntax
+        [attributeName="value"] {
+            property-1 : propertyValue-1;
+            property-2 : propertyValue-2;
+            .
+            .
+            .
+            property-N : propertyValue-N;
+        }
+        */
+      /* [class="red"] {
+        color: red;
+        border: 2px solid red;
+      } */
+
+      /* p[class="red"] {
+        color: red;
+        border: 2px solid red;
+      } */
+
+      /* [class] {
+        color: cornflowerblue;
+        border: 2px solid cornflowerblue;
+      } */
+
+      /* 
+       ^ => starts with
+       * => contains
+       $ => ends with
+      */
+
+      /* [class^="re"] {
+        color: red;
+        border: 2px solid red;
+      } */
+
+      /* [class*="ee"] {
+        color: green;
+        border: 2px soild green;
+      } */
+
+      /* [class$="e"] {
+        color: blue;
+        border: 2px solid blue;
+      } */
+
+      [id],
+      [class="red"] {
+        color: brown;
+        border: 2px soild brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="head">Attribute Selector</h2>
+    <p class="red">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, totam!
+    </p>
+    <div>
+      <p class="green">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae,
+        cupiditate.
+      </p>
+    </div>
+    <p class="blue">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, quis.
+    </p>
+    <h3 class="red">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, totam!
+    </h3>
+    <hr />
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, neque.
+    </p>
+  </body>
+</html>

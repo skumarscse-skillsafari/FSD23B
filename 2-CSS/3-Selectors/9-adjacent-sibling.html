@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Adjacent Sibling Selector" />
+    <title>Adjacent Sibling Selector</title>
+    <style>
+      /* 
+        Adjacent Sibling Selector
+        Syntax
+        referenceSiblingEle + adjacentSiblingEle {
+            property-1 : propertyValue-1;
+            property-2 : propertyValue-2;
+            .
+            .
+            .
+            property-N : propertyValue-N;
+        }
+        */
+      h2 + p {
+        color: green;
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Adjacent Sibling Selector</h2>
+    <div class="container">
+      <h2>Heading Two</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur,
+        nemo!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus,
+        necessitatibus?
+      </p>
+      <h3>Heading Three</h3>
+      <hr />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione,
+        omnis!
+      </p>
+    </div>
+  </body>
+</html>

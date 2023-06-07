@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Child Selector" />
+    <title>Child Selector</title>
+    <style>
+      /* 
+        Child Selector => Selects the child with parent as a reference
+        Syntax
+        parentEle > childEle {
+            property-1 : propertyValue-1;
+            property-2 : propertyValue-2;
+            .
+            .
+            .
+            property-N : propertyValue-N;
+        }
+        */
+
+      .container > p {
+        color: red;
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Child Selector</h2>
+    <div class="container">
+      <h2>Heading Two</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+        fugit!
+      </p>
+      <div>
+        <h2>Another Heading</h2>
+        <p>Another Paragraph</p>
+      </div>
+    </div>
+
+    <hr />
+    <div class="box">
+      <p>
+        Lorem ipsum dolor sit amet
+        <span>consectetur adipisicing elit.</span> Quia, soluta.
+      </p>
+      <h3>Heading Three</h3>
+      <hr />
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet
+          <span>consectetur adipisicing elit.</span> Non, magni!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
