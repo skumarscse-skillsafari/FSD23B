@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Pseudo Element" />
+    <title>Pseudo Element</title>
+    <style>
+      /* 
+      Pseudo Element
+      Syntax
+      selector::pseudoElement {
+          property-1 : propertyValue-1;
+          property-2 : propertyValue-2;
+                  .
+                  .
+                  .
+          property-N : propertyValue-N;
+      }
+
+      1. ::before => before the content (inline element), (Not before the element)
+      2. ::after => after the content (inline element), (Not after the element)
+      3. ::first-letter
+      4. ::first-line
+      */
+
+      p::first-letter {
+        font-size: 32px;
+        color: green;
+      }
+
+      #para::first-line {
+        text-decoration: underline;
+        color: coral;
+        letter-spacing: 24px;
+        word-spacing: 24px;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      h2::before {
+        content: " ";
+        background: red;
+        height: 5px;
+        /* width: 200px; */
+        display: block;
+      }
+
+      h2::after {
+        content: " ";
+        background: red;
+        height: 5px;
+        /* width: 200px; */
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Pseudo Element</h2>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, magni.
+    </p>
+
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vero
+      cupiditate praesentium! Quisquam earum vel molestias corrupti cum culpa
+      error sapiente consequatur harum laudantium. Fuga sapiente rem error, ipsa
+      ut quo esse et quod, quis eum, ab voluptate inventore quos perspiciatis
+      architecto quasi porro aperiam dolores incidunt dolorem fugit laborum.
+    </p>
+  </body>
+</html>
