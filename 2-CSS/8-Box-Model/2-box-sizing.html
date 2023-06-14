@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Box Sizing" />
+    <title>CSS - Box Sizing</title>
+    <style>
+      .one {
+        height: 100px;
+        width: 100px;
+        background-color: green;
+        margin: 30px;
+      }
+
+      .two {
+        height: 100px;
+        width: 100px;
+        background-color: crimson;
+        padding: 30px;
+      }
+
+      .three {
+        width: 100px;
+        height: 100px;
+        background-color: darkred;
+      }
+
+      .four {
+        width: 100px;
+        height: 100px;
+        background-color: cornflowerblue;
+        border: 5px solid red;
+        /* border => width => width + border (left + right) */
+        /* width => 100px + 10px => 110px */
+        /* height => 100px + 10px => 110px  (top + bottom) */
+        /* 100 x 100 */
+        box-sizing: border-box;
+        /* include, border width and height with actual height and width of the element */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS - Box Sizing</h2>
+
+    <div class="one"></div>
+    <hr />
+    <div class="two"></div>
+
+    <hr />
+    <div class="three"></div>
+
+    <hr />
+
+    <div class="four"></div>
+  </body>
+</html>

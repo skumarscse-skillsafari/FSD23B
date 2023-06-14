@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Box Model" />
+    <title>CSS - Box Model</title>
+    <style>
+      /* 
+            Box-Model
+            1. Content
+            2. Padding
+            3. Border
+            4. Margin
+            CSS => Each and every element as a box
+            
+        */
+
+      #head {
+        /* margin-top: 24px;
+        margin-bottom: 24px;
+        margin-left: 24px;
+        margin-right: 24px; */
+
+        /* margin top + bottom => same values */
+        /* margin left + right => same values */
+        /* margin: a b; a => top and bottom b => left and right */
+        /* margin: 24px 30px; */
+        /* margin: top_right_bottom_left */
+        /* margin: 10px; */
+
+        /* clock-wise direction */
+        /* margin: top right bottom left; */
+        margin: 10px 0px 0px 40px;
+      }
+
+      .container {
+        /* padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px; */
+
+        /* padding: 10px; */
+        /* padding: 20px 10px; */
+
+        /* clock-wise direction */
+        /* padding: 10px 20px 30px 40px; */
+        /* margin: 10px; */
+        /* border-position: value specification color */
+        border-top: 2px solid red;
+        border-right: 2px solid red;
+        border-bottom: 2px solid red;
+        border-left: 2px solid red;
+
+        margin-left: 20px;
+        padding-left: 20px;
+        border-radius: 20px;
+        /* border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px; */
+      }
+
+      #one {
+        border: 2px solid red;
+        padding: 20px;
+        display: block;
+        margin: 20px;
+      }
+
+      #two {
+        display: block;
+        margin: 20px;
+        border-top: 2px dotted green;
+        border-bottom: 2px double red;
+        border-left: 2px solid blue;
+        border-right: 2px solid crimson;
+        padding: 20px;
+      }
+
+      .circle {
+        height: 250px;
+        width: 250px;
+        background-color: green;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="head">CSS - Box Model</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio,
+      voluptatum.
+    </p>
+
+    <div class="container">
+      <h2>Heading Two</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, fugiat.
+      </p>
+    </div>
+
+    <span id="one">Hello</span>
+    <span id="two">World</span>
+
+    <div class="circle"></div>
+  </body>
+</html>
