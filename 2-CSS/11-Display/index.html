@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Display Properties" />
+    <title>CSS - Display Properties</title>
+    <style>
+      /* 
+        CSS - Display Properties
+        1. block
+        2. inline
+        3. inline-block
+        4. none
+
+        5. visibility
+        6. opacity
+        
+        */
+
+      .inline,
+      p {
+        display: inline;
+      }
+
+      span {
+        display: block;
+      }
+
+      .none {
+        height: 50px;
+        width: 100px;
+        background-color: green;
+        display: none;
+      }
+
+      .visibility {
+        height: 50px;
+        width: 100px;
+        background: coral;
+        visibility: hidden;
+      }
+
+      .opacity {
+        height: 50px;
+        width: 100px;
+        background: cornflowerblue;
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS - Display Properties</h2>
+    <h3 class="inline">Heading Three</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur,
+      ipsum!
+    </p>
+    <hr />
+    <div class="none"></div>
+    <hr />
+    <div class="visibility"></div>
+    <hr />
+    <div class="container">
+      <span>Hello, </span>
+      <span>World</span>
+    </div>
+    <hr />
+
+    <div class="opacity"></div>
+  </body>
+</html>

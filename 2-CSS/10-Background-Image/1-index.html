@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Background Image" />
+    <title>CSS - Background Image</title>
+    <style>
+      /* Background-Images */
+      .image-one {
+        background: url("./images/image-one.jpg");
+        height: 600px;
+        background-repeat: no-repeat;
+        /* background-repeat: repeat-x; */
+        /* background-repeat: repeat-y; */
+        background-size: cover;
+        background-position: center;
+        border: 5px solid red;
+        /* opacity: 100; */
+      }
+
+      .image-two {
+        background: url("./images/image-two.jpg");
+        height: 600px;
+        /* width: 600px; */
+        border: 2px solid green;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-attachment: fixed;
+      }
+
+      .image-three {
+        height: 600px;
+        border: 2px solid blue;
+        /* background: url("path") bg-repeat bg-position/bg-size bg-attachment */
+        /* background-image: url("./images/image-three.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed; */
+        background: linear-gradient(
+            90deg,
+            rgba(63, 94, 251, 1) 0%,
+            rgba(143, 12, 129, 0.12881649241727944) 100%
+          ),
+          url("./images/image-three.jpg") no-repeat center/cover fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-one"></div>
+    <div class="image-two"></div>
+    <div class="image-three"></div>
+  </body>
+</html>
