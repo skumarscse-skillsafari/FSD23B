@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS Position - Sticky" />
+    <title>CSS Position - Sticky</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .nav {
+        background: cornflowerblue;
+        max-height: 20vh;
+        text-align: center;
+        /* width: 100%; */
+        margin-top: 20px;
+        /* 
+        Applies the property as like fixed, but not change the flow of the element
+        */
+        position: sticky;
+        top: 20px;
+        left: 0;
+        right: 0;
+      }
+
+      .nav-items {
+        display: inline-block;
+        padding: 20px 50px;
+        color: white;
+        font-size: 30px;
+      }
+
+      .about {
+        background: coral;
+        min-height: calc(100vh - 20vh);
+        padding-top: 20px;
+      }
+
+      .projects {
+        min-height: 100vh;
+        background: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="nav">
+        <li class="nav-items">Home</li>
+        <li class="nav-items">About</li>
+        <li class="nav-items">Projects</li>
+        <li class="nav-items">Services</li>
+        <li class="nav-items">Contact</li>
+      </ul>
+
+      <!-- About section -->
+      <div class="about">
+        <h1>About Section</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eaque
+          amet molestias, unde perferendis adipisci illo excepturi optio, magni
+          sint et obcaecati explicabo. Eveniet repellendus alias aliquid
+          reprehenderit facere, distinctio voluptates voluptate earum ad ullam
+          ipsam minima iste quasi quis provident eos similique eligendi nesciunt
+          possimus, odio asperiores officia? Laborum delectus perspiciatis
+          expedita voluptatum enim, libero sapiente eaque repellat illo ducimus
+          sint modi dolores culpa obcaecati magni. Sapiente ipsa omnis, ipsam
+          similique est iusto totam earum maxime, accusamus ex corporis
+          voluptatum velit quisquam eum. Ducimus unde eius tempore accusantium
+          adipisci ab. Eius nisi ullam necessitatibus aspernatur alias incidunt
+          maxime iusto optio temporibus neque amet, voluptate minus libero aut
+          Molestias dolore mollitia a suscipit quaerat error? Obcaecati facere
+          velit quia eveniet officia magni eaque.
+        </p>
+      </div>
+
+      <hr />
+
+      <!-- Projects section -->
+      <div class="projects">
+        <h1>Projects Section</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto minus
+          culpa vero, repellendus possimus a inventore nulla, itaque neque vel
+          magni numquam mollitia hic voluptates debitis animi consequuntur eaque
+          placeat praesentium veniam error cupiditate! Cupiditate, illo sequi
+          eius mollitia, reprehenderit officia laborum facere, aperiam
+          blanditiis unde tenetur quod est. Excepturi, doloremque quis omnis,
+          repudiandae eos quos exercitationem dicta quod, fuga nihil magni dolor
+          dolore soluta accusantium explicabo! Quae dolore sunt itaque aliquid
+          doloribus ut consequuntur officia commodi harum praesentium quam vel
+          ducimus recusandae repellat repudiandae amet maxime saepe ab, natus
+          eius voluptates aut at ad officiis? Autem eius tempora ea obcaecati
+          itaque modi repellendus temporibus totam quasi unde quaerat eligendi
+          maiores harum, eos impedit. Ipsum, eaque necessitatibus tempore
+          reiciendis quo aperiam corporis, alias cum rerum ratione temporibus
+          sunt deserunt exercitationem quos, nobis laboriosam labore! Est a
+          dolore quod autem quia asperiores doloremque quas mollitia quidem nisi
+          dolores natus alias, consequuntur quaerat provident deserunt expedita
+          aliquid recusandae nostrum maxime, aperiam illo. Perspiciatis officiis
+          ex alias corporis delectus. Modi deserunt nostrum obcaecati minus
+          ratione iusto omnis sint vero. Enim laborum ullam autem ex quidem
+          doloribus hic labore! Distinctio dolores, modi sequi nobis quo velit
+          quos reiciendis hic ducimus similique dicta ex facilis.
+        </p>
+      </div>
+
+      <hr />
+
+      <div class="contact">
+        <h2>Contact Section</h2>
+        <form action="#">
+          <p>
+            <input type="text" name="username" placeholder="Enter name" />
+          </p>
+          <p>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email"
+            />
+          </p>
+          <p>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Clear" />
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

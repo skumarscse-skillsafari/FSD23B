@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Float - Usecase" />
+    <title>CSS - Float - Usecase</title>
+    <style>
+      .container {
+        border: 2px solid red;
+        padding: 10px;
+      }
+      div.one,
+      div.two {
+        height: 100px;
+        width: 100px;
+        background: green;
+        margin-top: 10px;
+      }
+
+      .one {
+        float: left;
+      }
+
+      .two {
+        float: right;
+      }
+
+      .para {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <p class="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ex
+        dolore voluptatem architecto voluptate tempore asperiores expedita
+        quidem tenetur assumenda!
+      </p>
+    </div>
+  </body>
+</html>
