@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Media Query" />
+    <title>Media Query</title>
+    <style>
+      /* 
+        Media Query => RWD => Responsive Web Design
+        // Along with the existing css properties, we can add a new css propery or remove
+        // existing css property based on width
+        1. max-width - upto
+        2. min-width - starts from
+
+        @media screen and (max-width: 400px) {
+            // css properties
+        }
+        */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .nav {
+        min-height: 20vh;
+        /* list-style-type: none; */
+        text-align: center;
+      }
+
+      li {
+        background: cornflowerblue;
+        display: inline-block;
+        color: white;
+        font-size: 30px;
+        padding: 20px 130px;
+        margin-top: 10px;
+        /* width: 200px; */
+      }
+
+      @media screen and (max-width: 400px) {
+        /* upto 400px => apply normal css properties + max-width properties */
+        li {
+          background: green;
+          display: block;
+        }
+
+        .nav-contact {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 500px) {
+        /* starts from 500px => applies normal css properties + min-width properties */
+        li {
+          background: coral;
+        }
+      }
+
+      @media screen and (min-width: 600px) {
+        /* starts from 600px => applies normal css properties + min-width properties */
+        li {
+          background: red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="nav">
+      <li class="nav-items">Home</li>
+      <li class="nav-items">About</li>
+      <li class="nav-items">Projects</li>
+      <li class="nav-items">Services</li>
+      <li class="nav-contact">Contact</li>
+    </ul>
+  </body>
+</html>
