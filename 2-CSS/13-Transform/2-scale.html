@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS Transform - Scale" />
+    <title>CSS Transform - Scale</title>
+    <style>
+      /* 
+        transform: scale()
+        */
+
+      .scale {
+        height: 200px;
+        width: 200px;
+        background: green;
+        margin: 0 auto;
+        transform: translateY(50%);
+      }
+
+      .scale:hover {
+        /* transform: scaleX(0.5); */
+        /* transform: scaleX(1); */
+        transform: scaleY(1.5);
+      }
+
+      h1 {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scale">
+      <h1>Heading</h1>
+    </div>
+  </body>
+</html>

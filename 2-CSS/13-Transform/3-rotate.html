@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Transform - Rotate" />
+    <title>CSS - Transform - Rotate</title>
+    <style>
+      /* 
+        transform: rotate()
+        */
+      .rotate {
+        height: 200px;
+        width: 200px;
+        background: green;
+        margin: 0 auto;
+        transform: rotate(360deg);
+      }
+
+      .rotate:hover {
+        /* transform: rotateX(45deg); */
+        transform: rotateY(120deg);
+      }
+
+      h1 {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rotate">
+      <h1>Heading</h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS Animation" />
+    <title>CSS Animation</title>
+    <style>
+      /* 
+        animation => add multiple css transition properties on different phases
+        animation-name
+        animation-duration
+        animation-iteration-count
+        animation-timing-function
+        animation: name duration timing-function delay iteration-count direction fill-mode
+        */
+      .animation {
+        height: 150px;
+        width: 150px;
+        background: green;
+        animation-name: demo;
+        animation-duration: 3s;
+        animation-iteration-count: 2;
+        /* animation-direction: alternate; */
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes demo {
+        0% {
+          transform: translateY(300px);
+        }
+
+        50% {
+          transform: translateX(300px) translateY(300px);
+          border-radius: 50%;
+          background: blue;
+        }
+
+        100% {
+          transform: translateX(300px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="animation"></div>
+  </body>
+</html>
