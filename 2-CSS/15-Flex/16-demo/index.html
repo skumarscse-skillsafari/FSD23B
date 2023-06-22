@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Flex - Demo" />
+    <title>CSS - Flex - Demo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        border: 2px solid red;
+        min-height: 100vh;
+      }
+
+      .top-container {
+        border: 2px solid green;
+        min-height: 50vh;
+        display: flex;
+      }
+
+      .desc {
+        border: 2px solid green;
+        flex-basis: 600px;
+      }
+
+      .rating-container {
+        border: 2px solid blue;
+        flex-grow: 1;
+      }
+
+      .bottom-container {
+        border: 2px solid blue;
+        min-height: 50vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-container">
+      <div class="desc">Description</div>
+      <div class="rating-container">
+        <div class="ratings">Rating-1</div>
+        <div class="ratings">Rating-2</div>
+        <div class="ratings">Rating-3</div>
+      </div>
+    </div>
+    <div class="bottom-container">
+      <div class="reviews">Review - 1</div>
+      <div class="reviews">Review - 2</div>
+      <div class="reviews">Review - 3</div>
+    </div>
+  </body>
+</html>

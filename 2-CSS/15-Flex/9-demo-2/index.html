@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Flex - Demo -2" />
+    <title>CSS - Flex - Demo-2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        height: 250px;
+        width: 250px;
+        border-radius: 20px;
+      }
+
+      .container {
+        border: 5px solid green;
+        padding: 10px;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div><img src="./images/image-one.jpg" alt="image-one" /></div>
+      <div><img src="./images/image-two.jpg" alt="image-two" /></div>
+      <div><img src="./images/image-three.jpg" alt="image-three" /></div>
+      <div><img src="./images/image-one.jpg" alt="image-one-copy" /></div>
+      <div><img src="./images/image-two.jpg" alt="image-two-copy" /></div>
+      <div><img src="./images/image-three.jpg" alt="image-three-copy" /></div>
+    </div>
+  </body>
+</html>

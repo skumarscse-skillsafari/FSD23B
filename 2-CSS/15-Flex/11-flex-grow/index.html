@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Flex - Grow" />
+    <title>CSS - Flex - Grow</title>
+    <style>
+      /* 
+        Flex => We can control the child element by using parent element
+        */
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #f3f3f3;
+      }
+
+      .parent {
+        border: 5px solid red;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: #f3f3f3;
+        /* flex-grow: 1; */
+      }
+
+      .child-1 {
+        background: #581f18;
+      }
+
+      .child-2 {
+        background: #f0a202;
+      }
+
+      .child-3 {
+        background: #d95d39;
+        /* flex-grow: 0; */
+        flex-grow: 1;
+      }
+
+      .child-4 {
+        background: #202c59;
+        flex-grow: 2;
+      }
+
+      .child-5 {
+        background: #51cb20;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box child-1">One</div>
+      <div class="box child-2">Two</div>
+      <div class="box child-3">Three</div>
+      <div class="box child-4">Four</div>
+      <div class="box child-5">Five</div>
+    </div>
+  </body>
+</html>
