@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Grid - Auto-Fit and Auto-Fill" />
+    <title>Grid - Auto-Fit and Auto-Fill</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      /* 
+      auto-fill => keeps creating the grid
+      auto-fit => fit only to the grid-area defined
+      */
+      .container {
+        border: 5px solid red;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .container-1 {
+        border: 5px solid red;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+
+      .cell {
+        padding: 2rem;
+        background: #dedede;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        border: 3px solid green;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cell cell-1">Auto-Fit</div>
+    </div>
+
+    <div class="container-1">
+      <div class="cell cell-1">Auto-Fill</div>
+    </div>
+  </body>
+</html>
