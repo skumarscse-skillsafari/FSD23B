@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  /* color variables */
+  --base-shade-1: #00a8fa;
+  --white-shade-1: #fff;
+  --white-shade-2: #d7e1f3;
+  --black-shade-1: #232323;
+  --black-shade-2: #676a8b;
+  --grad-color-1: 0, 180, 250;
+  --grad-color-2: 21, 120, 255;
+
+  /* font-size variable */
+  --base-font-size: 1.6rem;
+
+  /* heading variables */
+  --heading-font-size-1: 4rem;
+  --heading-font-size-2: 3.2rem;
+  --heading-font-size-3: 2rem;
+  --heading-font-size-4: 1.8rem;
+
+  /* border-radius variables */
+  --border-radius-1: 1rem;
+  --border-radius-2: 0.5rem;
+}
+
+/* resetting default element properties */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* utility classes */
+section,
+footer {
+  padding: 9rem 5rem;
+}
+
+h1 {
+  font-size: var(--heading-font-size-1);
+  color: var(--black-shade-1);
+  margin-bottom: 2rem;
+  word-spacing: 1rem;
+  line-height: 1.6;
+}
+
+p,
+button {
+  font-size: var(--base-font-size);
+  color: var(--black-shade-2);
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 1rem 2rem;
+  border-radius: var(--border-radius-2);
+  border: none;
+  margin: 2rem 0;
+}
+
+.primary-btn {
+  background-color: var(--base-shade-1);
+  color: var(--white-shade-1);
+}
+
+.secondary-btn {
+  border: 0.3rem solid var(--base-shade-1);
+  color: var(--base-shade-1);
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  padding: 3rem 5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-size: var(--heading-font-size-4);
+  text-decoration: none;
+}
+
+nav a#logo {
+  color: var(--black-shade-1);
+  font-weight: 700;
+}
+
+nav ul a {
+  /* color: var(--white-shade-2); */
+}
+
+#ham-menu {
+  display: none;
+}
+
+/* hero */
+
+section.hero {
+  display: grid;
+  grid-template-columns: 5rem 7rem;
+  align-items: center;
+}
+
+#header-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-content p {
+  text-align: justify;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.btn-container {
+  display: flex;
+  gap: 3rem;
+}
