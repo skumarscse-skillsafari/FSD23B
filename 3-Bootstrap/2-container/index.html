@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Bootstrap 5 - Container" />
+    <title>Bootstrap 5 - Container</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- 
+        Container => row and column
+        1. container
+        2. container-fluid
+        3. container-{breakpoints} => container-sm, container-xl, container-md
+            => upto the breakpoint value (whatever is mentioned i.e container-md) it behaves as "container-fluid", after that it behaves as "container" property 
+        Breakpoints
+        1. Extra-small => <576px => xs
+        2. Small => >= 576px =>  sm
+        3. Medium => >=768px =>  md
+        4. Large => >=992px => lg
+        5. Extra-large => >=1200px => xl
+        6. Extra-extra large => >=1400px => xxl
+
+     -->
+    <h2>Bootstrap 5 - Container</h2>
+    <!-- <div class="container-sm">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit sit a
+      ullam qui possimus perferendis cumque, doloremque nobis repellat laborum
+      fugit sequi asperiores accusantium impedit obcaecati eveniet. Optio,
+      pariatur quis. Modi ex facilis praesentium repellendus et, ab officiis.
+      Voluptatum sapiente accusamus voluptas excepturi, perspiciatis illum
+      maiores et impedit repudiandae atque neque. Ad repellat in ipsam sequi.
+      Reprehenderit fuga accusamus atque quae eius esse placeat consectetur, cum
+      ex odio accusantium fugit hic doloribus quia quo repellat error unde?
+      Laboriosam fuga mollitia molestias, quasi, reiciendis accusantium vitae
+      exercitationem minus provident dolorem libero earum, voluptatum quas
+      debitis ut eligendi deserunt? Accusantium dolores quae, beatae ea iure
+      asperiores, nostrum modi, ipsum et maiores facere nihil reprehenderit
+      tenetur consequatur saepe magni id odit dolorum repellendus adipisci velit
+      odio. A, cum in blanditiis quisquam nesciunt tenetur doloribus. Explicabo
+      quasi corrupti quaerat repellat corporis vero nam sapiente totam, eum
+      asperiores sit, voluptates voluptatem perspiciatis vitae, vel tenetur!
+    </div> -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <div class="box"></div>
+        </div>
+        <div class="col col-md-6">
+          <div class="box"></div>
+        </div>
+        <div class="col-2">
+          <div class="box"></div>
+        </div>
+        <div class="col-2">
+          <div class="box"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
