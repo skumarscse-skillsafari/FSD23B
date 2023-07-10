@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Desccription" content="Bootstrap 5 - Layout" />
+    <title>Bootstrap 5 - Layout</title>
+    <!-- Bootstrap 5 CSS -->
+    <link
+      rel="stylesheet"
+      href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <style>
+      .box {
+        border: 1px solid red;
+        padding: 1rem;
+        background: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-md">
+      <!-- 
+            Breakpoints
+            1. Extra Small => <576px
+            2. Small => sm => >=576px
+            3. Medium => md => >=768px
+            5. Large => lg => >= 992px
+            6. Extral Large => xl => >= 1200px
+            7. Extra extra Large => xxl => >= 1400px
+         -->
+      <h1 class="text-center display-3">
+        Bootstrap 5 - <span class="text-muted">Layout</span>
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dicta
+        recusandae provident possimus sapiente ab unde molestias quisquam autem
+        ad incidunt labore qui eveniet nihil in praesentium placeat officiis,
+        magnam at facere hic rem! Dolor, ad? Quas, odit. Quod, commodi eligendi
+        quo vero adipisci molestias recusandae voluptatum ipsa laboriosam optio?
+      </p>
+      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 g-3">
+        <div class="col">
+          <div>
+            <img
+              src="./images/image-three.jpg"
+              alt="image-three"
+              class="img-thumbnail"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <img
+              src="./images/image-three.jpg"
+              alt="image-three"
+              class="img-thumbnail"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div>
+            <img
+              src="./images/image-three.jpg"
+              alt="image-three"
+              class="img-thumbnail"
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="box"></div>
+        </div>
+        <div class="col">
+          <div class="box"></div>
+        </div>
+        <div class="col">
+          <div class="box"></div>
+        </div>
+      </div>
+
+      <hr />
+      <img src="./images/image-one.jpg" alt="image-one" class="img-fluid" />
+    </div>
+    <!-- Bootstrap 5 JS -->
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
