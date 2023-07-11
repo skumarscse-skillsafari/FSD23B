@@ -23,8 +23,123 @@
     />
   </head>
   <body>
-    <div class="container">
-      <h1 class="display-5"><u>Table Bootstrap 5 ClassNames</u></h1>
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Projects</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <h1 class="display-5 text-center"><u>Table Bootstrap 5 ClassNames</u></h1>
+      <hr />
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#example"
+      >
+        Launch demo modal
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="example"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                eligendi libero facilis odit, debitis porro illum optio aperiam?
+                At illo nisi voluptas nemo. Accusantium, itaque!
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <a class="btn btn-success" data-bs-toggle="collapse" href="#para">
+        Click
+      </a>
+      <p class="btn btn-primary mt-2 collapse" id="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        repellat qui exercitationem quaerat a temporibus, dolores, quo ipsam
+        eaque odit sapiente perspiciatis, pariatur sunt at?
+      </p>
+      <p class="btn btn-success mt-2 collapse" id="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        repellat qui exercitationem quaerat a temporibus, dolores, quo ipsam
+        eaque odit sapiente perspiciatis, pariatur sunt at?
+      </p>
+      <p class="btn btn-secondary mt-2 collapse" id="para">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        repellat qui exercitationem quaerat a temporibus, dolores, quo ipsam
+        eaque odit sapiente perspiciatis, pariatur sunt at?
+      </p>
+      <hr />
       <button
         type="button"
         class="btn btn-outline-success position-relative my-3"
@@ -70,6 +185,16 @@
       </table>
 
       <p class="btn btn-outline-success">Lorem ipsum dolor sit amet.</p>
+      <div class="d-grid gap-2 mx-auto col-6">
+        <button class="btn btn-success btn-lg">Submit</button>
+        <button class="btn btn-danger btn-sm">Cancel</button>
+      </div>
+
+      <hr />
+      <div class="btn-group-vertical">
+        <button class="btn btn-success">Submit</button>
+        <button class="btn btn-danger">Cancel</button>
+      </div>
     </div>
 
     <!-- Bootstrap - 5 JS CDN -->
