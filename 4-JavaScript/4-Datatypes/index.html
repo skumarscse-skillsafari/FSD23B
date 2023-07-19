@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Datatypes" />
+    <title>Datatypes</title>
+  </head>
+  <body>
+    <h2>Datatypes</h2>
+
+    <script>
+      // Datatypes
+      // 1. Primitive datatypes
+      // 1. Number
+      // 2. BigInt
+      // 3. String
+      // 4. Boolean
+      // 5. null
+      // 6. undefined
+      // 7. Symbol
+      // 2. Non-Primitive datatypes
+      // 8. Objects
+      // 9. Arrays
+      // 10.Functions
+
+      // variable
+      // let varName;
+      // let varName = value;
+
+      // value => assign to a variable
+      // let age = 35; // Number
+      // let firstName = "John" // String
+      // let isAdmin = true // Boolean
+
+      //  Number => Numerical values
+      // Whole number (0-9), decimal number
+      // Ex: 12
+      // Ex: 12.5
+
+      // typeof
+      //   let age = 23;
+      //   console.log(typeof age);
+      //   age = 23.67;
+      //   console.log(typeof age);
+      //   console.log(age);
+
+      //   // Infinity and -Infinity
+      //   let infinity = -1 / 0;
+      //   console.log(infinity);
+      // console.log(typeof infinity);
+
+      // NaN => Not a Number
+      //   let numOne = 23; // number
+      //   let numTwo = "John"; // string
+      //   let result = numOne / numTwo;
+      //   console.log(result);
+      //   console.log(typeof result);
+
+      // BigInt
+      // represent the number of larger range
+      // all the bigInt numbers must be ends with "n"
+      //   let bigInt = 1234567890123456789012345678901234567890n;
+      //   console.log(bigInt);
+      //   console.log(typeof bigInt);
+
+      // String => group of alphabets or alpha-numerics
+      // 1. Double quote
+      // 2. Single quote
+      // 3. Backtick
+      // Syntax
+      // let varName = "value"; // double quote
+      // let varName = 'value'; // single quote
+      //                        Don't mix double and single quote => "value' or 'value"
+      // let varName = `value`; // backtick
+
+      //   let firstName = "John";
+      //   let lastName = "Jack";
+      //   console.log(firstName);
+      //   console.log(lastName);
+
+      // concatenation => combining two or more string. Ex: string-1 + string-2 + string-3
+      // combining a string and a number. Ex: string + number + string
+
+      //   let fullName = firstName + " " + lastName; // "John" + "Jack"
+      //   console.log(fullName);
+
+      //   console.log("SkillSafari123" + " " + "546EduKeys");
+      //   console.log("John age is:" + 23);
+      //   let age = 23;
+      //   console.log(firstName + " age is: " + age);
+
+      // Backtick
+      // Syntax
+      // ${...}
+      // Hello, John
+      // Double quote / single quote
+      //   console.log("Hello", firstName);
+      //   console.log(`Hello, ${5 + 5}`);
+      //   console.log("Hello, 5 + 5");
+
+      //   console.log(typeof "John");
+      //   console.log(typeof "Jack");
+      //   console.log(typeof `John`);
+
+      // Boolean => true and false
+      // true and false
+      // 1 and 0
+      // 56 > 23 => true
+      // 12 < 23 => false
+      // let isAdmin = true;
+      //   let result = 54 < 23;
+      //   console.log(result);
+      //   console.log(typeof result);
+
+      // null => special type can be assigned as a value
+      //   let age = null;
+      //   console.log(age);
+      //   console.log(typeof age); // object
+
+      // undefined => if the value is not assigned to a variable
+      //   let age;
+      //   console.log(age);
+      //   console.log(typeof age);
+
+      // Questions
+      let name = "John";
+      console.log(`hello ${name}`);
+      console.log(`hello, ${123}`);
+      console.log(`hello, ${"name"}`);
+      console.log(`hello, ${"John"}, ${123}`);
+      // alpha
+      // alphaNumeric
+      // numericAlpha => not allowed
+      // let 123abc = 123; => not allowed
+      // let abc123 = 123 => allowed
+      // let _123 = 234; => allowed
+      // let 123 = 234; => not allowed
+    </script>
+  </body>
+</html>
