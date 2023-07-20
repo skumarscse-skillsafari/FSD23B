@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Type Conversions" />
+    <title>Type Conversions</title>
+  </head>
+  <body>
+    <h2>Type Conversions</h2>
+
+    <script>
+      // Type Conversions
+      // 1. String conversion
+      // 2. Numeric conversion
+      // 3. Boolean conversion
+
+      // String conversion
+      // "set of alpha or alpha-numeric characters enclosed by double or single quote"
+      // true => "true", false => "false", null => "null", 123 => "123"
+      //   let isAdmin = true;
+      //   console.log(isAdmin);
+
+      // String(value)
+      //   console.log(String(isAdmin));
+
+      // Numeric conversion
+      // Number(value)
+      //   console.log("12" / "6");
+
+      //   let age = "123";
+      //   console.log(Number(age));
+      // unary plus "+" as "prefix"
+      //   console.log(+age);
+
+      //   let firstName = "John";
+      //   console.log(Number(firstName));
+
+      // undefined => NaN
+      // null => 0
+      // true and false => 1 and 0
+      // string => if "numeric-string", returns a "number" by removing whitespaces if any
+      //   console.log(Number("          123          ")); // 123
+      //   console.log(Number("       John           ")); // NaN
+      //   console.log(Number(true));
+      //   console.log(Number(false));
+
+      // Boolean conversion
+      // true and false
+      // values => 0, null, undefined, NaN, empty string => false
+      // other than above values => true
+
+      // Boolean(value)
+      console.log(Boolean(0)); // false
+      console.log(Boolean(null)); // false
+      console.log(Boolean(undefined)); // false
+      console.log(Boolean("")); // false
+      console.log(Boolean(NaN)); // false
+      console.log(Boolean(" ")); // true
+      console.log(Boolean(123)); // true
+      console.log(Boolean("hello")); // true
+      console.log(Boolean("something")); // true
+      console.log(Boolean(1)); // true
+    </script>
+  </body>
+</html>
