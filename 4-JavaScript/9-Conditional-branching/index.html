@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Conditional Branching" />
+    <title>Conditional Branching</title>
+  </head>
+  <body>
+    <h2>Conditional Branching</h2>
+
+    <script>
+      // Conditional Branching
+      // Take different actions based on different conditions
+      // blocks => {........}
+      // {
+      //     statement-1;
+      //     statement-2;
+      //     .
+      //     .
+      //     .
+      //     statement-N;
+      // }
+
+      // "if" statement
+      // Syntax
+      //   if(condition) {
+      //     // if statements;
+      //   }
+      //   if (45 < 10) {
+      //     console.log("One");
+      //     console.log("Two");
+      //     console.log("Three");
+      //     console.log("Four");
+      //   }
+
+      //   let age = +prompt("Enter your age?", 20);
+      //   if (age >= 20) {
+      //     console.log("Welcome...");
+      //   }
+
+      // "else" clause
+      // Syntax
+      //   if (condition) {
+      //     // if block (true)
+      //   } else {
+      //     // else block (false)
+      //   }
+
+      //   let age = +prompt("Enter your age?", 20);
+      //   if (age >= 20) {
+      //     console.log("Welcome...");
+      //   } else {
+      //     console.log("Entry restricted...");
+      //   }
+
+      // if(condition) === true {...}
+      // if => expression turns to "true"
+      // if => true
+      // if => 1
+      // if => "any-string"
+
+      //   if (" ") {
+      //     console.log("True");
+      //   }
+
+      // No "{...}" required if there is only one statement inside the block
+      //   if (3 >= 3) console.log("True");
+      //   else console.log("False");
+
+      // Multiple Conditions => Nested if or "else if"
+      // Syntax
+      //   if (condition-1) {
+      //     // statement
+      //   } else if (condition-2) {
+      //     // statement
+      //   } else if (condition-3) {
+      //     // statement
+      //   } else {
+      //     // statement
+      //   }
+
+      // Blood Donar
+      // weight >= 45
+      // age >= 21
+      // same BG = true
+      // Donar name:
+      // Donar age:
+      // Donar weight:
+      // Donar BG:
+      // Donar is eligible to donate the Blood
+      // Not eligible
+
+      //   let donarName = prompt("Enter donar name", "Not prefer to say");
+      //   let donarAge = +prompt("Enter donor age", 21);
+      //   //   console.log(donarAge);
+      //   let donarWeight = +prompt("Enter donar weight", 45);
+      //   //   console.log(donarWeight);
+      //   let donarBG = prompt("Is donar BG is same?", true); // "true"
+      //   //   console.log(donarBG);
+      //   console.log("--------------------------");
+      //   console.log("------- REPORT -----------");
+      //   console.log(`Donar name: ${donarName}`);
+      //   console.log(`Donar Age: ${donarAge}`);
+      //   console.log(`Donar weight: ${donarWeight}`);
+      //   console.log(`Donar BG, ${donarBG}`);
+      //   let result = null;
+      //   if (donarAge < 21) {
+      //     result = "Not Eligible";
+      //   } else if (donarWeight < 45) {
+      //     result = "Not Eligible";
+      //   } else if (donarBG == "false") {
+      //     // "false" == "false"
+      //     result = "Not Eligible";
+      //   } else {
+      //     result = "Eligible";
+      //   }
+      //   console.log("-------------------------");
+      //   console.log(`The result is: ${result}`);
+      //   console.log("-------------------------");
+
+      // Amount withdrawal application
+      // balance = 200000;
+      // pin = "1234"
+      // Enter the amount =
+
+      // conditional operator
+      // Syntax
+      // (condition) ? (true statement) : (false statement)
+      23 < 12
+        ? console.log("First number is higher")
+        : console.log("Second number is higher");
+    </script>
+  </body>
+</html>
