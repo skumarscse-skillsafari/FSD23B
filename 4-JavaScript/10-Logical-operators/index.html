@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Logical operators" />
+    <title>Logical operators</title>
+  </head>
+  <body>
+    <h2>Logical operators</h2>
+
+    <script>
+      // Logical operators => Booleans
+      // 1. OR (||) => Binary operator
+      // 2. AND (&&) => Binary operator
+      // 3. NOT (!) => Unary operator
+
+      // 4. Nullish coalescing (??) => Binary operator
+
+      // OR operator
+      // Syntax
+      // value-1 || value-2
+      // Ex: true || false
+      // Ex: 1 || 0
+
+      // expression-1 || expression-2
+      // Ex: 75 > 12 || 10 < 11
+
+      //   let result = 12 > 10 || 10 < 5;
+      //   //            true || false  => true
+      //   console.log(result); // true
+      // if any one of the operand is "true" the result also be "true"
+      // true || true => true
+      // true || false => true
+      // false || true => true
+      // false || false => false
+
+      // 12 < 10 || 23 > 34 || 10 > 45 || 12 == 25
+      // false || false || false || false
+      // false || false || false
+      // false || false
+      // false
+
+      // 1 || 0 => 1
+      // true || false => true
+
+      // First "truthy" value and return its "actual value"
+      // If none of the operands in the expression turns "true", return last operand "actual value"
+      // 12 > 1 || 23 > 45 || 34 == 35 || "Hello" || 123
+      // false || false || false ||
+      // Hello
+
+      //   let firstName = "John";
+      //   let lastName = "";
+      //   let fullName = firstName || lastName || "Guest";
+      //   console.log(`Welcome, ${fullName}`);
+      //   let username = prompt("Enter your name");
+      //   console.log(`Welcome, ${username || "Guest"}`);
+
+      // short-circuting
+      // opernad-1 || operand-2
+      // If, first operand is truthy, return its "actual value" else return second operand "actual value"
+      //   console.log(10 || 12); // 10
+      //   console.log(10 > 20 || 12); // 12
+      //   console.log(0 || 1); // 1
+      //   console.log("" || "John"); // John
+      //   console.log(false || 12 > 2); // true
+
+      //   true || alert("Hello"); // true
+      //   false || alert("Hello"); // "Hello"
+
+      // Logical AND
+      // Syntax
+      // value-1 && value-2
+      // 12 > 3 && 10 == 10
+      // true && true => true
+      // expression-1 && expression-2
+      // 12 > 10 && 20 == 23 && 10 < 2
+      // If any one of the operand is "false", the result also be false
+      // true && true => true
+      // true && false => false
+      // false && true => false
+      // false && false => false
+
+      // Finds for first "falsy" value, return its "actual value"
+      // If none of the operand in the expression is "falsy", it return last operand "actual value"
+      // 12 < 3 && "Hello" && 1 && "World" // false
+      // 12 > 3 && "Hello" && 1 && "World" // "World"
+
+      // 1 && 0 => 0
+      // 1 && alert("Hello")
+
+      // short-circuiting
+      // operand-1 && operand-2
+      // first operand is false, return its "actual value", else return second operand "actual value"
+
+      // Not operator => unary operator
+      // true => false
+      // false => true
+
+      // Syntax
+      // !operand
+
+      //   console.log(!true); // false
+      //   console.log(!0); // true
+      //   console.log(!" "); // false
+      //   console.log(!1); // false
+
+      // Nullish coalescing => Binary operator
+      // Check wheather the value is defined to the variable or not
+      // a ?? b
+      // if "a" is defined, return "a"'s actual value, else return "b"'s actual value
+      //   let firstName;
+      //   let lastName = "Jack";
+      //   console.log(firstName ?? lastName); // Jack
+
+      let firstName;
+      let lastName;
+      let nickname;
+      console.log(firstName ?? lastName ?? nickname ?? "Guest"); // Guest
+      // console.log(firstName ?? lastName ?? nickname ?? 0); // 0
+      // console.log(firstName ?? lastName ?? nickname ?? 1); // 1
+      console.log(firstName ?? lastName ?? nickname); // undefined
+
+      console.log(0 || "Hello"); // Hello
+      console.log(0 ?? "Hello"); // 0
+    </script>
+  </body>
+</html>
