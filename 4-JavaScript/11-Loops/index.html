@@ -43,6 +43,22 @@
         }
       */
 
+      /*
+      // if => "if body" executes only once if the "condition" turns "false"
+      Syntax
+      if(condition) {
+        // if body
+        // statements
+      }
+
+      // while => "loop body" executes in repeat mode, untill the "condition" turns "false"
+      Syntax
+      while(condition) {
+        // loop body
+        // statement
+      }
+      */
+
       // initialization
       //   let i = 1;
       //   // condition
@@ -144,14 +160,11 @@
       //   }
 
       // break => breaking the loop before the actual condition fails
-      //   for (let i = 1; i <= 10; i++) {
-      //     // i = 5; 5 <= 10
-      //     console.log(i); // 1 2 3 4 5
-      //     if (i == 5) {
-      //       // 5 == 5
-      //       break;
-      //     }
-      //   }
+      // for (let i = 1; i <= 10; i++) {
+      //   // i = 5; 5 <= 10
+      //   console.log(i); // 1 2 3 4 5
+      //   if (i == 5) break; // 5 == 5
+      // }
 
       // continue => skipping a specific iteration based on the condition
       //   for (let i = 1; i <= 10; i++) {
@@ -163,12 +176,10 @@
       //     console.log(i); // 2 4 6 8 10
       //   }
 
-      //   for (let i = 1; i <= 10; i++) {
-      //     if (i == 5) {
-      //       continue;
-      //     }
-      //     console.log(i);
-      //   }
+      // for (let i = 1; i <= 10; i++) {
+      //   if (i == 5) continue;
+      //   console.log(i); // 5
+      // }
 
       // skipping in for loop statement
       /*
@@ -196,10 +207,36 @@
             increment/decrement;
         }
       */
-      for (let i = 1; i <= 10; ) {
-        console.log(i);
-        i++;
+      // for (let i = 1; i <= 10; ) {
+      //   console.log(i);
+      //   i++;
+      // }
+
+      // Nested loop => loop inside a loop
+      // for (let i = 1; i <= 5; i++) {
+      //   // outer loop => if "outer" loop runs once
+      //   console.log("Outer Loop");
+      //   console.log(i); // 1 2 3
+      //   console.log("---------------");
+      //   for (let j = 1; j <= 5; j++) {
+      //     // inner loop => the "inner" loop runs till the condition "fails"
+      //     console.log("Inner Loop");
+      //     console.log(j); // 1 2 3 4 5 // 1 2 3 4 5 // 1 2 3 4 5
+      //   }
+      //   console.log("-------------");
+      // }
+
+      for (let i = 1; i <= 5; i++) {
+        // row
+        // document.write(i + " => "); // 1 2
+        for (let j = 1; j <= i; j++) {
+          // column
+          // document.write(j); // 1 2 3 4 5
+          document.write(" * "); // 1 2 3 4 5
+        }
+        document.write("<br />");
       }
+      document.write("-------------------");
     </script>
   </body>
 </html>
