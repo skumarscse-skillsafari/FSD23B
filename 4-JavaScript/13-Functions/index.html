@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Functions" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h2>Functions</h2>
+
+    <script>
+      // Functions
+      // Is to perform a similar kind of actions in many places whenever required
+      // Input => Perform => Output
+      // ATM => Input => Card and pin number => deposit/withdraw => output
+      // Building block of a program
+      // 1. Function Declaration
+      // 2. Function Calling
+
+      // We can call the function from anywhere in the code and any number of times
+      //   add();
+      // Syntax
+      /*
+        // Function Declaration
+        function functionName(parameter-1, parameter-2, ..., parameter-N) {
+            // function body
+            // statement
+        }
+
+        // Function Calling
+        // Syntax
+        functionName(argument-1, argument-2, ..., argument-N)
+      */
+      //   add();
+      // add 2 numbers
+      // Function Declaration
+      //   function add() {
+      //     let a = 10;
+      //     let b = 20;
+      //     let c = a + b;
+      //     console.log(c); // 30
+      //   }
+
+      // Function Calling
+      //   add();
+      // "use strict";
+      //   function message() {
+      //     let firstName = "John";
+      //     console.log("Welcome, " + firstName);
+      //   }
+      //   firstName = "Jack";
+      //   console.log(firstName);
+      //   message();
+      //   message();
+      //   message();
+      //   message();
+      //   message();
+      //   message();
+
+      // Local variables Vs. Outer variables
+      // Local variables => inside the block/scope
+
+      //   function displayMessage() {
+      //     let message = "Hello";
+      //     console.log(message);
+      //   }
+      //   displayMessage();
+      //   message = "Hai";
+      //   console.log(message); // "message" is not defined => variable which are declared
+      // inside the scope/block can't be accessed outside the scope/block
+
+      // Outer variable => variables declared outside the scope/block
+      // Outer variable => value can be accessed and modified both inside and outside scope/block
+      // Local variable => value can be accessed and modified only inside the scope/block
+      //   let message = "Hello";
+      //   function displayMessage() {
+      //     let message = "Welcome";
+      //     console.log(message); // Welcome
+      //     message = "Hai";
+      //   }
+      //   console.log(message); // Hello
+      //   displayMessage();
+      //   console.log(message); // Hello
+
+      // Parameters => Making the function dynamic
+      // Syntax
+      /*
+       function functionName(para-1, para-2, ..., para-N) {
+            // function body
+            // statement
+       }
+       functionName(arg-1, arg-2, ..., arg-N)
+      */
+
+      //   function evenLoop() {
+      //     for (let i = 1; i <= 10; i++) {
+      //       if (i % 2 != 0) continue;
+      //       console.log(i);
+      //     }
+      //   }
+      //   evenLoop();
+      //   evenLoop();
+      //   evenLoop();
+
+      //   function evenLoop(n) {
+      //     for (let i = 1; i <= n; i++) {
+      //       if (i % 2 != 0) continue;
+      //       console.log(i);
+      //     }
+      //   }
+      //   evenLoop(10);
+      //   console.log("---------");
+      //   evenLoop(5);
+      //   console.log("---------");
+      //   evenLoop(20);
+
+      function displayName(firstName, lastName) {
+        // let firstName = "John" let lastName = "Jack"
+        firstName = "Mary";
+        lastName = "Robert";
+        console.log(`Fullname: ${firstName}, ${lastName}`);
+      }
+      displayName("John", "Jack");
+      displayName("Raaj", "Raam");
+      displayName("SkillSafari", "EduKeys");
+    </script>
+  </body>
+</html>
