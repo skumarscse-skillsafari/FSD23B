@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Function Expression" />
+    <title>Function Expression</title>
+  </head>
+  <body>
+    <h2>Function Expression</h2>
+
+    <script>
+      // Function Expression
+      // Assign the function as a value to the variable.
+      // Anonymous function
+
+      // Function Declaration
+      // Syntax
+      /*
+        function functionName(para-1, para-2,..., para-N) {
+            // function body
+        }
+
+        // Function Calling
+        functionName(arg-1, arg-2,..., arg-N)
+      */
+
+      // Function Expression
+      // Syntax
+      /*
+        let varName = function(para-1, para-2,..., para-N) {
+            // function body
+        }
+
+        // Function Calling
+        varName(arg-1, arg-2,..., arg-N)
+      */
+
+      //   function displayMessage() {
+      //     console.log("Welcome, Function Declaration");
+      //   }
+      //   displayMessage();
+
+      //   let displayMessage = function (message) {
+      //     return `${message}, Function Declaration`;
+      //   };
+      //   let result = displayMessage("Welcome");
+      //   console.log(result);
+
+      // Copying a variable value
+      //   let firstName = "John";
+      //   // copy the value of "firstName" to "lastName"
+      //   let lastName = firstName;
+      //   firstName = "Jack";
+      //   console.log(firstName); // Jack
+      //   console.log(lastName); // John
+
+      //   let originalFunction = function (message) {
+      //     console.log(message);
+      //   };
+      //   originalFunction("Original Function");
+
+      //   let copyFunction = originalFunction;
+      //   copyFunction("Copied Function");
+
+      // Callback
+      // Function inside a function
+      // Passing function as a parameter to the another function
+      //   let functionOne = function () {
+      //     console.log("Function One");
+      //   };
+
+      //   function displayName(firstName, lastName, callBackFun) {
+      //     // let callBackFun = functionOne
+      //     console.log(firstName, lastName);
+      //     callBackFun();
+      //   }
+      //   displayName("John", "Jack", functionOne);
+
+      // Function Declaration Vs. Function Expression
+      // Function Declaration => Function can be call from anywhere inside the file
+      // Function Expression => Function can be called only after declaration
+      displayMessage();
+      function displayMessage() {
+        console.log("Hello");
+      }
+
+      //   console.log(firstName);
+      //   let firstName = "John";
+      displayMessageExp();
+      let displayMessageExp = function () {
+        console.log("Welcome");
+      };
+    </script>
+  </body>
+</html>

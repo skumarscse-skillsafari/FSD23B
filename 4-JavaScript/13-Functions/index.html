@@ -115,15 +115,75 @@
       //   console.log("---------");
       //   evenLoop(20);
 
-      function displayName(firstName, lastName) {
-        // let firstName = "John" let lastName = "Jack"
-        firstName = "Mary";
-        lastName = "Robert";
-        console.log(`Fullname: ${firstName}, ${lastName}`);
-      }
-      displayName("John", "Jack");
-      displayName("Raaj", "Raam");
-      displayName("SkillSafari", "EduKeys");
+      // function displayName(firstName, lastName) {
+      //   // let firstName = "John" let lastName = "Jack"
+      //   firstName = "Mary";
+      //   lastName = "Robert";
+      //   console.log(`Fullname: ${firstName}, ${lastName}`);
+      // }
+      // displayName("John", "Jack");
+      // displayName("Raaj", "Raam");
+      // displayName("SkillSafari", "EduKeys");
+
+      // Default values
+      // function displayName(firstName, lastName = "EduKeys") {
+      //   // let firstName = "John" let lastName = "Jack"
+      //   console.log(`Fullname: ${firstName}, ${lastName}`);
+      // }
+      // displayName("John", "Jack");
+      // displayName("Raaj", "Raam");
+      // displayName("SkillSafari");
+
+      // return a value from the function
+      // Function Declaration
+      // Syntax
+      /*
+        function functionName(para-1, para-2,..., para-N) {
+          // statements
+          // print/display the result
+          // return "result"
+        }
+
+        // Function Calling
+        let varName = functionName(arg-1, arg-2,..., arg-N)
+      */
+
+      // function add(a, b) {
+      //   let c = a + b;
+      //   return `The result is: ${c}`;
+      // }
+      // let addResult = add(2, 3);
+      // console.log(addResult);
+
+      // 1. Only one "return" keyword is allowed inside the function body.
+      // 2. If morethan one "return" keyword is used, only the result of first "return" keyword only be executed
+      // 3. Any statement which are present below the "return" keyword will not be executed
+      // 4. We can return any kind of value from the function. Ex: primitive datatypes, Non-primitives or without any value
+      // 5. "return" keyword must be added at as the last statement of the function body
+
+      // function returnDemo(firstName, lastName) {
+      //   return `${firstName}, ${lastName}`;
+      //   // return;
+      //   console.log("Hello");
+      //   // return "Hello";
+      // }
+      // let result = returnDemo("John", "Jack");
+      // console.log(result);
+
+      // function getAge(age) {
+      //   if (age < 18) {
+      //     return "You are not allowed to enter";
+      //   }
+      //   return "You are allowed to enter";
+      // }
+      // let userAge = prompt("Enter user age");
+      // let result = getAge(userAge);
+      // console.log(result);
+
+      // Naming the function
+      // 1. Always give some meaningful name to the function
+      // 2. Use the prefix such as get and set. Ex: getUseAge(), setCreditLimit(), createUser(), deleteUser()
+      // 3. Always use camelCase notation for defining multi-word function
     </script>
   </body>
 </html>
