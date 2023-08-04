@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="IIFE - Function" />
+    <title>IIFE - Function</title>
+  </head>
+  <body>
+    <h2>IIFE - Function</h2>
+
+    <script>
+      // IIFE - Function
+      // IIFE => Immediate Invocable Function Expression
+
+      // Syntax
+      /*
+        (function () {
+            // function body
+        })();
+        */
+
+      // Function Declaration
+      //   function addNum(a, b) {
+      //     console.log(a + b);
+      //   }
+      //   addNum(2, 3);
+
+      // Function Expression
+      //   const addNum = function (a, b) {
+      //     console.log(a + b);
+      //   };
+      //   addNum(4, 5);
+
+      // Arrow Function
+      //   const addNum = (a, b) => console.log(a + b);
+      //   addNum(2, 5);
+
+      // IIFE
+      (function addNum(a, b) {
+        console.log(a + b);
+      })(2, 6);
+
+      (function displayMessage() {
+        console.log("Welcome...");
+      })();
+
+      (() => {
+        console.log("IIFE");
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Objects" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <h2>Objects</h2>
+
+    <script>
+      // Objects
+      // Non-Primitive datatype
+      // Primitive => to a variable, we can able to store only one value
+      // Data => value => string, number, boolean
+      // Ex: let name = "John"; let age = 25;
+      // Non-Primitives => more than one value to a variable
+
+      // Object
+      // Data => key : value pairs
+      // propertyName : propertyValue
+      // Syntax
+      /*
+        let varName = {
+            propertyName-1 : propertyValue-1,
+            propertyName-2 : propertyValue-2,
+                           :
+                           : 
+            propertyName-N : propertyValue-N
+        };
+        // Collection of key : value or propertyName : propertyValue can be called as "properties"
+        // key or propertyName => must be written as string without single or double quotes
+        // value or propertyValue => must be a primitive or non-primitive value. 
+        // Ex: string, number, boolean, null, undefined, bigint, object, array, function
+        */
+
+      // let userDetails = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 30,
+      //   isAdmin: true,
+      // };
+      // console.log(userDetails);
+
+      // Creating an Object
+      // 1. Object constructor method => new Object()
+      // Ex: let userDetails = new Object()
+      // 2. Object literal method => {...} (Recommended/most commonly used method)
+      // Ex: let userDetails = {...}
+
+      // Object literal method
+      //   let userDetails = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 30,
+      //     isAdmin: true,
+      //   };
+      //   console.log(userDetails);
+
+      // Accessing individual properties in the object
+      // Syntax
+      // objectName.propertyName
+      //   console.log(userDetails.age);
+      //   console.log(userDetails.isAdmin);
+      //   console.log(userDetails.firstName);
+      //   console.log(userDetails.lastName);
+
+      // Add and update the object properties
+      // Add new properties
+      // Syntax
+      // objectName.newPropertyName = value;
+      //   userDetails.city = "Chennai";
+      //   console.log(userDetails);
+
+      // Update the existing property
+      // Syntax
+      // objectName.existingPropertyName = newValue;
+      //   userDetails.isAdmin = false;
+      //   console.log(userDetails);
+
+      // delete existing property
+      // Syntax
+      // delete objectName.existingPropertyName
+      //   delete userDetails.isAdmin;
+      //   console.log(userDetails);
+
+      // Add multi-word properties => camelCase notation or square bracket method "[]"
+      // date of birth => dateOfBirth or ["date of birth"]
+      // first name => firstName or ["first name"]
+      // last name => lastName or ["last name"]
+
+      //   let john = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     dateOfBirth: "12-10-2023",
+      //   };
+      //   console.log(john);
+
+      let john = {
+        ["first name"]: "John",
+        ["last name"]: "Jack",
+        ["date of birth"]: "12-10-2023",
+        age: 23,
+      };
+      console.log(john);
+
+      // Access the multi-word properties
+      // Syntax
+      // objectName["property name"]
+      console.log(john["first name"]);
+      console.log(john["age"]);
+      console.log(john.age);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Arrow Function" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <h2>Arrow Function</h2>
+
+    <script>
+      // Arrow Function
+
+      // 1. Function Declaration
+      //   function displayMessage(message) {
+      //     console.log(`${message}, John`);
+      //   }
+      //   displayMessage("Welcome");
+
+      // 2. Function Expression
+      //   const displayMessage = function (message) {
+      //     console.log(`${message}, John`);
+      //   };
+      //   displayMessage("Hello");
+
+      // 3. Arrow Function
+      // Syntax
+      /*
+      let varName = (para-1, para-2,..., para-N) {
+        // function body
+      }
+      varName(arg-1, arg-2,..., arg-N)
+      */
+      //   const displayMessage = (message) => {
+      //     console.log(`${message}, John`);
+      //   };
+      //   displayMessage("Hello");
+
+      // No need to add "{...}" if there is only one statement in the function body
+      //   const displayMessage = (message) => console.log(`${message}, John`);
+      //   displayMessage("Hello");
+
+      // No need to add "{...}" and "return" keyword if there is only one statement in the function body
+      //   const doubleNum = (n) => n * n;
+      //   const result = doubleNum(6);
+      //   console.log(result);
+
+      // No need to have function bracket "()" if there is only one parameter
+      //   const doubleNum = (n) => n * n;
+      //   const result = doubleNum(6);
+      //   console.log(result);
+
+      // Add "()" if there is morethan one parameter
+      //   const displayName = (firstName, lastName) =>
+      //     `The fullname: ${firstName}, ${lastName}`;
+      //   console.log(displayName("John", "Jack"));
+
+      //   let age = +prompt("Enter age");
+      // age > 18
+      // let message = function () { console.log("Entry accepted"); }
+      // age < 18
+      // let message = function () { console.log("Entry restricted"); }
+      let message =
+        age > 18
+          ? () => console.log("Entry accepted")
+          : () => console.log("Entry restricted");
+      message();
+    </script>
+  </body>
+</html>
