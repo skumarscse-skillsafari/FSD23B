@@ -97,20 +97,104 @@
       //   };
       //   console.log(john);
 
-      let john = {
-        ["first name"]: "John",
-        ["last name"]: "Jack",
-        ["date of birth"]: "12-10-2023",
-        age: 23,
-      };
-      console.log(john);
+      // let john = {
+      //   ["first name"]: "John",
+      //   ["last name"]: "Jack",
+      //   ["date of birth"]: "12-10-2023",
+      //   age: 23,
+      // };
+      // console.log(john);
 
       // Access the multi-word properties
       // Syntax
       // objectName["property name"]
-      console.log(john["first name"]);
-      console.log(john["age"]);
-      console.log(john.age);
+      // console.log(john["first name"]);
+      // console.log(john["age"]);
+      // console.log(john.age);
+
+      // Objects and function
+      // function userDetails(id, name, age, city) {
+      // let user = {
+      //   id: id,
+      //   name: name,
+      //   age: age,
+      //   city: city,
+      // };
+      // console.log(user);
+      // return user;
+
+      //   return {
+      //     id: id,
+      //     name: name,
+      //     age: age,
+      //     city: city,
+      //   };
+      // }
+      // console.log(userDetails(1, "John", 23, "Chennai"));
+      // console.log(userDetails(2, "Jack", 33, "Chennai"));
+      // console.log(userDetails(3, "Mary", 21, "Bangalore"));
+
+      // Property value shorthand
+      // If propertyName and propertyValue are of same, we can mention only the propertyName
+      // function subjects(name, maths, physics, chemistry) {
+      //   return {
+      //     studentName: name,
+      //     maths, // maths: maths,
+      //     physics, // physics: physics,
+      //     chemistry, // chemistry: chemistry,
+      //   };
+      // }
+      // console.log(subjects("John", 89, 98, 78));
+
+      // propertyName Vs. varName
+      // varName => use the JavaScript keywords as variable name. Ex: if, else, for, while
+      // propretyName => no restrictions in naming the propertyName, but it is always recommended
+      // to name the property depends on the value assigned
+
+      // let demo = {
+      //   for: 123,
+      //   while: "John",
+      //   if: true,
+      // };
+      // console.log(demo);
+
+      // Checking the presence of the property using "in"
+      // Syntax
+      // "propertyName" in objectName => true or false
+      // let products = {
+      //   mobiles: 12,
+      //   laptops: 10,
+      //   televisions: 20,
+      // };
+      // console.log("mobiles" in products);
+      // console.log("fridges" in products);
+      // let key = "laptops";
+      // console.log(key in products);
+      // console.log(products[key]); // products["laptops"]
+
+      // for...in loop
+      // To iterate the properties of object
+      // Syntax
+      /*
+      for(varName in objName) {
+        // varName => propertyName (key)
+        // varName => propertyNames (keys) in the object
+      }
+      */
+      let userDetails = {
+        id: 1,
+        name: "John",
+        age: 23,
+        isAdmin: false,
+        city: "Chennai",
+      };
+      // console.log(userDetails);
+      for (let userDetail in userDetails) {
+        console.log(`${userDetail} => ${userDetails[userDetail]}`);
+        //                "id"       =>  userDetails["id"]
+        //                "id"       =>  1
+        //                "name"     =>  "John"
+      }
     </script>
   </body>
 </html>

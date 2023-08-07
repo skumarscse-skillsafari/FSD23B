@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object references and copying" />
+    <title>Object references and copying</title>
+  </head>
+  <body>
+    <h2>Object references and copying</h2>
+
+    <script>
+      // Object references and copying
+      // Copying variable (primitive)
+      // Copy by value
+      //   let firstName = "John";
+      //   let lastName = firstName; // copying the value of firstName to lastName
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   firstName = "Jack";
+      //   console.log(firstName);
+      //   console.log(lastName);
+
+      // Copy by reference
+      //   let userOne = {
+      //     id: 2,
+      //     name: "John",
+      //   };
+      //   let userTwo = userOne;
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   userOne.age = 23;
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   userTwo.name = "Jack";
+      //   console.log(userOne);
+      //   console.log(userTwo);
+
+      //   console.log(userOne === userTwo);
+      //   let a = { id: 1 };
+      //   let b = { id: 1 };
+      //   console.log(a === b);
+
+      // Cloning and merging
+      //   let userOne = {
+      //     id: 1,
+      //     name: "John",
+      //     age: 20,
+      //   };
+      //   let userTwo = {};
+      //   for (let key in userOne) {
+      //     userTwo[key] = userOne[key];
+      //     // userTwo["id"] = userOne["id"]; => userTwo.id = 1
+      //   }
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   userTwo.city = "Chennai";
+      //   console.log(userOne);
+      //   console.log(userTwo);
+
+      //   // Nested object => object inside object
+      //   let user = {
+      //     id: 1,
+      //     name: {
+      //       firstName: "John",
+      //       lastName: "Jack",
+      //     },
+      //     age: 23,
+      //     address: {
+      //       streetNo: 123,
+      //       city: "Chennai",
+      //       state: "TN",
+      //       pincode: 600001,
+      //     },
+      //   };
+      //   console.log(user);
+      //   console.log(user.name.firstName);
+      //   console.log(user.name.lastName);
+      //   console.log(user.address.streetNo);
+      //   console.log(user.address.city);
+      //   console.log(user.address.state);
+      //   console.log(user.address.pincode);
+
+      // Object.assign() => clone and merge the object properties
+      // Syntax => cloning
+      // Object.assign(destinationObj, sourceObj-1, sourceObj-2, ..., sourceObj-N)
+      //   let a = { id: 123, name: "John" };
+      //   let b = {};
+      //   console.log(a);
+      //   console.log(b);
+      //   Object.assign(b, a);
+      //   console.log(a);
+      //   console.log(b);
+      //   a.age = 23;
+      //   b.city = "Chennai";
+      //   console.log(a);
+      //   console.log(b);
+
+      // merging
+      //   let newObj = Object.assign(
+      //     { city: "Chennai" },
+      //     { id: 1 },
+      //     { name: "Jack", isAdmin: true },
+      //     { age: 23 }
+      //   );
+      //   console.log(newObj);
+
+      // merging
+      //   let mergeObj = Object.assign(
+      //     {},
+      //     { id: 1, name: "John" },
+      //     { id: 2 },
+      //     { name: "Jack", age: 23 },
+      //     { city: "Chennai" }
+      //   );
+
+      //   console.log(mergeObj);
+
+      // Copying nested properties
+      let objOne = {
+        id: 1,
+        name: {
+          firstName: "John",
+          lastName: "Jack",
+        },
+        age: 23,
+      };
+      let objTwo = { city: "Chennai" };
+      let cloneObj = Object.assign(objTwo, objOne);
+      console.log(structuredClone(cloneObj));
+      cloneObj.name.firstName = "Mary";
+      console.log(objOne);
+      console.log(cloneObj);
+    </script>
+  </body>
+</html>
