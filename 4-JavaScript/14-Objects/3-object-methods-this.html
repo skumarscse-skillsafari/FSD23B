@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object methods and this keyword" />
+    <title>Object methods and this keyword</title>
+  </head>
+  <body>
+    <h2>Object methods and this keyword</h2>
+
+    <script>
+      // Object methods and this keyword
+      // Object => propertyValues => primitive data => string, number, boolean
+      // propertyValues => non-primitives => object, array, function/methods
+      //   let userDetails = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 20,
+      //     isAdmin: false,
+      //   };
+      //   console.log(userDetails);
+
+      //   let message = function () {
+      //     console.log("Hello");
+      //   };
+
+      // adding function/methods as the property to an object => (.)
+      // Syntax
+      // objName.propertyName = propertyValue
+      //   userDetails.displayMessage = message;
+      //   console.log(userDetails);
+
+      // adding method directly to the object
+      //   let products = {
+      //     mobile: 20,
+      //     laptop: 30,
+      //     television: 30,
+      //     total: function () {
+      //       console.log("The total products are: 80");
+      //     },
+      //   };
+      //   console.log(products);
+
+      // Accessing object methods
+      // Syntax
+      // objectName.propertyName()
+      //   products.total();
+
+      // "this" in object methods
+      // this => outside the scope => global object
+      // this => inside the scope => current object
+      // this => act as a substitute for a current object which we are working on
+      //   let userName = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     displayFullname: function () {
+      //       console.log(`The fullname is: ${this.firstName}, ${this.lastName}`);
+      //       console.log(this);
+      //     },
+      //   };
+      //   console.log(this);
+      //   console.log(userName.firstName);
+      //   console.log(userName.lastName);
+
+      //   userName.displayFullname();
+
+      // Usage of "this"
+      let userOne = { firstName: "John", lastName: "Jack" };
+      let userTwo = { firstName: "Mary", lastName: "Robert" };
+      let displayName = function () {
+        console.log(`The fullName is: ${this.firstName}, ${this.lastName}`);
+      };
+
+      // Adding object method
+      userOne.displayUserOne = displayName;
+      userTwo.displayUserTwo = displayName;
+
+      console.log(userOne);
+      console.log(userTwo);
+
+      userOne.displayUserOne(); // this => userOne
+      userTwo.displayUserTwo(); // this => userTwo
+    </script>
+  </body>
+</html>

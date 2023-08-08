@@ -82,6 +82,7 @@
       //   console.log(user.address.pincode);
 
       // Object.assign() => clone and merge the object properties
+      // Shallow cloning
       // Syntax => cloning
       // Object.assign(destinationObj, sourceObj-1, sourceObj-2, ..., sourceObj-N)
       //   let a = { id: 123, name: "John" };
@@ -117,6 +118,8 @@
       //   console.log(mergeObj);
 
       // Copying nested properties
+      // Deep clone
+      // structuredClone and spread operator
       let objOne = {
         id: 1,
         name: {
@@ -126,11 +129,11 @@
         age: 23,
       };
       let objTwo = { city: "Chennai" };
-      let cloneObj = Object.assign(objTwo, objOne);
-      console.log(structuredClone(cloneObj));
-      cloneObj.name.firstName = "Mary";
+      let clonedObj = structuredClone({ ...objTwo, ...objOne });
+      console.log(clonedObj);
+      clonedObj.name.firstName = "Mary";
       console.log(objOne);
-      console.log(cloneObj);
+      console.log(clonedObj);
     </script>
   </body>
 </html>

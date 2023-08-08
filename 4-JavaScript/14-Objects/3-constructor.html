@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Constructor function" />
+    <title>Constructor function</title>
+  </head>
+  <body>
+    <h2>Constructor function</h2>
+
+    <script>
+      // Constructor function
+      // 1. It looks similar like function, but uses PascalCase notation for representing
+      // the function name.
+      // Function => Ex: Function => camelCase => displayName, getUsers
+      // Constructor => Ex: PascalCase => DisplayName, GetUsers
+      // 2. Constructor functions can be executed only by using "new" keyword
+      // Ex: GetUsers => new GetUsers()
+
+      //   function createUser(firstName, lastName, age) {
+      //     return {
+      //       firstName: firstName,
+      //       lastName: lastName,
+      //       age: age,
+      //     };
+      //   }
+      //   let userOne = createUser("John", "Jack", 30);
+      //   console.log(userOne);
+
+      // Constructor method
+      function CreateUser(firstName, lastName, age) {
+        // let this = {};
+        // this.firstName = firstName;
+        // this.lastName = lastName;
+        // this.age = age;
+        // let this = { firstName:..., lastName:..., age:...};
+        // return this;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        // return this;
+      }
+      //   console.log(new CreateUser("ABC", "XYZ", 32));
+      let userOne = new CreateUser("John", "Jack", 30);
+      let userTwo = new CreateUser("Mary", "Robert", 35);
+      console.log(userOne);
+      console.log(userTwo);
+    </script>
+  </body>
+</html>
