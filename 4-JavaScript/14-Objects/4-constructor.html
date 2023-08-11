@@ -41,11 +41,24 @@
         this.age = age;
         // return this;
       }
+      // console.log(user);
       //   console.log(new CreateUser("ABC", "XYZ", 32));
       let userOne = new CreateUser("John", "Jack", 30);
       let userTwo = new CreateUser("Mary", "Robert", 35);
       console.log(userOne);
       console.log(userTwo);
+
+      // Methods in constructor
+      function Message(message) {
+        // this = {}
+        this.message = message; // Welcome
+        this.displayMessage = function () {
+          console.log(this.message); // Welcome
+        };
+      }
+      let hello = new Message("Welcome");
+      console.log(hello); // {message: "Welcome", displayMessage: f{}}
+      hello.displayMessage();
     </script>
   </body>
 </html>

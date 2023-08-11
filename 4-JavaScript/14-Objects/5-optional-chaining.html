@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Optional Chaining" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <h2>Optional Chaining</h2>
+
+    <script>
+      // Optional Chaining
+      // Solve => non-existing property error
+      // error => stops the execution of the program
+
+      let users = {
+        john: {
+          firstName: "John",
+          lastName: "Jack",
+          age: 23,
+          address: {
+            no: 123,
+            street: "ABC",
+            city: "Chennai",
+            pincode: 600001,
+            country: "IN",
+          },
+        },
+      };
+
+      // Syntax
+      // propertyName?.nestedPropertyName
+      console.log(users);
+      console.log(users?.john?.address?.state?.countryCode);
+
+      // Optional chaining
+      // propertyName-1?.propertyName-2?.propertyName-3
+    </script>
+  </body>
+</html>
