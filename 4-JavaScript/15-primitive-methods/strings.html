@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Strings" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h2>Strings</h2>
+
+    <script>
+      // Strings
+      // Sequence of alpha or alpha-numeric characters enclosed by double or single quotes
+      // Ex: "hello", "hello123", '12hello3', 'hello'
+
+      // Double quotes => "hello world"
+      // Single quotes => 'hello world'
+      // Backticks => `hello world`, `hello ${2 + 3} world` => hello 5 world
+
+      //   let firstName = "John";
+      //   let lastName = "Jack";
+      //   let fullName = firstName + " " + lastName;
+      //   console.log(fullName);
+
+      //   let listOfNames = `
+      // 1. John
+      // 2. Jack
+      // 3. Mary
+      // 4. Robert
+      // 5. Prince`;
+      //   console.log(listOfNames);
+
+      //   let numOne = 5;
+      //   let numTwo = 6;
+      //   let result = `The sum is: ${numOne + numTwo}`;
+      //   console.log(result);
+
+      //   // special characters
+      //   // new line => \n
+
+      //   let name = "John\nJack";
+      //   console.log(name);
+
+      // length => get the number of characters/letters in a string
+      // Syntax
+      // string.length => no. of letters in a string
+      //   let product = "Television";
+      //   // T-e-l-e-v-i-s-i-o-n
+      //   console.log(product.length);
+
+      //   console.log("John".length);
+
+      // Access a single characters/letters from a string
+      // 1. square bracket[index]
+      // 2. charAt(index)
+
+      // John
+      // J-o-h-n
+      // 0-1-2-3
+      // 0 => J
+      // 1 => o
+      // 2 => h
+      // 3 => n
+
+      // Syntax
+      // string[index/pos]
+
+      //   let name = "John";
+      //   console.log(name[0]);
+      //   console.log(name[1]);
+      //   console.log(name[2]);
+      //   console.log(name[3]);
+
+      //   let fruits = "Mango";
+      //   // M-a-n-g-o
+      //   // 0-1-2-3-4
+      //   console.log(fruits[2]);
+
+      //   // Access the last character
+      //   let name = "Robert";
+      //   console.log(name.length - 1);
+      //   console.log(name[name.length - 1]); // name[6 - 1]
+
+      //   let message = "Welcome";
+      //   console.log(message[message.length - 1]);
+
+      //   // at()
+      //   console.log(message.at(-1));
+      //   console.log(message[-1]); // Not works
+
+      // Iterating each and every character from a string
+      //   for (let i = 0; i < message.length; i++) {
+      //     // 7
+      //     console.log(message[i]); //
+      //   }
+
+      // for...of
+      //   for (const char of message) {
+      //     console.log(char); // W-e-l-c-o-m-e
+      //   }
+
+      // str.charAt(pos)
+      //   let name = "SkillSafari";
+      //   console.log(name.charAt(name.length - 1));
+
+      // Strings are immutable
+      // Character of the strings cannot be modified
+      //   let name = "John";
+      //   console.log(name);
+      //   name[2] = "H";
+      //   console.log(name);
+
+      // substring => string inside a string
+      // "John" => J-o-h-n => "Jo" - "hn" - "oh"
+      // Seaching for a sub-string from given string
+      // indexOf("substring")
+
+      // Syntax - 1
+      // str.indexOf("substring") => if the "substring" is in the given "string",
+      // return "starting index" of the "substring", else return "-1"
+
+      //   let designation = "Full-stack developer";
+      //   // "stack"
+      //   console.log(designation.indexOf("stack")); // 5
+      //   console.log(designation.indexOf("front")); // -1
+      //   console.log(designation.indexOf("ll")); // 2
+      //   console.log(designation.indexOf("d")); // 11
+      //   console.log(designation.indexOf("e")); // 12
+
+      //   // Syntax - 2
+      //   // str.indexOf("substring", searchStartIndex);
+      //   console.log(designation.indexOf("stack")); // 5
+      //   console.log(designation.indexOf("stack", 5)); // -1
+      //   console.log(designation.indexOf(" ")); // 10
+
+      // Number of occurances of the "substring" in the given "string"
+      let designation = "Full-stack developer";
+      let subString = "l";
+      let pos = 0;
+      while (true) {
+        let foundPos = designation.indexOf(subString, pos);
+        if (foundPos == -1) break;
+        console.log(`The substring ${subString} => found at: ${foundPos}`);
+        pos = foundPos + 1;
+      }
+    </script>
+  </body>
+</html>
