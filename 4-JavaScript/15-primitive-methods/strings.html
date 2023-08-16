@@ -129,21 +129,123 @@
       //   console.log(designation.indexOf("e")); // 12
 
       //   // Syntax - 2
-      //   // str.indexOf("substring", searchStartIndex);
+      //   // str.indexOf("substring", searchStartIndex?);
       //   console.log(designation.indexOf("stack")); // 5
       //   console.log(designation.indexOf("stack", 5)); // -1
       //   console.log(designation.indexOf(" ")); // 10
 
       // Number of occurances of the "substring" in the given "string"
-      let designation = "Full-stack developer";
-      let subString = "l";
-      let pos = 0;
-      while (true) {
-        let foundPos = designation.indexOf(subString, pos);
-        if (foundPos == -1) break;
-        console.log(`The substring ${subString} => found at: ${foundPos}`);
-        pos = foundPos + 1;
-      }
+      // let designation = "Full-stack developer";
+      // let subString = "l";
+      // let pos = 0;
+      // while (true) {
+      //   let foundPos = designation.indexOf(subString, pos);
+      //   if (foundPos == -1) break;
+      //   console.log(`The substring ${subString} => found at: ${foundPos}`);
+      //   pos = foundPos + 1;
+      // }
+
+      // lastIndexOf(substring, position?) => last occurance of the substring (starting index) in the given string
+      // "hello world"
+      // console.log("hello world".indexOf("l")); // 2 - 3 - 9
+      // console.log("hello world".lastIndexOf("l")); // 9
+
+      // 1. includes()
+      // 2. startsWith()
+      // 3. endsWith()
+
+      // includes()
+      // syntax
+      // str.includes(substring, pos?)
+      // return "true" if searching "substring" is in the given "string", else return "false"
+
+      // "SkillSafari EduKeys"
+      // let name = "SkillSafari EduKeys";
+      // console.log(name.includes("Edu"));
+      // console.log(name.includes("kill", 3));
+
+      // startsWith(substring, pos?)
+      // return "true" if searching "substring" is in the "starting" position of the given "string", else return "false"
+      // let name = "SkillSafari EduKeys";
+      // console.log(name.startsWith("Skill")); // true
+      // console.log(name.startsWith("Keys")); // false
+      // console.log(name.startsWith("kill", 1)); // true
+
+      // Syntax
+      // str.endsWith(substring, pos?)
+      // let name = "SkillSafari EduKeys";
+      // // return "true", if searching "substring" is in the "ending" position of the given "string", else return "false"
+      // console.log(name.endsWith("Keys"));
+      // console.log(name.endsWith("s"));
+
+      // Index of the substring (indexOf, lastIndexOf) and presence of the substring (includes, startWith, endsWith)
+
+      // Getting or Extracting a substring
+      // 1. slice()
+      // 2. substring()
+      // 3. substr()
+
+      // slice()
+      // Syntax
+      // str.slice(startIndex, endIndex?)
+      // positive indexValues
+      // return a "substring" based on the "startIndex" and "endIndex" (upto endIndex - 1)
+      // let name = "SkillSafari EduKeys";
+      // console.log(name.slice(0, 5));
+      // console.log(name.slice(12));
+
+      // // negative indexValues
+      // console.log(name.slice(-7, -4));
+
+      // substring
+      // Syntax
+      // str.substring(startIndex, endIndex)
+      // return a "substring" based on the "startIndex" and "endIndex" (upto endIndex - 1)
+      // positiveIndex
+      // let name = "SkillSafari EduKeys";
+      // console.log(name.substring(0, 11));
+      // console.log(name.substring(11, 0));
+
+      // console.log(name.slice(0, 11));
+      // console.log(name.slice(11, 0));
+
+      // negativeIndex => not allowed in substring
+
+      // substr()
+      // Syntax
+      // str.substr(startIndex, length)
+      // let name = "SkillSafari EduKeys";
+      // console.log(name.substr(12, 7));
+
+      // negativeIndex
+      // console.log(name.substr(-7, 7));
+
+      // Comparing a string => boolean => true or false
+      // console.log("a" > "A"); // 97 > 65
+      // console.log("abc" > "aac"); // 98 > 97
+
+      // codePointAt() => return equivalent "ASCII" value for a "char"
+      // console.log("abc".codePointAt(1)); // b => 98
+
+      // String.fromCodePoint() => return equivalent "char" for a "ASCII" value
+      // console.log(String.fromCodePoint(97)); // a
+      // console.log(String.fromCodePoint(65)); // A
+
+      // trim() => remove unnecessary space in the beginning and the end of the string
+      // let name = "      SkillSafari EduKeys      ";
+      // console.log(name);
+      // console.log(name.trim());
+      // console.log(name.trimStart());
+      // console.log(name.trimEnd());
+
+      let demo = "S    kill";
+      console.log(demo);
+      let str1 = demo[0];
+      let str2 = demo.slice(1).trim();
+      // console.log(str1);
+      // console.log(str2);
+      console.log(str1 + str2);
+      console.log(str1.concat(str2));
     </script>
   </body>
 </html>
