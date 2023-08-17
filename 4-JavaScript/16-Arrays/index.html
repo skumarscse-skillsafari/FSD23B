@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Arrays" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h2>Arrays</h2>
+
+    <script>
+      // Arrays => storing ordered collection
+      // Arrays are used to store the data in sequential order
+
+      // Object => key-value pairs (keyed collection of values)
+
+      // Declaration
+      // Syntax
+      // 1. new Array() => new Object()
+      // 2. [] => {..}
+
+      //   let usersObj = {
+      //     userOne: "John",
+      //     userTwo: "Jack",
+      //     userThree: "Mary",
+      //     userFour: "Robert",
+      //   };
+      //   console.log(usersObj);
+      //   console.log(usersObj.userOne);
+      //   console.log(usersObj["userTwo"]);
+
+      // Syntax
+      // let varName = [ value-1, value-2, ..., value-N]
+      let usersArr = ["John", "Jack", "Mary", "Robert"];
+      //   console.log(usersArr);
+
+      // Accessing the elements
+      // index
+      // Syntax
+      // arrName[index]
+      //   console.log(usersArr[0]);
+      //   console.log(usersArr[1]);
+
+      // add a new element
+      // Syntax
+      // arrName[index] = value;
+      //   usersArr[4] = "Prince";
+      //   console.log(usersArr);
+
+      // modify the existing value
+      // Syntax
+      // arrName[index] = newValue;
+
+      //   usersArr[3] = "Raam";
+      //   //   console.log(usersArr);
+
+      //   usersArr[7] = "Raaj";
+
+      //   console.log(usersArr);
+
+      // delete an existing element
+      // Syntax
+      // delete arrName[index]
+      //   console.log(usersArr);
+      //   delete usersArr[2];
+
+      //   console.log(usersArr);
+
+      // length
+      //   console.log(usersArr.length);
+
+      // Iteration
+      //   for (let i = 0; i < usersArr.length; i++) {
+      //     console.log(usersArr[i]);
+      //   }
+
+      // for..of
+      //   for (const user of usersArr) {
+      //     // user => Robert
+      //     console.log(user);
+      //   }
+
+      // for..in
+      //   for (const user in usersArr) {
+      //     console.log(usersArr[user]);
+      //   }
+
+      // Accessing last element from array
+      //   console.log(usersArr[usersArr.length - 1]);
+
+      // at()
+      //   console.log(usersArr.at(-1));
+
+      // inbuild-array methods => adding and removing the element from the beginning and end
+      // 1. pop()/push() => remove and add elements at the end of the array
+      // 2. shift()/unshift() => remove and add elememts at the beginning of the array
+
+      //   console.log(usersArr);
+      // pop() and push() => LIFO => Last In First Out
+      // pop() => remove the elements from the end one-by-one
+      // return => removed element
+      // Syntax
+      // arrName.pop()
+      // console.log(usersArr.pop());
+      //   console.log(usersArr.pop());
+      //   console.log(usersArr);
+
+      // push() => add more than one elements at the end of existing array
+      // return => total number of elements in the array after insertion
+      // Syntax
+      // arrName.push(value-1, value-2, ..., value-N)
+      // console.log(usersArr.push("Mary", "Robert", "Raam"));
+      //   console.log(usersArr);
+
+      // shift()/unshift() => FIFO
+      // shift() => remove the elements from the beginning one-by-one
+      // return => removed element
+      // Syntax
+      // arrName.shift()
+      //   console.log(usersArr);
+      //   console.log(usersArr.shift());
+      //   console.log(usersArr.shift());
+      //   console.log(usersArr);
+
+      // unshift() => add more than one elements at the beginning of existing array
+      // return => total number of elements in the array after insertion (length)
+      // Syntax
+      // arrName.unshift(value-1, value-2,..., value-N)
+      //   usersArr.unshift("Raam", "Raaj");
+      //   console.log(usersArr.unshift("Raam", "Raaj"));
+      //   console.log(usersArr);
+
+      // pop()/push() => High performance
+      //   let numbers = [1, 2, 3, 4];
+      //   numbers.push(5);
+      //   numbers.pop();
+      //   console.log(numbers);
+      // shift()/unshift()
+      //   let numbers = [1, 2, 3, 4];
+      //   numbers.unshift(5, 6);
+      //   console.log(numbers);
+
+      //   let fruitsArr = ["apple", "orange", "mango"];
+      //   fruitsArr.push("apple");
+      //   fruitsArr.unshift("mango");
+      //   fruitsArr[2] = "orange";
+      //   console.log(fruitsArr);
+
+      // new Array
+      //   let users = new Array("John", "Jack", "Mary");
+      //   users.push("John");
+      //   users.unshift("Jack");
+      //   users[2] = "Mary";
+      //   console.log(users);
+
+      // Multi-dimensional array
+      // array inside an array
+      //   let numbers = [
+      //     [1, 2, 3],
+      //     [4, 5, 6],
+      //     [7, 8, 9],
+      //   ];
+      //   // 0 => 1 => [1, 2, 3]
+      //   // 1 => 2 => [4, 5, 6]
+      //   // 2 => 3 => [7, 8, 9]
+      //   console.log(numbers);
+      //   console.log(numbers[0][1]); // [1, 2, 3]
+      //   console.log(numbers[1][2]); // [4, 5, 6]
+      //   console.log(numbers[2][0]); // [7, 8, 9]
+      //   console.log(numbers[1][1]); // 5
+    </script>
+  </body>
+</html>
