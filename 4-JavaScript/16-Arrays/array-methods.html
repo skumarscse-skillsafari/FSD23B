@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Array Methods" />
+    <title>Array - Methods</title>
+  </head>
+  <body>
+    <h2>Array - Methods</h2>
+
+    <script>
+      // Array - Methods
+      // Inbuilt methods => pop(), push(), shift(), unshift()
+      // Remove/Add => in the end and beginning
+
+      // splice()
+      // insert, remove and updation
+      //   let num = [1, 2, 3, 4, 5];
+      //   delete num[2];
+      //   delete num[4];
+      //   console.log(num);
+
+      // splice()
+      // Syntax
+      // arr.splice(start, deleteCount, insertingElements);
+
+      //   console.log(num.splice(1, 2));
+      //   console.log(num);
+
+      // updation => remove and new insert
+      //   num.splice(1, 2, 6, 7, 8);
+      //   console.log(num);
+
+      //   num.splice(1, 1, 6);
+      //   console.log(num);
+
+      //   let str = ["I'am", "learning", "array", "methods"];
+      //   console.log(str);
+      //   str.splice(2, 2, "Javascript");
+      //   console.log(str);
+
+      // insertion without removal
+      //   str.splice(1, 0, "studying");
+      //   console.log(str);
+
+      // slice(start, end)
+      // extract elements from an array based on start and end index (end - 1 index)
+      //   let fruits = ["apple", "orange", "mango", "banana", "pineapple"];
+      //   console.log(fruits);
+      //   let extractedArr = fruits.slice(1, 4);
+      //   console.log(extractedArr);
+
+      //   let products = [
+      //     "mobile",
+      //     "laptops",
+      //     "television",
+      //     "desktop",
+      //     "smart watch",
+      //   ];
+      //   let extractedProducts = products.slice(1, 3);
+      //   console.log(extractedProducts); // [ "laptops", "television" ]
+      //   console.log(products);
+
+      // negativeIndex
+      //   let extractedProducts = products.slice(-4, 4);
+      //   console.log(extractedProducts);
+
+      // concat()
+      //   let a = [1, 2, 3];
+      //   let b = [4, 5, 6];
+      //   let c = [7, 8];
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+      //   console.log(c.concat(a, b));
+
+      //   console.log([].concat([1, 2, 3], [4, 5, 6], [7, 8, 9]));
+
+      // Iterate
+      let names = ["John", "Jack", "Mary", "Robert", "Prince"];
+      //   for (let i = 0; i < names.length; i++) {
+      //     console.log(names[i]);
+      //   }
+
+      //   for (const name of names) {
+      //     console.log(name);
+      //   }
+
+      // forEach()
+      // Syntax
+      // arr.forEach(function(element, index, array) {
+      // function body
+      // })
+
+      //   names.forEach(function (val, i, arr) {
+      //     console.log(`Value => ${val}, Index => ${i}, Array => ${arr}`);
+      //   });
+
+      //   names.forEach((val, i, arr) =>
+      //     console.log(`Value => ${val}, Index => ${i}, Array => ${arr}`)
+      //   );
+
+      //   names.forEach((val, index, arr) => console.log(`Value => ${val}`));
+
+      names.forEach(
+        (name, index) =>
+          console.log(`The employee code of ${name}: 1000${index + 1}`)
+        // The employee code of Mary : 10003
+      );
+    </script>
+  </body>
+</html>
