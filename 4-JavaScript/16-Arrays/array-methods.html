@@ -103,11 +103,143 @@
 
       //   names.forEach((val, index, arr) => console.log(`Value => ${val}`));
 
-      names.forEach(
-        (name, index) =>
-          console.log(`The employee code of ${name}: 1000${index + 1}`)
-        // The employee code of Mary : 10003
-      );
+      // names.forEach(
+      //   (name, index) =>
+      //     console.log(`The employee code of ${name}: 1000${index + 1}`)
+      //   // The employee code of Mary : 10003
+      // );
+
+      // Searching in array
+      // indexOf(searchElement, startpos?) => if "searchElement" is found in the "array", return "index" of the same
+      // else return "-1"
+      // let num = [1, 2, 3, 4, 5, 4, 5, 6];
+      // console.log(num);
+      // 4
+      // console.log(num.indexOf(4)); // 3
+      // console.log(num.indexOf(2)); // 1
+      // console.log(num.indexOf(2, 2)); // -1
+      // console.log(num.indexOf(5)); // 4
+      // console.log(num.indexOf(1)); // 0
+      // console.log(num.lastIndexOf(1)); // 0
+
+      // lastIndexOf()
+      // console.log(num.lastIndexOf(5)); // 6
+
+      // includes(searchElement, startIndex?) => true/false
+      // console.log(num.includes(5)); // true
+      // console.log(num.includes(3)); // true
+      // console.log(num.includes(3, 4)); // false
+
+      // find()/findIndex()/findLastIndex()
+      // find() => check if the "specific element" is part of the "array"
+      // Syntax
+      /* arr.find(function(value, index, array) => {
+              // logic to check the presence of searching element
+      }) */
+
+      // let users = ["John", "Jack", "Mary", "Robert", "Prince"];
+      // find => "Mary"
+      // find => iterate the array elements by setting a condition.
+      // if, condition turns "true" => return the "value" in the current iteration and exit from the loop
+      // else, return "undefined"
+      // if, the "searchElement" has multiple occurances, find() => return only "first occurance"
+      // let foundUser = users.find(function (val, index, arr) {
+      //   // console.log(val);
+      //   // console.log(index);
+      //   // console.log(arr);
+      //   return val === "Mary"; // "Mary" === "Mary"
+      // });
+      // console.log(foundUser);
+
+      // let usersArr = [
+      //   { id: 10001, name: "John", age: 25, city: "Chennai" },
+      //   { id: 10002, name: "Jack", age: 28, city: "Bangalore" },
+      //   { id: 10003, name: "Mary", age: 30, city: "Hyderabad" },
+      //   { id: 10004, name: "Robert", age: 27, city: "Mumbai" },
+      //   { id: 10005, name: "Prince", age: 23, city: "Delhi" },
+      //   { id: 10005, name: "Raam", age: 20, city: "Chennai" },
+      // ];
+
+      // id === 10003
+      // let searchUserwithID = usersArr.find(function (user) {
+      //   // user => { id: 10003, name: "Mary", age: 30, city: "Hyderabad" }
+      //   return user.id === 10003; // 10003 === 10003
+      // });
+      // console.log(searchUserwithID)
+
+      // let searchUserwithID = usersArr.find((user) => user.id === 10003);
+      // console.log(searchUserwithID);
+
+      // for loop
+      // for (let i = 0; i < usersArr.length; i++) {
+      //   // usersArr[2] => { id: 10003, name: "Mary", age: 30, city: "Hyderabad" }
+      //   if (usersArr[i].id === 10003) {
+      //     // 10003 === 10003
+      //     console.log(usersArr[i]);
+      //   }
+      // }
+
+      // findIndex()
+      // id === 10005
+      // let findUserIndex = usersArr.findIndex((user) => user.id === 10005);
+      // console.log(findUserIndex);
+
+      // findLastIndex()
+      // id === 10005
+      // let findUserLastIndex = usersArr.findLastIndex(
+      //   (user) => user.id === 10005
+      // );
+      // console.log(findUserLastIndex);
+
+      // filter()
+      // iterate the elements one-by-one based on the condition
+      // if, condition turns "true", return the "value" of the array in "current iteration" as "array"
+      // and continue the "iteration" till the last element ( check for all the occurances)
+      // else. return empty array ([])
+      // Syntax
+      /*
+        arr.filter(function(value, index, array) {
+          // condition
+        })
+      */
+
+      let studentsArr = [
+        { id: 10001, name: "John", age: 25, city: "Chennai", dept: "CSE" },
+        { id: 10002, name: "Jack", age: 28, city: "Bangalore", dept: "IT" },
+        { id: 10003, name: "Mary", age: 30, city: "Hyderabad", dept: "CSE" },
+        { id: 10004, name: "Robert", age: 27, city: "Mumbai", dept: "ECE" },
+        { id: 10005, name: "Prince", age: 23, city: "Delhi", dept: "CSE" },
+        { id: 10006, name: "Raam", age: 20, city: "Chennai", dept: "IT" },
+      ];
+      // dept => "CSE"
+      // find => return single element or undefined
+      // let findCSE = studentsArr.find((student) => student.dept === "CSE");
+      // let findCSE = studentsArr.find((student) => student.dept === "EEE");
+      // console.log(findCSE);
+
+      // filter => return array of matches or []
+      // let filterCSE = studentsArr.filter((student) => student.dept === "CSE");
+      // let filterCSE = studentsArr.filter((student) => student.dept === "EEE");
+      // console.log(filterCSE);
+
+      // filter
+      // students => name => starts with => "J"
+      // let studentNameStartsWithJ = studentsArr.filter((student) =>
+      //   student.name.startsWith("J")
+      // );
+      // console.log(studentNameStartsWithJ);
+
+      //students => name => ends with => "m"
+      // let studentNameEndsWithM = studentsArr.filter((student) =>
+      //   student.name.endsWith("m")
+      // );
+      // console.log(studentNameEndsWithM);
+
+      // students => name => includes => "a"
+      // let studentNameWithA = studentsArr.filter((student) =>
+      //   student.name.includes("a")
+      // );
+      // console.log(studentNameWithA);
     </script>
   </body>
 </html>
