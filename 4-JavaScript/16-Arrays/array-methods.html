@@ -240,6 +240,193 @@
       //   student.name.includes("a")
       // );
       // console.log(studentNameWithA);
+
+      // 1. forEach() => iterate the elements one by one from array
+      // 2. find() => find a "specific element" from an array
+      // 3. filter() => filter the "specific set of elements" from an array
+
+      // map() => transforming an array into another type of array
+      let num = [2, 3, 4, 5];
+      // Syntax
+      /*
+        arr.map(function(value, index, array) {
+          // logic
+        })
+        return => array
+      */
+      // console.log(num);
+      // let newNum = num.map(function (val) {
+      //   return val * val;
+      // });
+      // console.log(newNum);
+
+      // studentsArr
+      // extract only the student_id of all the students
+      // console.log(studentsArr);
+
+      // Extract student id
+      // let studentsID = studentsArr.map((student) => {
+      //   // student => { id: 10002, name: "Jack", age: 28, city: "Bangalore", dept: "IT" }}
+      //   return {
+      //     studentID: student.id, // 10002
+      //   };
+      // });
+
+      // Extract specific set of properties
+      // let studentsNewProp = studentsArr.map((student) => {
+      //   // student => { id: 10002, name: "Jack", age: 28, city: "Bangalore", dept: "IT" }}
+      //   return {
+      //     id: student.id, // 10002
+      //     name: student.name,
+      //     dept: student.dept,
+      //     college: "SkillSafari",
+      //   };
+      // });
+
+      // Extract specific set of properties and add new prop
+      // let studentsNewProp = studentsArr.map((student) => {
+      //   // student => { id: 10002, name: "Jack", age: 28, city: "Bangalore", dept: "IT" }}
+      //   return {
+      //     id: student.id, // 10002
+      //     name: student.name,
+      //     dept: student.dept,
+      //     college: "SkillSafari",
+      //   };
+      // });
+
+      // Along with existing properties add new property
+      // Method - 1
+      // let studentsNewProp = studentsArr.map((student) => {
+      //   // student => { id: 10002, name: "Jack", age: 28, city: "Bangalore", dept: "IT" }}
+      //   return {
+      //     id: student.id, // 10002
+      //     name: student.name,
+      //     dept: student.dept,
+      //     city: student.city,
+      //     age: student.age,
+      //     college: "SkillSafari",
+      //   };
+      // });
+
+      // Along with existing properties add new property
+      // Method - 2
+      // spread operator
+      // let studentsNewProp = studentsArr.map((student) => {
+      //   // student => { id: 10001, name: "John", age: 25, city: "Chennai", dept: "CSE" }
+      //   return {
+      //     ...student, // student: { id: 10001, name: "John", age: 25, city: "Chennai", dept: "CSE" }
+      //     college: "SkillSafari",
+      //   };
+      // });
+
+      // Add newProp => college: "SkillSafari" to the object dept: "CSE"
+      // All other object => college: "Edukeys"
+      // let studentsNewProp = studentsArr.map((student) => {
+      //   if (student.dept === "CSE") {
+      //     return {
+      //       ...student,
+      //       college: "SkillSafari",
+      //     };
+      //   } else {
+      //     return {
+      //       ...student,
+      //       college: "Edukeys",
+      //     };
+      //   }
+      // });
+
+      // console.log(studentsNewProp);
+
+      // sort()
+      // Asending
+      // Desending
+      // Syntax
+      /*
+        arr.sort(function(value-1, value-2) {
+          return value-1 - value-2 // ascending order
+          return value-2 - value-1 // desending order
+        })
+      */
+      // let numArr = [1, 5, 2, 6, 5, 4];
+      // console.log(numArr);
+      // let sortNumAsc = numArr.sort((a, b) => a - b);
+      // console.log(sortNumAsc);
+
+      // reverse()
+      // let numArr = [1, 5, 2, 6, 5, 4];
+      // console.log(numArr);
+      // console.log(numArr.reverse());
+
+      // let usersArr = ["John", "Jack", "Mary"];
+      // console.log(usersArr);
+      // console.log(usersArr.reverse());
+
+      // split() and join()
+      // split() => split a string into an array based on "seperator"
+      // Syntax
+      // str.split("seperator")
+      // let str = "John Jack Mary Robert Prince";
+      // console.log(str);
+      // console.log(str.split(" "));
+      // console.log("John".split(""));
+      // for (const key of "John".split("")) {
+      //   // ["J", "o", "h", "n"]
+      //   console.log(key);
+      // }
+
+      // "John".split("").forEach((val) => console.log(val));
+
+      // join() => convert an array of elements into a "string" using "seperator"
+      // Syntax
+      // arr.join("seperator")
+      // let userArr = ["John", "Jack", "Mary", "Prince"];
+      // console.log(userArr);
+      // console.log(userArr.join(" "));
+
+      // reduce()
+      // reduce an array of elements into a single value
+      // Syntax
+      /*
+        arr.reduce(function(accumulator, value, index, array) {
+          // logic
+        }, [initialValue])
+        // iterate
+        // 1st iteration => accumulator => initialValue
+        // value => current value
+        // other than 1st iteration => accumulator => result of previous iteration
+      */
+
+      let numArr = [1, 2, 3, 4, 5];
+      console.log(numArr);
+      let reduceNum = numArr.reduce(function (acc, currentVal, i) {
+        console.log(`---- iteration - ${i + 1} ----`);
+        console.log(`Acc: ${acc}`);
+        console.log(`CurrentVal: ${currentVal}`);
+        console.log(`Result: ${acc + currentVal}`);
+        // iteration - 1
+        // acc = 0 (initial value)
+        // currentVal = 1
+        // result = acc + currentVal => 0 + 1 => 1
+
+        // iteration - 2
+        // acc = 1 (result of previous iteration)
+        // currentVal = 2
+        // result = acc + currentVal => 1 + 2 => 3
+
+        // iteration - 3
+        // acc = 3 (result of previous iteration)
+        // cuurentVal = 3
+        // result = acc + currentVal => 3 + 3 => 6
+        return acc + currentVal;
+      }, 0);
+
+      console.log(reduceNum);
+
+      // Array.isArray() => check the given value is array or not
+      console.log(typeof null);
+      console.log(typeof [1, 2, 3]);
+      console.log(Array.isArray([1, 3, 5]));
+      console.log(Array.isArray({ name: "John" }));
     </script>
   </body>
 </html>
