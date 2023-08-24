@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Map and Set" />
+    <title>Map and Set</title>
+  </head>
+  <body>
+    <h1>Map and Set</h1>
+
+    <script>
+      // Map and Set
+      // Map
+      // Map => Datastructure for storing data in keyed pair
+      // Combination of both object and array
+      // Object => key or propertyName must be a "String" always
+      // let user = { name: "John", age: 23, city: "Chennai"}
+      // Map => key or propertyName can be of any type
+      // let user = [[123 , "John"], ["age", 23], ["city", "chennai"]]
+
+      // create, read, add, update and delete
+      // in-built methods
+      // create
+      // Map()
+      // Syntax
+      // let varName = new Map()
+      //   let usersMap = new Map();
+      //   console.log(usersMap);
+
+      // add the properties
+      // map.set("key", "value")
+      // method -1
+      //   usersMap.set("userOne", "John");
+      //   usersMap.set("userTwo", "Jack");
+
+      //   // chain
+      //   usersMap.set("userThree", "Mary").set("userFour", "Robert");
+
+      // method - 2
+      let usersMap = new Map([
+        ["userOne", "John"],
+        ["userTwo", "Mary"],
+        ["userThree", "Robert"],
+      ]);
+
+      // update
+      // Syntax
+      // map.set("existingProp", "newValue")
+      //   usersMap.set("userTwo", "Mary");
+
+      // read
+      // Syntax
+      // map.get("propName")
+      //   console.log(usersMap.get("userOne"));
+
+      // delete
+      // Syntax
+      // map.delete("propName")
+      //   usersMap.delete("userTwo");
+
+      // clear
+      // Syntax
+      // map.clear()
+      //   usersMap.clear();
+
+      // size
+      //   console.log(usersMap.size);
+
+      // iteration
+      //   usersMap.forEach((val, key) => {
+      //     console.log(`${key} => ${val}`);
+      //   });
+
+      // keys()
+      // for...of
+      //   for (const key of usersMap.keys()) {
+      //     console.log(key);
+      //   }
+
+      // values()
+      //   for (const val of usersMap.values()) {
+      //     console.log(val);
+      //   }
+
+      // entries()
+      //   for (const [key, val] of usersMap.entries()) {
+      //     console.log(`${key} => ${val}`);
+      //   }
+
+      // has()
+      // Syntax
+      // map.has("propName")
+      //   console.log(usersMap.has("userOne"));
+      //   console.log(usersMap.has("userThree"));
+
+      console.log(usersMap);
+    </script>
+  </body>
+</html>

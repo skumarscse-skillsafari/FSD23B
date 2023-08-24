@@ -246,7 +246,7 @@
       // 3. filter() => filter the "specific set of elements" from an array
 
       // map() => transforming an array into another type of array
-      let num = [2, 3, 4, 5];
+      // let num = [2, 3, 4, 5];
       // Syntax
       /*
         arr.map(function(value, index, array) {
@@ -397,12 +397,12 @@
       */
 
       let numArr = [1, 2, 3, 4, 5];
-      console.log(numArr);
+      // console.log(numArr);
       let reduceNum = numArr.reduce(function (acc, currentVal, i) {
-        console.log(`---- iteration - ${i + 1} ----`);
-        console.log(`Acc: ${acc}`);
-        console.log(`CurrentVal: ${currentVal}`);
-        console.log(`Result: ${acc + currentVal}`);
+        // console.log(`---- iteration - ${i + 1} ----`);
+        // console.log(`Acc: ${acc}`);
+        // console.log(`CurrentVal: ${currentVal}`);
+        // console.log(`Result: ${acc + currentVal}`);
         // iteration - 1
         // acc = 0 (initial value)
         // currentVal = 1
@@ -420,13 +420,77 @@
         return acc + currentVal;
       }, 0);
 
-      console.log(reduceNum);
+      // console.log(reduceNum);
 
       // Array.isArray() => check the given value is array or not
-      console.log(typeof null);
-      console.log(typeof [1, 2, 3]);
-      console.log(Array.isArray([1, 3, 5]));
-      console.log(Array.isArray({ name: "John" }));
+      // console.log(typeof null);
+      // console.log(typeof [1, 2, 3]);
+      // console.log(Array.isArray([1, 3, 5]));
+      // console.log(Array.isArray({ name: "John" }));
+
+      // some() => true or false
+      // used to check if the given condition turns "true" for some of the elements
+      // in the original array
+      // Syntax
+      /*
+        arr.some(function(value, index, array) { 
+          // logic
+        })
+      */
+      // console.log(studentsArr);
+
+      // filter => age >= 25
+      // let studentsAge = studentsArr.filter((student) => {
+      //   return student.age >= 25;
+      // });
+      // console.log(studentsAge);
+
+      // check dept. "CSE" is part of studentsArr
+      // let studentsCSE = studentsArr.some((student) => {
+      //   return student.dept === "CSE";
+      // });
+      // console.log(studentsCSE);
+
+      // every() => boolean => true/false
+      // used to check if the given condition turns "true" with all the elements
+      // of the original array
+      // let studentsECE = studentsArr.every((student) => {
+      //   return student.dept === "ECE";
+      // });
+      // console.log(studentsECE);
+
+      // fill()
+      // Syntax
+      // arr.fill(value, start, end);
+      // let num = [1, 2, 3, 4, 5];
+      // console.log(num);
+      // console.log(num.fill(5));
+
+      // console.log(num.fill(5, 1, 3));
+      // console.log(num.fill(2, 4, 4));
+
+      // flat()
+      // Syntax
+      // arr.flat(deepen)
+      // let num = [1, 2, [3, 4], 5];
+      // console.log(num);
+      // console.log(num.flat(1));
+      // let numOne = [1, [2, 3, [4, 5, [6, 7, 8]]], 9, 10];
+      // console.log(numOne);
+      // console.log(numOne.flat(1));
+      // console.log(numOne.flat(2));
+      // console.log(numOne.flat(3));
+
+      // copyWithin() => copies its elements from position "start" till position "end"
+      // into itself, at position "target" (overwrites the existing)
+      // Syntax
+      // arr.copyWithin(target, start, end);
+
+      // let num = [1, 2, 3, 4, 5];
+      // console.log(num);
+      // console.log(num.copyWithin(3));
+      // console.log(num.copyWithin(3, 2));
+      // console.log(num.copyWithin(2, 1, 3));
     </script>
   </body>
 </html>
