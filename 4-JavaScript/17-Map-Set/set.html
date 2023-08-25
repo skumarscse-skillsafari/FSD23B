@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Set" />
+    <title>Set</title>
+  </head>
+  <body>
+    <h2>Set</h2>
+
+    <script>
+      // Set => special collection or data structure
+      // store "set of values"
+      // values => primitives and non-primitives
+      // Set stores only unique values (It doesn't allows duplicate entries)
+      // Syntax
+      // let varName = new Set()
+
+      let userSet = new Set();
+      console.log(userSet);
+
+      // add property
+      // add()
+      // Method - 1
+      userSet.add("John");
+      userSet.add("Jack");
+      userSet.add("Jack");
+      userSet.add("Mary");
+      userSet.add("Mary");
+      userSet.add("Robert");
+      userSet.add("Robert");
+      userSet.add("Robert");
+
+      // Method - 2
+      //   let newUserSet = new Set(["Raam", "Raaj", "Prince", "Raam"]);
+      //   console.log(newUserSet);
+
+      //   console.log(userSet);
+
+      // Usecase
+      //   let num = [1, 2, 2, 3, 4, 4, 5, 5, 5];
+      //   console.log(num);
+      //   let newNumArr = [...new Set(num)];
+      //   console.log(newNumArr);
+
+      let prop = { age: 30 };
+      let propOne = { city: "Chennai" };
+      userSet.add(prop);
+      userSet.add(prop);
+      userSet.add(propOne);
+
+      // delete
+      userSet.delete(propOne);
+      userSet.delete("Jack");
+
+      // clear()
+      //   userSet.clear();
+
+      // size
+      //   console.log(userSet.size);
+
+      // has()
+      //   console.log(userSet.has("Mary"));
+      //   console.log(userSet.has(prop));
+      //   console.log(userSet.has("Raam"));
+
+      console.log(userSet);
+
+      // iterate
+      //   let newUserSet = new Set(["Raam", "Raaj", "Prince", "Raam"]);
+      // for...of
+      //   for (const val of newUserSet) {
+      //     console.log(val);
+      //   }
+
+      // keys()
+      //   for (const val of newUserSet.keys()) {
+      //     console.log(val);
+      //   }
+
+      // values()
+      //   for (const val of newUserSet.values()) {
+      //     console.log(val);
+      //   }
+
+      // entries()
+      //   for (const [key, val] of newUserSet.entries()) {
+      //     console.log(key, val);
+      //   }
+
+      // forEach()
+      //   newUserSet.forEach((user) => {
+      //     console.log(user);
+      //   });
+    </script>
+  </body>
+</html>
