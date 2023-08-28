@@ -433,7 +433,7 @@
       // in the original array
       // Syntax
       /*
-        arr.some(function(value, index, array) { 
+        arr.some(function(value, index, array) {
           // logic
         })
       */
@@ -491,6 +491,47 @@
       // console.log(num.copyWithin(3));
       // console.log(num.copyWithin(3, 2));
       // console.log(num.copyWithin(2, 1, 3));
+
+      // Chain method
+      console.log(studentsArr);
+      // 1. filter the students, age <= 25 (filter)
+      // 2. add new prop. college: "SkillSafari" (map)
+      // 3. find the average age of the filtered students (reduce)
+
+      // age <= 25
+      // let filterbyAge = studentsArr.filter((student) => student.age <= 25);
+      // console.log(filterbyAge);
+
+      // college: "SkillSafari"
+      // let addCollegeProp = filterbyAge.map((student) => {
+      //   return {
+      //     ...student,
+      //     college: "SkillSafari",
+      //   };
+      // });
+      // console.log(addCollegeProp);
+
+      // find average age
+      // let findAvgAge = addCollegeProp.reduce(
+      //   (acc, currValue) => acc + currValue.age,
+      //   0
+      // );
+      // console.log(Number((findAvgAge / addCollegeProp.length).toFixed(2)));
+
+      // chain method
+      let findAvgAge =
+        studentsArr
+          .filter((student) => student.age <= 25)
+          .map((filterStu) => {
+            return {
+              ...filterStu,
+              college: "SkillSafari",
+            };
+          })
+          .reduce((acc, stu) => {
+            return acc + stu.age;
+          }, 0) / 3;
+      console.log(+findAvgAge.toFixed(2));
     </script>
   </body>
 </html>

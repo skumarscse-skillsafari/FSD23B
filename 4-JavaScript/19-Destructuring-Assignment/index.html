@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Destructuring - Assignment" />
+    <title>Destructuring - Assignment</title>
+  </head>
+  <body>
+    <h2>Destructuring - Assignment</h2>
+
+    <script>
+      // Destructuring - Assignment => unpack the properties and elements of objects and arrays into variables
+      // 1. Object
+      // 2. Array
+
+      // Array Destructuring
+      let userNames = ["John", "Jack", "Mary", "Robert", "Prince"];
+      //   console.log(userNames);
+      //   console.log(userNames[0]);
+      //   console.log(userNames[1]);
+      //   console.log(userNames[2]);
+      //   console.log(userNames[3]);
+      //   console.log(userNames[4]);
+
+      // Destructure arrays
+      // Syntax
+      // let [var-1, var-2,..., var-N] = [ele-1, ele-2,..., ele-N];
+      // val-1 => ele-1
+      // var-2 => ele-2
+      // var-N => ele-N
+
+      //   let [userOne, userTwo, userThree, userFour, userFive] = userNames; // ["John", "Jack", "Mary", "Robert", "Prince"]
+      //   console.log(userOne); // John
+      //   console.log(userTwo); // Jack
+      //   console.log(userThree); // Mary
+      //   console.log(userFour); // Robert
+      //   console.log(userFive); // Prince
+
+      // iterable values
+      //   let [firstName, lastName] = "John Jack".split(" "); // ["John", "Jack"]
+      //   console.log(firstName);
+      //   console.log(lastName);
+
+      //   let fruits = {
+      //     apple: 23,
+      //     orange: 12,
+      //     banana: 10,
+      //   };
+      //   let [qtyOne, qtyTwo, qtyThree] = Object.entries(fruits); // [23, 12, 10];
+      //   console.log(qtyOne); // ["apple", 23]
+      //   console.log(qtyTwo); // ["orange", 12]
+      //   console.log(qtyThree); // ["banana", 10]
+
+      //   let [markOne, markTwo, markThree] = new Set([50, 70, 80]);
+      //   console.log(markOne);
+      //   console.log(markTwo);
+      //   console.log(markThree);
+
+      // ignore the elements
+      //   console.log(userNames);
+      //   let [userOne, , userThree, , userFive] = userNames;
+      //   console.log(userOne);
+      //   console.log(userNames[1]);
+      //   console.log(userThree);
+      //   console.log(userFive);
+
+      //   let [a, b, c] = "abc"; // ["a", "b", "c"]
+      //   console.log(a);
+      //   console.log(b);
+      //   console.log(c);
+
+      // swap two value
+      //   let [firstName, lastName] = ["John", "Jack"];
+      //   console.log("Before Swap");
+      //   console.log("FirstName: ", firstName);
+      //   console.log("LastName: ", lastName);
+      //   console.log("After Swap");
+      //   [lastName, firstName] = ["John", "Jack"];
+      //   console.log("FirstName: ", firstName);
+      //   console.log("LastName: ", lastName);
+
+      // rest
+      //   console.log(userNames);
+      //   let [userOne, userTwo, ...restUsers] = userNames;
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   console.log(restUsers);
+      //   let [userThree, userFour, userFive] = restUsers;
+      //   console.log(userThree);
+      //   console.log(userFour);
+      //   console.log(userFive);
+
+      // default values
+      let [firstName, lastName = "Jack"] = ["John", undefined];
+      console.log(firstName);
+      console.log(lastName);
+    </script>
+  </body>
+</html>

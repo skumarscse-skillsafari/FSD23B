@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object - Methods" />
+    <title>Object - Methods</title>
+  </head>
+  <body>
+    <h2>Object - Methods</h2>
+
+    <script>
+      // Object - Methods
+      // Object
+      let userDetails = {
+        name: "John",
+        age: 30,
+        city: "Chennai",
+        isAdmin: false,
+      };
+      //   console.log(userDetails);
+
+      // Object.keys() => object keys as iterable keys (as like array)
+      // Object.values() => object values as iterable values (as like array)
+      // Object.entries() => object keys and values as iterable "keys" and "values" (multi-dimentional array)
+
+      // Object.keys()
+      // Syntax
+      // Object.keys(objName)
+      // return => iterable keys
+      //   console.log(Object.keys(userDetails));
+      //   // for...of
+      //   for (const userKey of Object.keys(userDetails)) {
+      //     console.log(userKey);
+      //   }
+
+      // Object.values()
+      // Syntax
+      // Object.values(objName)
+      // return => iterable values
+      //   console.log(Object.values(userDetails));
+      //   // for...of
+      //   for (const userVal of Object.values(userDetails)) {
+      //     console.log(userVal);
+      //   }
+
+      // Object.entries()
+      // Syntax
+      // Object.entries(objName)
+      // return => iterable keys and values
+      //   console.log(Object.entries(userDetails));
+      //   // for...of
+      //   for (const [userKey, userVal] of Object.entries(userDetails)) {
+      //     console.log(`UserKey => ${userKey} : UserValue => ${userVal}`);
+      //   }
+
+      // Transform object properties
+      let usersAge = {
+        john: 23,
+        jack: 25,
+        mary: 20,
+        robert: 26,
+      };
+      console.log(usersAge);
+
+      // doubleAge
+      // Convert object to array (into Map)
+      // Object.entries()
+      //   console.log(Object.entries(usersAge));
+
+      let doubleAge = Object.fromEntries(
+        Object.entries(usersAge).map((age) => {
+          // age = [jack, 25]
+          return [age[0], age[1] * 2]; // [jack, 50]
+        })
+      );
+      console.log(doubleAge);
+      //   let doubleAgeObj = Object.fromEntries(doubleAge);
+      //   console.log(doubleAgeObj);
+    </script>
+  </body>
+</html>
