@@ -92,9 +92,180 @@
       //   console.log(userFive);
 
       // default values
-      let [firstName, lastName = "Jack"] = ["John", undefined];
-      console.log(firstName);
-      console.log(lastName);
+      // let [firstName, lastName = "Jack"] = ["John", undefined];
+      // console.log(firstName);
+      // console.log(lastName);
+
+      // Object destructuring
+      // Syntax
+      // let {propName-1, propName-2,..., propName-N} = {propName-1 : propValue-1, propName-2 : propValue-2, ..., propName-N : propValue-N}
+      // let userInfo = {
+      //   name: "John",
+      //   age: 23,
+      //   city: "Chennai",
+      //   isAdmin: true,
+      // };
+      // console.log(userInfo);
+
+      // let { name, age, city, isAdmin } = userInfo;
+      // console.log(name);
+      // console.log(age);
+      // console.log(city);
+      // console.log(isAdmin);
+
+      // let john = {
+      //   empId: 10001,
+      //   department: "DevOps",
+      //   address: {
+      //     houseNo: 123,
+      //     street: "ABC street",
+      //     city: "Chennai",
+      //   },
+      // };
+
+      // let {
+      //   empId,
+      //   department,
+      //   address: { houseNo, street, city },
+      // } = john;
+
+      // console.log(empId);
+      // console.log(department);
+      // // console.log(address);
+      // console.log(houseNo);
+      // console.log(street);
+      // console.log(city);
+
+      // property order doesn't matter
+      //   let { lastName, city, firstName, age } = {
+      //     firstName: "John",
+      //     lastName: "Jack",
+      //     age: 23,
+      //     city: "Bangalore",
+      //   };
+
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   console.log(age);
+      //   console.log(city);
+
+      // Alias name to the properties
+      // ":"
+      // Syntax
+      // let {propName: aliasPropName} = {propName: propValue}
+      // let fruits = {
+      //   apple: 20,
+      //   orange: 10,
+      //   mango: 15,
+      //   banana: 10,
+      // };
+
+      // let { apple: a, orange: o, mango, banana: b } = fruits;
+
+      // console.log(a);
+      // console.log(o);
+      // console.log(mango);
+      // console.log(b);
+
+      // default values
+      // "="
+      // Syntax
+      // let {propName = defaultValue} = {propName: propValue}
+      // let {
+      //   firstName,
+      //   lastName,
+      //   age = 30,
+      //   city = "Chennai",
+      // } = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 43,
+      //   city: "Bangalore",
+      // };
+      // console.log(firstName);
+      // console.log(lastName);
+      // console.log(age);
+      // console.log(city);
+
+      // combine both "alias" and "default values"
+      // let { firstName: f, lastName: l = "Jack" } = { firstName: "John" };
+      // console.log(f);
+      // console.log(l);
+
+      // ...rest
+      // let { firstName, lastName, ...restProp } = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 23,
+      //   city: "Chennai",
+      // };
+      // console.log(firstName);
+      // console.log(lastName);
+      // console.log(restProp);
+      // let { age, city } = restProp;
+      // console.log(age);
+      // console.log(city);
+
+      // Nested destructuring
+      // let userInfo = {
+      //   firstName: "John",
+      //   lastName: "Jack",
+      //   age: 23,
+      //   address: {
+      //     houseNo: 123,
+      //     street: "ABC street",
+      //     city: "Chennai",
+      //   },
+      //   hobbies: ["cricket", "football", "singing"],
+      // };
+
+      // console.log(userInfo);
+      // let {
+      //   firstName,
+      //   lastName,
+      //   age,
+      //   address: { houseNo, street, city },
+      //   hobbies: [eleOne, eleTwo, eleThree],
+      // } = userInfo;
+
+      // console.log(firstName);
+      // console.log(lastName);
+      // console.log(age);
+      // console.log(houseNo);
+      // console.log(street);
+      // console.log(city);
+      // console.log(eleOne);
+      // console.log(eleTwo);
+      // console.log(eleThree);
+
+      // Smart functions
+      // destructuring
+      // functions
+      function objectDestruct({ name: n = "Guest user", ...restProps }) {
+        // left-hand side
+        // console.log(name);
+        console.log(n);
+        // console.log(age);
+        // console.log(city);
+        console.log(restProps);
+      }
+      // let { name, age, city } = { name: "John", age: 23, city: "Chennai" }
+      objectDestruct({ name: undefined, age: 23, city: "Chennai" }); // right-hand side
+
+      function arrayDestruct([
+        fruitOne,
+        fruitTwo = "pine apple",
+        ...restFruits
+      ]) {
+        // LHS
+        console.log(fruitOne);
+        console.log(fruitTwo);
+        // console.log(fruitThree);
+        // console.log(fruitFour);
+        console.log(restFruits);
+      }
+      // let [fruitOne, fruitTwo, ...restFruits] = ["apple", "orange", "mango", "banana"]
+      arrayDestruct(["apple", , "mango", "banana"]); // RHS
     </script>
   </body>
 </html>

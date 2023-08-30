@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Date and JSON" />
+    <title>Date and JSON</title>
+  </head>
+  <body>
+    <h2>Date and JSON</h2>
+
+    <script>
+      // Date and JSON
+      // Date()
+      // Syntax
+      // let varName = new Date();
+
+      let currentDate = new Date();
+      console.log(currentDate);
+
+      // getHours()
+      // getMinutes()
+      // getSeconds()
+      // getMilliseconds()
+
+      console.log(currentDate.getDate());
+      console.log(currentDate.getDay() + 1); // ["Sun", Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+      console.log(currentDate.getMonth() + 1); // ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+      console.log(currentDate.getFullYear());
+
+      // JSON
+      // JSON.stringify() => Object into string of object
+      // JSON.parse() => String of object to Object
+
+      let userObj = {
+        name: "John",
+        age: 23,
+        city: "Chennai",
+      };
+      console.log(userObj);
+      //   alert(userObj);
+      let strUserObj = JSON.stringify(userObj);
+      //   alert(strUserObj);
+      console.log(strUserObj);
+
+      document.write("<h1>Hello</h1>");
+      document.write(strUserObj);
+
+      let objUser = JSON.parse(strUserObj);
+      console.log(objUser);
+
+      // properties of two objects same or not
+      let userOne = { name: "John" };
+      let userTwo = { name: "John", age: 23 };
+      console.log(JSON.stringify(userOne) === JSON.stringify(userTwo));
+    </script>
+  </body>
+</html>
