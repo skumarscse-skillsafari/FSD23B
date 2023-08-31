@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selectors - getElementById()" />
+    <title>Selectors - getElementById()</title>
+  </head>
+  <body>
+    <h2>Selectors - getElementById()</h2>
+
+    <h2 id="head">Heading Two</h2>
+    <p id="para">This is a paragraph</p>
+
+    <script>
+      // Selectors - getElementById()
+      // Syntax
+      // let varName = document.getElementById("idValue")
+      // return HTML element
+      let head = document.getElementById("head");
+      console.log(head); // <h2 id="head">Heading Two</h2>
+
+      let para = document.getElementById("para");
+      console.log(para); // <p id="para">This is a paragraph</p>
+    </script>
+  </body>
+</html>

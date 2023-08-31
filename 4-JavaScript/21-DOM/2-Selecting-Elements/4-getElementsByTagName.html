@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selectors - getElementsByTagName" />
+    <title>Selectors - getElementsByTagName</title>
+  </head>
+  <body>
+    <h2>Selectors - getElementsByTagName</h2>
+    <h2>Heading One</h2>
+    <h2>Heading Two</h2>
+    <h2>Heading Three</h2>
+    <h2>Heading Four</h2>
+    <hr />
+    <p>This is Paragraph One</p>
+    <p>This is Paragraph Two</p>
+    <p>This is Paragraph Three</p>
+    <p>This is Paragraph Four</p>
+
+    <script>
+      // Selectors - getElementsByTagName
+      // Syntax
+      // document.getElementsByTagName("elementName")
+      // return => HTMLCollectionOf<Element> => Array - like
+
+      let headings = document.getElementsByTagName("h2");
+      let paras = document.getElementsByTagName("p");
+
+      console.log(headings);
+      console.log(paras);
+
+      //   for (const key in headings) {
+      //     console.log(headings[key]);
+      //   }
+
+      // HTML Collection => Array Elements
+      // Array.from(HTML Collection) => Array Elements
+      let headingsArr = Array.from(headings);
+      console.log(headingsArr);
+
+      //   headingsArr.forEach((heading, index) => {
+      //     console.log(
+      //       `The element - ${index + 1} has the textContent as ${
+      //         heading.textContent
+      //       }`
+      //     );
+      //   });
+
+      //   headingsArr[0].textContent = "This is modified text";
+
+      //   let arr = ["Apple", "Orange", "mango"];
+      //   arr.forEach((a) => console.log(a));
+
+      headingsArr.forEach((heading, index) => {
+        heading.textContent = `Modified Content - ${index + 1}`;
+      });
+    </script>
+  </body>
+</html>

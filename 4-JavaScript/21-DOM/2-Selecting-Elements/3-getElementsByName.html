@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selectors - getElementsByName" />
+    <title>Selectors - getElementsByName</title>
+  </head>
+  <body>
+    <h2>Selectors - getElementsByName</h2>
+    <form action="#">
+      <p>Select anyone subject</p>
+      <input type="radio" name="subjects" id="english" class="english" />English
+      <input type="radio" name="subjects" id="maths" />Maths
+      <input type="radio" name="subjects" id="physics" />Physics
+      <input type="radio" name="subjects" id="chemistry" />Chemistry
+    </form>
+
+    <script>
+      // Selectors - getElementsByName()
+      // Syntax
+      // let varName = document.getElementsByName("nameVal")
+      // return => NodeList of HTML Elements => Array like
+
+      let subjects = document.getElementsByName("subjects");
+      console.log(subjects);
+
+      //   for (const key of subjects.keys()) {
+      //     console.log(key);
+      //   }
+
+      //   for (const value of subjects.values()) {
+      //     console.log(value);
+      //   }
+
+      //   for (const [key, value] of subjects.entries()) {
+      //     console.log(key, value);
+      //   }
+
+      //   subjects.forEach((value) => {
+      //     console.log(value);
+      //   });
+    </script>
+  </body>
+</html>
