@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Traversing elements - child to parent" />
+    <title>Traversing elements - child to parent</title>
+  </head>
+  <body>
+    <h2>Traversing elements - child to parent</h2>
+    <div id="outer-container">
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div id="inner-container">
+        <h2>This is heading two</h2>
+        <h3>This is heading three</h3>
+        <p id="para">This is paragraph</p>
+        <a href="#">Click here</a>
+      </div>
+    </div>
+
+    <script>
+      // Traversing elements - child to parent
+
+      let para = document.querySelector("#para");
+      console.log(para); // child element
+
+      // Syntax
+      // childElement.parentNode
+
+      console.log(para.parentElement.parentElement);
+    </script>
+  </body>
+</html>

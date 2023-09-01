@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selectors - getElementsByClassName" />
+    <title>Selectors - getElementsByClassName</title>
+  </head>
+  <body>
+    <h2>Selectors - getElementsByClassName</h2>
+    <ul>
+      <li class="menu-items">Home</li>
+      <li class="menu-items">About</li>
+      <li class="menu-items">Services</li>
+      <li class="menu-items">Projects</li>
+      <li class="menu-items">Contact</li>
+    </ul>
+    <p class="demo">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi, vero.
+    </p>
+    <h3 class="demo">This is a paragraph</h3>
+    <script>
+      // Selectors - getElementsByClassName
+      // Syntax
+      // let varName = document.getElementsByClassName("classNameValue");
+      // return => HTMLCollectionOf<Element>
+
+      let menuItems = Array.from(document.getElementsByClassName("menu-items"));
+      console.log(menuItems);
+
+      menuItems.forEach((menuItem) => {
+        console.log(menuItem.textContent);
+      });
+
+      let demos = Array.from(document.getElementsByClassName("demo"));
+      console.log(demos);
+      demos.forEach((demo, index) => {
+        console.log(
+          `The number of characters in element: ${index + 1} is: ${
+            demo.textContent.length
+          }`
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selectors - querySelector" />
+    <title>Selectors - querySelector</title>
+  </head>
+  <body>
+    <h2>Selectors - querySelector</h2>
+    <h3 id="head">This is head three</h3>
+    <p id="para">This is a paragraph</p>
+    <!-- <p id="para">This is a paragraph two</p> -->
+
+    <ul>
+      <li class="menu-items">Home</li>
+      <li class="menu-items">About</li>
+      <li class="menu-items">Projects</li>
+      <li class="menu-items">Contact</li>
+    </ul>
+
+    <ul>
+      <li class="fruit-items">Apple</li>
+      <li class="fruit-items">Orange</li>
+      <li class="fruit-items">Mango</li>
+      <li class="fruit-items">Banana</li>
+    </ul>
+
+    <script>
+      // Selectors - querySelector
+      // querySelector => select a single element based on CSS selectors
+      // Syntax
+      // document.querySelector("CSS-selector")
+      // returns => HTML element
+      // querySelectorAll => select one or more elements based on CSS selectors
+      // Syntax
+      // document.querySelectorAll("CSS-selector")
+      // returns => NodeListOf<Element>
+
+      let head = document.querySelector("#head");
+      console.log(head.textContent);
+
+      let para = document.querySelector("#para");
+      console.log(para);
+
+      let menuItems = document.querySelectorAll("[class='fruit-items']");
+      console.log(menuItems);
+
+      menuItems.forEach((menu) => {
+        console.log(menu.textContent);
+      });
+    </script>
+  </body>
+</html>

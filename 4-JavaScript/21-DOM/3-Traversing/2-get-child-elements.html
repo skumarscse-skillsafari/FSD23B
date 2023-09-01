@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="Traversing - Get child element from parent element"
+    />
+    <title>Traversing - Get child element from parent element</title>
+  </head>
+  <body>
+    <h2>Traversing - Get child element from parent element</h2>
+    <div class="container">
+      <h2>This is heading two</h2>
+      <p id="para">Lorem ipsum dolor sit amet.</p>
+      <a href="#">Click me</a>
+      <div class="demo">
+        <p>This is paragraph</p>
+      </div>
+      <h3>This is heading three</h3>
+    </div>
+
+    <script>
+      // Traversing - Get child element from parent element
+      //   let parent = document.querySelectorAll(".container");
+      let parent = document.querySelector(".container");
+      console.log(parent);
+
+      // select firstChild
+      // parentEle.firstElementChild
+      console.log(parent.firstElementChild);
+
+      // select lastChild
+      // parentEle.lastElementChild
+      console.log(parent.lastElementChild);
+
+      // select all the child
+      // parentEle.children
+      // returns => HTML Collection of all the child elements
+      let childrenEle = parent.children;
+      console.log(childrenEle);
+      Array.from(childrenEle).forEach((c) => {
+        console.log(c.textContent);
+      });
+    </script>
+  </body>
+</html>
