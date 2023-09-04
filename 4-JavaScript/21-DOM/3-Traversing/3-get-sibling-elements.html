@@ -17,19 +17,28 @@
 
     <script>
       // Get sibling elements
-      //   let lists = document.querySelectorAll("li");
-      //   console.log(lists);
+      let lists = document.querySelectorAll("li");
+      console.log(lists);
 
       let about = document.querySelector("#about");
-      console.log(about);
+      // console.log(about);
 
       // nextElementSibling
       // currentEle.nextElementSibling
-      console.log(about.nextElementSibling);
+      // console.log(about.nextElementSibling);
 
       // previousElementSibling
       // currentEle.previousElementSibling
-      console.log(about.previousElementSibling);
+      // console.log(about.previousElementSibling);
+
+      // Getting all the siblings
+      let siblingOne = document.querySelector("#menu").firstElementChild;
+      // console.log(siblingOne);
+      while (siblingOne) {
+        // <li>Contact</li>
+        console.log(siblingOne);
+        siblingOne = siblingOne.nextElementSibling;
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - after()" />
+    <title>DOM - after()</title>
+  </head>
+  <body>
+    <h2>DOM - after()</h2>
+    <ul id="menu">
+      <li>Home</li>
+    </ul>
+
+    <script>
+      // DOM - after() => insert a node or nodes after an element
+      // Add a element
+      const para = document.createElement("p");
+      para.textContent = "This is a paragraph";
+
+      // Syntax
+      // baseElement.after(newElement)
+
+      //   const headingTwo = document.querySelector("h2");
+      //   headingTwo.after(para);
+
+      let listEle = ["About", "Services", "Projects", "Contact"];
+
+      //   function addElement(list) {
+      //     const listItems = list.map((li) => {
+      //       // Array of newly created elements
+      //       const liEle = document.createElement("li");
+      //       liEle.textContent = li;
+      //       return liEle;
+      //     });
+      //     return listItems;
+      //   }
+      //   //   console.log(addElement(listEle));
+
+      //   const home = document.querySelector("#menu").firstElementChild;
+      //   home.after(...addElement(listEle));
+
+      let listElements = listEle.map((li) => {
+        const liEle = document.createElement("li");
+        liEle.textContent = li;
+        return liEle;
+      });
+      console.log(listElements);
+
+      const home = document.querySelector("#menu").firstElementChild;
+      home.after(...listElements);
+    </script>
+  </body>
+</html>

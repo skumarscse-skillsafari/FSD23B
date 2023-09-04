@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Create Element" />
+    <title>DOM - Create Element</title>
+  </head>
+  <body>
+    <h1>DOM - Create Element</h1>
+
+    <script>
+      // DOM - Create Element
+      // Syntax
+      // document.createElement("tagName")
+      // Ex:
+      // <p></p> => document.createElement("p")
+      const para = document.createElement("p");
+      console.log(para); // <p></p>
+      // Adding textContent
+      // syntax
+      // element.textContent = "content"
+      //   para.textContent = "This is a paragraph";
+      // element.innerText = "content"
+      //   para.innerText = "This is a paragraph";
+
+      // Changing existing textContent
+      const headingOne = document.querySelector("h1");
+      console.log(headingOne.textContent);
+      // textContent or innerText
+      //   headingOne.innerText = "Text Content";
+
+      // div
+      const divEle = document.createElement("div"); // divEle = { id: "container" }
+      // Adding attributes
+      // Syntax
+      // element.attributeName = "value"
+      divEle.id = "container";
+      divEle.className = "container-class";
+      console.log(divEle);
+      // Adding elements
+      // Syntax
+      // element.innerHTML = "element"
+      //   divEle.innerHTML = `
+      //             <p id='para'>This is a paragraph</p>
+      //             <ul id='fruits'>
+      //                 <li>Apple</li>
+      //                 <li>Orange</li>
+      //                 <li>Mango</li>
+      //                 <li>Banana</li>
+      //             </ul>
+      //   `;
+
+      let headingTwo = document.createElement("h2");
+      //   console.log(headingTwo);
+      headingTwo.textContent = "Heading Two";
+      // Adding a HTML element inside another HTML element
+      // Syntax
+      // parentElement.appendChild(childElement) => append the element as a last child
+      // of the parent element
+      divEle.appendChild(headingTwo);
+
+      document.body.appendChild(divEle);
+
+      // createElement("tagName") => creating new html element
+      // textContent and innerText => add or modify the content of the specific element
+      // innerHTML => add one or more HTML element inside another HTML elememt
+      // element.attributeName = "value" => add or modify attribute or attribute value
+      // parentEle.appendChild(childEle) => add the new element as last child of the selected parent element
+    </script>
+  </body>
+</html>
