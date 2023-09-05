@@ -12,6 +12,8 @@
       <li>Home</li>
     </ul>
 
+    <h2 id="head">This is heading</h2>
+
     <script>
       // DOM - after() => insert a node or nodes after an element
       // Add a element
@@ -49,6 +51,11 @@
 
       const home = document.querySelector("#menu").firstElementChild;
       home.after(...listElements);
+
+      const head = document.querySelector("#head");
+      let paraEle = document.createElement("p");
+      paraEle.textContent = "This is paragraph";
+      head.after(paraEle);
     </script>
   </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - removeChild()" />
+    <title>DOM - removeChild()</title>
+  </head>
+  <body>
+    <h2>DOM - removeChild()</h2>
+
+    <div class="container">
+      <h2>This is heading two</h2>
+      <p>This is a paragraph</p>
+      <a href="#">Click here...</a>
+    </div>
+
+    <script>
+      // DOM - removeChild()
+      // remove a child from a parentElement
+      // Syntax
+      // parentElement.removeChild(childNode)
+      const container = document.querySelector(".container");
+      container.removeChild(container.firstElementChild);
+    </script>
+  </body>
+</html>

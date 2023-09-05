@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - cloneNode()" />
+    <title>DOM - cloneNode()</title>
+  </head>
+  <body>
+    <h2>DOM - cloneNode()</h2>
+    <ul id="fruits">
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Banana</li>
+    </ul>
+
+    <div class="fruits-clone"></div>
+
+    <script>
+      // DOM - cloneNode()
+      // Syntax
+      // originalNode.cloneNode(deep)
+      // deep => true or false (default)
+      // 1. clone the node along with its descendants (deep => true)
+      // 2. clone only the selected node (deep => false)
+
+      // clone single node
+      let fruits = document.querySelector("#fruits");
+      console.log(fruits.cloneNode(true));
+
+      document
+        .querySelector(".fruits-clone")
+        .appendChild(fruits.cloneNode(true));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - insertAdjacentHTML" />
+    <title>DOM - insertAdjacentHTML</title>
+  </head>
+  <body>
+    <h2>DOM - insertAdjacentHTML</h2>
+
+    <script>
+      // DOM - insertAdjacentHTML()
+      // 1. beforebegin => before the element
+      // 2. afterbegin => before its first child of the element
+      // 3. beforeend => after its last child of the element
+      // 4. afterend => after the element
+
+      // Syntax
+      // element.insertAdjacentHTML("position", "newEle")
+
+      let headTwo = document.querySelector("h2");
+      headTwo.insertAdjacentHTML(
+        "beforebegin",
+        "<h1>Added by insertAdjacentHTML</h1>"
+      );
+
+      headTwo.insertAdjacentHTML(
+        "afterend",
+        ` <ul id='menu'>
+            <li>Home</li>
+        </ul>`
+      );
+
+      let menu = document.querySelector("#menu");
+      menu.insertAdjacentHTML(
+        "beforeend",
+        `<li>About</li> 
+      <li>Services</li>`
+      );
+
+      menu.insertAdjacentHTML("afterbegin", "<li>List of menu</li>");
+    </script>
+  </body>
+</html>

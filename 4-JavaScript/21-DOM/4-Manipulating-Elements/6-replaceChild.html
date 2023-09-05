@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - replaceChild()" />
+    <title>DOM - replaceChild()</title>
+  </head>
+  <body>
+    <h2>DOM - replaceChild()</h2>
+    <div class="container">
+      <h3>This is heading three</h3>
+      <p>This is a paragraph</p>
+      <a href="#">Click me...</a>
+    </div>
+    <script>
+      // DOM - replaceChild()
+      // replace a childElement by a new element
+      // Syntax
+      // parentEle.replaceChild(newChild, existingChild)
+
+      const container = document.querySelector(".container");
+      let headFour = document.createElement("h4");
+      headFour.textContent = "This is heading four";
+
+      console.log(container.children);
+      container.replaceChild(headFour, container.children[1]);
+    </script>
+  </body>
+</html>

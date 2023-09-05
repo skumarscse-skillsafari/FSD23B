@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - insertBefore()" />
+    <title>DOM - insertBefore()</title>
+  </head>
+  <body>
+    <h2>DOM - insertBefore()</h2>
+    <ul id="menu">
+      <li>Services</li>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
+
+    <script>
+      // DOM - insertBefore()
+      // insert a new node before an existing node as a child node
+      // of a specified parent node
+      // Syntax
+      // parentNode.insertBefore(newNode, existingNode)
+
+      let menu = document.querySelector("#menu");
+      let liEle = document.createElement("li");
+      liEle.textContent = "Home";
+
+      menu.insertBefore(liEle, menu.firstElementChild);
+    </script>
+  </body>
+</html>

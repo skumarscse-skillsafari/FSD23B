@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - prepend()" />
+    <title>DOM - prepend()</title>
+  </head>
+  <body>
+    <h2>DOM - prepend()</h2>
+    <ul id="menu">
+      <li>Contact</li>
+    </ul>
+
+    <script>
+      // DOM - prepend()
+      // insert a node(s) before the firstChild of the parent node
+      // Syntax
+      // parentEle.prepend(...nodes)
+      let itemsArr = ["Home", "About", "Services"];
+      const menu = document.querySelector("#menu");
+      let itemsEleArr = itemsArr.map((i) => {
+        let liEle = document.createElement("li");
+        liEle.textContent = i;
+        return liEle;
+      });
+      menu.prepend(...itemsEleArr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - append()" />
+    <title>DOM - append()</title>
+  </head>
+  <body>
+    <h2>DOM - append()</h2>
+    <ul id="menu">
+      <li>Home</li>
+    </ul>
+
+    <script>
+      // DOM - append()
+      // insert a node(s) after the last child of a parent element
+      // Syntax
+      // parentEle.append(...nodes)
+
+      const menu = document.querySelector("#menu");
+      let itemsArr = ["About", "Services", "Contact"];
+      let itemElements = itemsArr.map((i) => {
+        let liEle = document.createElement("li");
+        liEle.textContent = i;
+        return liEle;
+      });
+      console.log(itemElements);
+
+      menu.append(...itemElements);
+    </script>
+  </body>
+</html>
