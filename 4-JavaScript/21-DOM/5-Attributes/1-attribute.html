@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Handling attributes" />
+    <title>DOM - Handling attributes</title>
+  </head>
+  <body>
+    <h2>DOM - Handling attributes</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, illo!
+    </p>
+
+    <button id="btn">Click...</button>
+    <script>
+      // DOM - Handling attributes
+      // types => name: value and name
+      // 1. setAttribute() => add or modify the attribute value
+      // 2. getAttribute() => get the value of an attribute
+      // 3. removeAttribute()
+      // 4. hasAttribute()
+
+      // adding attribute using "." operator
+      const para = document.querySelector("p");
+      //   console.log(para);
+      //   para.className = "para-class";
+
+      // adding attribute using "setAttribute" method
+      // Syntax
+      // element.setAttribute("name", "value") => void
+      para.setAttribute("class", "para-class");
+      //   para.setAttribute("class", "para-class-1");
+      //   let btn = document.querySelector("#btn");
+      //   btn.setAttribute("disabled", "");
+
+      // get the attribute values
+      // Syntax
+      // element.getAttribute("name") => string | null
+      //   const getAttr = para.getAttribute("class");
+      //   console.log(getAttr);
+
+      // remove an attribue
+      // Syntax
+      // element.removeAttribute("name") => void
+      //   para.removeAttribute("class");
+
+      // check the presence of an attribute
+      // Syntax
+      // element.hasAttribute("name") => boolean
+      let chkAttr = para.hasAttribute("class");
+      console.log(chkAttr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - className" />
+    <title>DOM - className</title>
+  </head>
+  <body>
+    <h2>DOM - className</h2>
+    <p class="para para-red para-italic">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit,
+      maiores.
+    </p>
+
+    <script>
+      // DOM - className => return and manipulte the class attribute values
+      const para = document.querySelector("p");
+      console.log(para);
+      console.log(para.className.split(" "));
+      para.className += " para-new";
+    </script>
+  </body>
+</html>

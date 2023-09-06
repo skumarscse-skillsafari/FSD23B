@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Styles" />
+    <title>DOM - Styles</title>
+  </head>
+  <body>
+    <h2>DOM - Styles</h2>
+    <button id="btn">Click</button>
+
+    <script>
+      // DOM - Styles
+      const headTwo = document.querySelector("h2");
+      console.log(headTwo);
+
+      // Events
+      // Any action such as mouse click or scroll or keypress
+      // HTML events => starts with "on"
+      // onclick
+      // Syntax
+      // element.onclick = function () {...}
+      let btn = document.querySelector("#btn");
+      btn.onclick = function () {
+        // console.log(`I am clicked => ${Math.random()}`);
+        const headTwoNode = document.querySelectorAll("h2");
+        console.log(headTwoNode);
+        headTwoNode[0].style.color = "red";
+        headTwoNode[0].style.background = "blue";
+        headTwoNode[0].style.height = "50px";
+        headTwoNode[0].style.width = "200px";
+        headTwoNode[0].style.fontFamily = "arial";
+      };
+    </script>
+  </body>
+</html>
