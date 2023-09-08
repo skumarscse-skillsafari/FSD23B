@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - EventListener" />
+    <title>DOM - EventListener</title>
+  </head>
+  <body>
+    <h2>DOM - EventListener</h2>
+
+    <button id="btn-1">Click me</button>
+
+    <button id="remove">Remove event</button>
+    <script>
+      // DOM - EventListener
+      // Add a event on a event
+      // Remove the added event on the element
+
+      // 1. addEventListener()
+      // 2. removeEvemtListener()
+
+      // addEventListener()
+      // Syntax
+      /*
+        element.addEventListener("eventType", "listenerFunction")
+      */
+
+      const btnOne = document.querySelector("#btn-1");
+      // listener function => as parameter
+      //   btnOne.addEventListener("click", function () {
+      //     alert("I am clicked...");
+      //   });
+
+      // listener function => as arrow function
+      //   btnOne.addEventListener("click", () => alert("I am clicked..."));
+
+      // listener function => outside the eventListener
+      // function declaration
+      function showMessage() {
+        alert("I am clicked...");
+      }
+
+      // function expression
+      //   const showMessage = function () {
+      //     alert("I am clicked...");
+      //   };
+      //   btnOne.addEventListener("click", showMessage);
+
+      // removeEventListener()
+      // Syntax
+      // element.removeEventListener("eventType", "listenerFunction")
+      // const removeEvent = document.querySelector("#remove");
+      //   removeEvent.addEventListener("click", () => {
+      //     btnOne.removeEventListener("click", showMessage);
+      //   });
+
+      // event object
+      btnOne.addEventListener("click", (e) => {
+        console.log(e);
+        console.log(e.target);
+        console.log(e.target.id);
+        console.log(e.target.textContent);
+      });
+    </script>
+  </body>
+</html>

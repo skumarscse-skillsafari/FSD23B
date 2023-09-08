@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - HTML Attribute Events" />
+    <title>DOM - HTML Attribute Events</title>
+  </head>
+  <body>
+    <h2>DOM - HTML Attribute Events</h2>
+
+    <h3 onclick="alert('Hello...')">This is heading three</h3>
+
+    <button onclick="displayMessage()">Click</button>
+
+    <button id="btn" class="btn-class">Click me</button>
+
+    <script>
+      // DOM - HTML Attribute Events
+      // Level 0 Event handlers
+      // This can be add directly to the HTML element as an attribute
+      //   alert("Hello");
+
+      //   function displayMessage() {
+      //     alert("I am from displayMessage function");
+      //   }
+
+      //   const btn = document.querySelector("#btn");
+      //   btn.onclick = function () {
+      //     alert("Hello, button-2");
+      //   };
+
+      // event object
+      //   const btn = document.querySelector("#btn");
+      //   btn.onclick = function (event) {
+      //     console.log(event);
+      //     console.log(event.target.className);
+      //     console.log(event.target.textContent.toUpperCase());
+      //   };
+
+      // this object
+      const btn = document.querySelector("#btn");
+      btn.onclick = function () {
+        console.log(this.textContent);
+      };
+    </script>
+  </body>
+</html>

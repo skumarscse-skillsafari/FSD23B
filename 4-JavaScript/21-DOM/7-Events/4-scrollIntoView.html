@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - ScrollIntoView()" />
+    <title>DOM - ScrollIntoView()</title>
+  </head>
+  <body>
+    <h2>DOM - ScrollIntoView()</h2>
+    <ul>
+      <li id="home">Home</li>
+      <li>About</li>
+      <li>Services</li>
+      <li>Contact</li>
+    </ul>
+    <hr />
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem quaerat modi
+      dolor earum nihil a maxime ipsa itaque eius assumenda quisquam, nisi
+      libero sunt? Quaerat saepe sunt ex sed alias! Dicta culpa sed nisi,
+      voluptatum quidem fuga rerum atque voluptate neque a incidunt dolorem
+      numquam? Unde tempore reiciendis harum fugit explicabo omnis eos
+      consectetur sapiente earum voluptatem, commodi inventore quaerat velit
+      quos consequuntur recusandae, voluptates, excepturi numquam blanditiis
+      asperiores! Voluptatibus, aperiam explicabo. Quaerat, repudiandae! Ut,
+      doloremque a mollitia unde neque impedit, sint sed distinctio saepe minima
+      enim, autem voluptatem culpa sunt dolores commodi? Quos, ipsam et corporis
+      nostrum aspernatur, veniam aperiam praesentium iste officiis deleniti
+      debitis corrupti eos libero culpa excepturi esse voluptatem dignissimos
+      saepe enim? Distinctio, beatae. Molestiae, beatae maxime tempore facilis
+      impedit tempora. Blanditiis labore, ea id dolorem vitae suscipit incidunt
+      exercitationem magnam beatae asperiores unde culpa aliquid, vel maiores
+      impedit assumenda dolorum quas. Molestias laudantium incidunt aut sapiente
+      commodi odio velit obcaecati quasi amet consectetur. Recusandae quae
+      impedit cumque deserunt delectus. Soluta officia voluptatum id praesentium
+      quasi consectetur ut odio quos corporis. Vitae blanditiis molestias nobis
+      ipsam a repudiandae recusandae ipsum, magnam voluptas. Officia expedita
+      cupiditate totam corporis beatae adipisci nostrum sequi? Eligendi
+      voluptatem id quam libero praesentium, debitis illum quasi? Aperiam quod
+      suscipit placeat dolore quia exercitationem eveniet inventore libero
+      neque, nobis fugiat blanditiis nihil nulla ipsam. Molestiae iste ea
+      suscipit autem pariatur! Laboriosam eligendi sit commodi nemo numquam
+      dolore ut corporis ipsam mollitia officia reiciendis ratione iusto itaque
+      odit minus dolorum voluptatibus quibusdam nisi, ad quaerat animi
+      doloremque necessitatibus! Aliquid alias, omnis ab voluptatum maxime
+      molestias sit quo tenetur animi odit beatae debitis, perspiciatis ut totam
+      recusandae quis! Tenetur, alias. Exercitationem ex earum odit magni? Est
+      sapiente ut, nemo aliquam odit ipsam consequuntur omnis consequatur
+      voluptatibus, temporibus voluptas totam dignissimos fugit blanditiis
+      soluta expedita quos!
+    </p>
+    <hr />
+    <ul>
+      <li>Apple</li>
+      <li>Orange</li>
+      <li>Mango</li>
+      <li>Banana</li>
+    </ul>
+    <hr />
+    <button id="top">click to move top</button>
+
+    <script>
+      // DOM - ScrollIntoView()
+      // Syntax
+      // element.scrollIntoView()
+
+      const topBtn = document.querySelector("#top");
+      const home = document.querySelector("#home");
+      topBtn.addEventListener("click", () => {
+        home.scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
+  </body>
+</html>
