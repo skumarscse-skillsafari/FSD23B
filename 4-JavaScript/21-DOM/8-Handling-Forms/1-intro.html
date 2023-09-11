@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Handling Forms" />
+    <title>DOM - Handling Forms</title>
+  </head>
+  <body>
+    <h2>DOM - Handling Forms</h2>
+    <form action="#" id="register-form">
+      <p>
+        <label for="username">Enter Username:</label>
+        <input
+          type="text"
+          name="username"
+          id="username-id"
+          placeholder="Enter username"
+        />
+      </p>
+      <p>
+        <label for="password">Enter Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password-id"
+          placeholder="Enter password"
+        />
+      </p>
+      <p>
+        <label for="email">Enter Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email-id"
+          placeholder="Enter email"
+        />
+      </p>
+      <p>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <script>
+      // DOM - Handling Forms
+      //   const username = document.querySelector("#username");
+      //   const password = document.querySelector("#password");
+      //   const email = document.querySelector("#email");
+
+      // Method - 1
+      // form.elements
+      //   const formEle = document.querySelector("#register-form");
+      //   console.log(formEle);
+      //   console.log(formEle.elements);
+      // index, name attribute value or id attribute value
+      // index
+      //   console.log(formEle.elements[0]);
+      //   console.log(formEle.elements[1]);
+      //   console.log(formEle.elements[2]);
+      // name attribute value
+      //   console.log(formEle.elements["username"]);
+      //   console.log(formEle.elements["password"]);
+      //   console.log(formEle.elements["email"]);
+      // id attribute value
+      //   console.log(formEle.elements["username-id"]);
+      //   console.log(formEle.elements["password-id"]);
+      //   console.log(formEle.elements["email-id"]);
+
+      // Method - 2
+      // Using document object
+      // document.forms
+      //   const formEle = document.forms[0];
+      //   console.log(formEle);
+      //   const username = formEle[0];
+      //   console.log(username);
+      //   const password = formEle[1];
+      //   console.log(password);
+      //   const email = formEle[2];
+      //   console.log(email);
+
+      //   const registerForm = document.querySelector("#register-form");
+      //   registerForm.addEventListener("submit", (e) => {
+      //     e.preventDefault();
+      //     const userDetails = {};
+      //     userDetails.username = username.value;
+      //     userDetails.password = password.value;
+      //     userDetails.email = email.value;
+      //     console.log(userDetails);
+      //   });
+    </script>
+  </body>
+</html>

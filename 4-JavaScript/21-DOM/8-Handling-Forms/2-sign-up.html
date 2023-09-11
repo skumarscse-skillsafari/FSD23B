@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Sign-up form" />
+    <title>DOM - Sign-up form</title>
+  </head>
+  <body>
+    <h1>DOM - Sign-up form</h1>
+    <form action="#" id="register-form">
+      <table>
+        <tr>
+          <td>
+            <label for="username">Enter Username:</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter username"
+            />
+            <span id="user-span"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">Enter Email:</label>
+          </td>
+          <td>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email"
+            />
+            <span id="email-span"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Enter Password:</label>
+          </td>
+          <td>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+            />
+            <span id="password-span"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="confirm-password">Enter Confirm password:</label>
+          </td>
+          <td>
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Enter confirm password"
+            />
+            <span id="confirm-span"></span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Register" />
+          </td>
+          <td>
+            <input type="reset" value="Clear" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      // DOM - Sign-up form
+      const registerForm = document.querySelector("#register-form");
+      const username = registerForm.elements["username"];
+      const email = registerForm.elements["email"];
+      const password = registerForm.elements["password"];
+      const confirmPassword = registerForm.elements["confirm-password"];
+
+      registerForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        checkUsername();
+        checkEmail();
+        checkPassword();
+        checkConfirmPassword();
+      });
+
+      function checkUsername() {
+        if (username.value === "") {
+          const userSpan = document.querySelector("#user-span");
+          userSpan.style.color = "red";
+          userSpan.textContent = "Enter valid username";
+        } else {
+          const userSpan = document.querySelector("#user-span");
+          userSpan.style.color = "green";
+          userSpan.textContent = "Thanks for entering valid username";
+        }
+      }
+
+      function checkEmail() {
+        if (email.value === "") {
+          const emailSpan = document.querySelector("#email-span");
+          emailSpan.style.color = "red";
+          emailSpan.textContent = "Enter valid email";
+        } else {
+          const emailSpan = document.querySelector("#email-span");
+          emailSpan.style.color = "green";
+          emailSpan.textContent = "Thanks for entering valid email";
+        }
+      }
+
+      function checkPassword() {
+        if (password.value === "") {
+          const pwdSpan = document.querySelector("#password-span");
+          pwdSpan.style.color = "red";
+          pwdSpan.textContent = "Enter password";
+        } else {
+          const pwdSpan = document.querySelector("#password-span");
+          pwdSpan.style.color = "green";
+          pwdSpan.textContent = "Thanks for entering password";
+        }
+      }
+
+      function checkConfirmPassword() {
+        if (confirmPassword.value === "") {
+          const cfmPwdSpan = document.querySelector("#confirm-span");
+          cfmPwdSpan.style.color = "red";
+          cfmPwdSpan.textContent = "Enter confirm password";
+        } else {
+          if (password.value === confirmPassword.value) {
+            const cfmPwdSpan = document.querySelector("#confirm-span");
+            cfmPwdSpan.style.color = "green";
+            cfmPwdSpan.textContent = "Thanks for entering confirm password";
+          } else {
+            const cfmPwdSpan = document.querySelector("#confirm-span");
+            cfmPwdSpan.style.color = "red";
+            cfmPwdSpan.textContent =
+              "Password and Confirm password are not same";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
