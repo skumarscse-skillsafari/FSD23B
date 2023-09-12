@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Radio button" />
+    <title>DOM - Radio button</title>
+  </head>
+  <body>
+    <h1>DOM - Radio Button</h1>
+    <form action="#" id="gender-form">
+      <p>
+        <label for="gender">Select Gender</label>
+        <input type="radio" name="gender" id="male" value="Male" />Male
+        <input type="radio" name="gender" id="female" value="Female" />Female
+        <input type="radio" name="gender" id="other" value="Other" />Other
+      </p>
+      <p>
+        <input type="submit" value="Submit" id="submit" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+    <hr />
+    <p id="para"></p>
+
+    <script>
+      // DOM - Radio Buttons
+      const genderForm = document.querySelector("#gender-form");
+      genderForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const genderOptions = document.querySelectorAll("[name='gender']");
+        const para = document.querySelector("#para");
+        console.log(genderOptions);
+        let optionsArr = Array.from(
+          document.querySelectorAll("[name='gender']")
+        );
+        let optionCheckedArr = optionsArr.filter((o) => o.checked);
+        console.log(optionCheckedArr);
+        if (optionCheckedArr.length <= 0) {
+          para.textContent = "Select atleast one option";
+        } else {
+          for (const genderOption of genderOptions) {
+            if (genderOption.checked) {
+              // console.log(`User selected option is: ${genderOption.value}`);
+              para.textContent = `User selected option is: ${genderOption.value}`;
+            }
+          }
+        }
+      });
+
+      //   const submitBtn = document.querySelector("#submit");
+      //   submitBtn.addEventListener("click", (e) => {
+      //     e.preventDefault();
+      //     console.log("Click Event");
+      //   });
+    </script>
+  </body>
+</html>

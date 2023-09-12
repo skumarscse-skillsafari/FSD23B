@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Checkbox" />
+    <title>DOM - Checkbox</title>
+  </head>
+  <body>
+    <h1>DOM - Checkbox</h1>
+
+    <form action="#" id="form-fruits">
+      <p>
+        <label for="fruits">Select Fruit(s)</label>
+        <input type="checkbox" name="apple" id="apple" value="Apple" />Apple
+        <input type="checkbox" name="orange" id="orange" value="Orange" />Orange
+        <input type="checkbox" name="mango" id="mango" value="Mango" />Mango
+        <input type="checkbox" name="banana" id="banana" value="Banana" />Banana
+      </p>
+      <p>
+        <input type="submit" value="Submit" id="submit" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+    <hr />
+    <p id="para"></p>
+
+    <script>
+      // DOM - Checkbox
+      let submitBtn = document.querySelector("#submit");
+      let para = document.querySelector("#para");
+      let allOptions = document.querySelectorAll("[type = 'checkbox']");
+      console.log(allOptions);
+      for (const allOption of allOptions) {
+        allOption.addEventListener("change", (e) => {
+          e.preventDefault();
+          //   console.log("demo");
+          let checkBts = document.querySelectorAll('[type="checkbox"]:checked');
+          console.log(checkBts);
+          let checkBtsArr = Array.from(checkBts).map((c) => c.value);
+          console.log(checkBtsArr);
+          para.textContent =
+            checkBtsArr.length != 0
+              ? `You selected: ${checkBtsArr.join(", ")}`
+              : "You not selected any option";
+        });
+      }
+    </script>
+  </body>
+</html>
