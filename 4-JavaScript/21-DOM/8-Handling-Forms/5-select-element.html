@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Select Element" />
+    <title>DOM - Select Element</title>
+  </head>
+  <body>
+    <h2>DOM - Select Element</h2>
+    <!-- <form action="#">
+      <p>
+        <label for="subjects">Select Subject:</label>
+        <select name="subjects" id="subjects">
+          <option value="English">English</option>
+          <option value="Maths">Maths</option>
+          <option value="Physics">Physics</option>
+          <option value="Chemistry">Chemistry</option>
+        </select>
+      </p>
+      <p>
+        <input type="submit" value="Submit" id="btn" />
+        <input type="reset" value="Reset" />
+      </p>
+    </form>
+    <hr />
+    <p id="para"></p> -->
+
+    <!-- Handling select with multiple attribute -->
+    <form action="#">
+      <p>
+        <label for="subjects">Select Subject:</label>
+        <select name="subjects" id="subjects" multiple>
+          <option value="English">English</option>
+          <option value="Maths">Maths</option>
+          <option value="Physics">Physics</option>
+          <option value="Chemistry">Chemistry</option>
+        </select>
+      </p>
+      <p>
+        <input type="submit" value="Submit" id="btn" />
+        <input type="reset" value="Reset" />
+      </p>
+    </form>
+    <hr />
+    <p id="para"></p>
+
+    <script>
+      // DOM - Select Element
+      // options and selected property
+      // Syntax
+      // selectEle.options
+      //   const subjects = document.querySelector("#subjects");
+      //   console.log(subjects);
+      //   // options
+      //   console.log(subjects.options); // HTMLOptionsCollection
+      //   // selected
+
+      //   // Getting the elements by index
+      //   //   console.log(subjects.options[0].value);
+      //   //   console.log(subjects.options[3].text);
+
+      //   const submitBtn = document.querySelector("#btn");
+      //   const para = document.querySelector("#para");
+      //   submitBtn.addEventListener("click", (e) => {
+      //     e.preventDefault();
+      //     for (const subject of subjects.options) {
+      //       if (subject.selected) {
+      //         para.textContent = `User selected: ${subject.value}`;
+      //       }
+      //     }
+      //   });
+
+      const submitBtn = document.querySelector("#btn");
+      const para = document.querySelector("#para");
+      let optionsArr = [];
+      submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        for (const subject of subjects.options) {
+          if (subject.selected) {
+            optionsArr.push(subject.value);
+          }
+        }
+        console.log(optionsArr);
+        para.textContent =
+          optionsArr.length != 0
+            ? `User selected options are: ${optionsArr.join(", ")}`
+            : `User not selected any option`;
+        optionsArr = [];
+      });
+    </script>
+  </body>
+</html>

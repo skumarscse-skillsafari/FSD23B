@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - To-Do List" />
+    <title>DOM - To-Do List</title>
+  </head>
+  <body>
+    <h2>DOM - To-Do List</h2>
+    <div class="container">
+      <div class="top">
+        <form action="#" id="form">
+          <p>
+            <label for="todo">Enter your wish list...</label>
+            <input type="text" name="todo" id="todo" />
+          </p>
+          <div id="info"></div>
+          <input type="submit" value="Create" />
+        </form>
+      </div>
+      <hr />
+      <div class="bottom">
+        <h2>Your wish lists are as follows:</h2>
+        <div id="todos"></div>
+      </div>
+    </div>
+
+    <script>
+      // DOM - To-Do List
+      // CRUD => Create, Read, Update, Delete
+      const formEle = document.querySelector("#form");
+      const inputEle = document.querySelector("#todo");
+      const info = document.querySelector("#info");
+      const todosContainer = document.querySelector("#todos");
+
+      formEle.addEventListener("submit", (e) => {
+        e.preventDefault();
+        formValidation();
+      });
+
+      function formValidation() {
+        // console.log("Hello");
+        if (inputEle.value === "") {
+          info.innerHTML =
+            "<p style='color: red'>Kindly enter your wish list...</p>";
+        } else {
+          info.innerHTML =
+            "<p style='color: green'>Your wish list is added successfully...</p>";
+          addWishList();
+        }
+      }
+
+      let todo = {};
+      function addWishList() {
+        todo["todo"] = inputEle.value;
+        // console.log(todo);
+        createToDoSection();
+      }
+
+      function createToDoSection() {
+        todosContainer.innerHTML += `
+        <div>
+            <p>${todo.todo}</p>
+            <span>
+              <button type="button" onClick="editToDo(this)">Edit</button>
+              <button type="button" onClick="deleteToDo(event)">Delete</button>
+            </span>
+            <hr />
+          </div>
+        `;
+        inputEle.value = "";
+      }
+
+      let deleteToDo = (event) => {
+        // console.log(event.target.parentElement.parentElement.remove());
+        if (confirm("Are you sure to delete your wish list?")) {
+          event.target.parentElement.parentElement.remove();
+          alert("Your wish list is deleted...");
+        }
+      };
+
+      let editToDo = (event) => {
+        // console.log(event.parentElement.previousElementSibling.textContent);
+        inputEle.value = event.parentElement.previousElementSibling.textContent;
+        event.parentElement.parentElement.remove();
+      };
+    </script>
+  </body>
+</html>
