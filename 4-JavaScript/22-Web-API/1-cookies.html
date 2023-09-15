@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Web API - Cookies" />
+    <title>Web API - Cookies</title>
+  </head>
+  <body>
+    <h2>Web API - Cookies</h2>
+
+    <script>
+      // Web API - Cookies
+      // Store some set of information in our browser
+      // Each and every website and endpoints we can store a piece of information in
+      // the browser as "name"="value" pair
+      // http://www.demo.com => username=John
+      // http://www.demo.com/about => designation=Tester
+
+      // Access cookies from the browser
+      // document.cookie
+      console.log(document.cookie);
+
+      // Set cookie
+      // Syntax
+      // "name=value; expires=expirationTime; path=domainPath; domain=domainName; secure";
+      let cookieData = "username=John";
+      // Syntax
+      // document.cookie = "name=value"
+      document.cookie = cookieData;
+      document.cookie = "designation=Tester";
+
+      // remove the cookie
+      // Use the same method used for set cookie by setting the expiration time to past
+      // with same path, domainName and secure option
+    </script>
+  </body>
+</html>

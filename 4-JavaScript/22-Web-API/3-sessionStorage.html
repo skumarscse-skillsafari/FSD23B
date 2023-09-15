@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Web API - SessionStorage" />
+    <title>Web API - SessionStorage</title>
+  </head>
+  <body>
+    <h2>Web API - SessionStorage</h2>
+
+    <script>
+      // Web API - SessionStorage
+      // localStore
+      // sessionStorage => setItem("key", "value"), getItem("key"), removeItem("key")
+      // clear()
+
+      // localStorage Vs sessionStorage
+      // data stored in localStorage can be removed or deleted either by using removeItem or manually
+      // data stored in sessionStorage can be removed whenever the browser is closed / removeItem / manual
+
+      // Access sessionStorage
+      // 1. window.sessionStorage
+      // 2. sessionStorage
+
+      // set the sessionStorage
+      //   sessionStorage.setItem("username", "John");
+      //   sessionStorage.setItem("designation", "Tester");
+      //   sessionStorage.setItem("age", "20");
+
+      // Get the value
+      //   console.log(sessionStorage.getItem("username"));
+      //   console.log(sessionStorage.getItem("designation"));
+      //   console.log(sessionStorage.getItem("age"));
+      //   console.log(sessionStorage.getItem("city"));
+
+      // remove the value
+      //   sessionStorage.removeItem("age");
+
+      //   sessionStorage.clear();
+
+      // storing object
+      //   let johnDetails = {
+      //     username: "John",
+      //     age: 23,
+      //     city: "Chennai",
+      //   };
+
+      //   sessionStorage.setItem("John", JSON.stringify(johnDetails));
+
+      //   console.log(JSON.parse(sessionStorage.getItem("John")));
+    </script>
+  </body>
+</html>
