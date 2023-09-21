@@ -17,4 +17,10 @@ signInBtn.addEventListener("click", (e) => {
     }
   });
   findUser ? console.log(findUser) : console.log("No user found");
+  if (findUser) {
+    const { id } = findUser;
+    window.location.href = `./profile.html?id=${id}`;
+  } else {
+    alert("Invalid credentials");
+  }
 });
