@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Geolocation API" />
+    <title>Geolocation API</title>
+  </head>
+  <body>
+    <h1>Geolocation API</h1>
+    <button id="btn">Know your live location</button>
+    <p id="result"></p>
+
+    <script>
+      // Geolocation API
+      // Access Geolocation - navigator
+      const btn = document.querySelector("#btn");
+      const result = document.querySelector("#result");
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+        function onSuccess(position) {
+          console.log(position);
+          const { latitude, longitude } = position.coords;
+          result.textContent = `Latitude: ${latitude} and Longitude: ${longitude}`;
+        }
+
+        function onError() {
+          result.textContent = "Live location inaccessable";
+        }
+      });
+    </script>
+  </body>
+</html>

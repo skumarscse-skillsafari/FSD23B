@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Fetch API" />
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <h2>Fetch API</h2>
+    <div id="container"></div>
+
+    <script>
+      // Fetch API
+      // Used to fetch the data from third party API
+      // Async
+      // JavaScript => Single thred synchronous
+      // At a time handle only 1 request
+
+      // Asynchronous
+      // Process more than one request at a time by using callback function
+      // Any request
+      // callback
+      // onSuccess
+      // onError
+
+      // GET => Requesting data from a resource,
+      // POST => Sending some data to the resource,
+      // PUT => Sending updated data to the resource,
+      // DELETE => Delete the data from the resource
+      // resource => server, database, application
+
+      // Syntax
+      /* fetch("url", {
+            // options (optional)
+       }) */
+      // Async/Await
+
+      /*
+       try {
+            // success
+       } catch (e) {
+            // error
+       }
+      */
+
+      async function fetchData(url) {
+        try {
+          let req = await fetch(url);
+          let products = await req.json();
+          console.log(products);
+          const container = document.querySelector("#container");
+          const productsArr = products.map((product) => {
+            return `
+          <div id="${product.id}">
+                <p>Title: ${product.title}</p>
+                <p>Description: ${product.description}</p>
+                <p>Category: ${product.category}</p>
+                <p>Price: ${product.price}</p>
+                <p>
+                    <img src="${product.image}" alt="${product.title}" height="200px" width="200px" />    
+                </p>
+                <hr />
+            </div>
+                `;
+          });
+          //   console.log(productsArr.join(" "));
+          container.innerHTML = productsArr.join("");
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      fetchData("https://fakestoreapi.com/products");
+    </script>
+  </body>
+</html>
