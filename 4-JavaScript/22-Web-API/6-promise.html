@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Promise" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <h2>Promise</h2>
+    <div class="container"></div>
+
+    <script>
+      // Promise
+      // Handling Async operations
+      // 3 stages
+      // 1. Pending => Initial
+      // 2. Fulfilled (resolved) => success =>  {...} => then()
+      // 3. Error (rejected) => Error => catch {...} => catch()
+
+      // Syntax
+      // fetch("url").then(success).catch(error)
+
+      fetch("demo.txt") // response
+        .then((res) => res.text()) // response => data => text()
+        .then((data) => console.log(data)) // data
+        .catch((error) => console.log(error));
+
+      fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((data) => {
+          const container = document.querySelector(".container");
+          const productsArr = data.map((p) => {
+            return `
+                    <div>
+                        <p>Title: ${p.title}</p>    
+                        <p>Description: ${p.description}</p>   
+                        <p>Category: ${p.category}</p> 
+                        <p>Price: ${p.price}</p>
+                        <p>
+                            <img src="${p.image}" alt="${
+              p.title
+            }" height="${100}" width="${100}"/>
+                        </p>
+                        <hr />
+                    </div>
+                    `;
+          });
+          container.innerHTML = productsArr.join("");
+        })
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>
