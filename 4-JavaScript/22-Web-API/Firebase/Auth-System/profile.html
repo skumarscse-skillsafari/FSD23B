@@ -97,41 +97,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      // Profile
-      // Get ID
-      let idUrl = new URLSearchParams(location.search);
-      console.log(idUrl);
-      const [id] = idUrl.values();
-      console.log(id);
-      //   console.log(JSON.parse(localStorage.getItem(id)));
-      let userDetails = JSON.parse(localStorage.getItem(id));
-      console.log(userDetails);
-      const sessionDetails = {
-        username: userDetails.username,
-        email: userDetails.email,
-      };
-      sessionStorage.setItem(
-        sessionDetails.username,
-        JSON.stringify(sessionDetails)
-      );
-
-      const signOutBtn = document.querySelector("#signOutBtn");
-      signOutBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        sessionStorage.removeItem(sessionDetails.username);
-        window.location.href = "./";
-      });
-
-      const welcome = document.querySelector("#welcome");
-      const username = document.querySelector("#username");
-      const email = document.querySelector("#email");
-      const userID = document.querySelector("#userID");
-
-      welcome.textContent = `Welcome, ${userDetails.username}`;
-      username.textContent = `Username: ${userDetails.username}`;
-      email.textContent = `Email: ${userDetails.email}`;
-      userID.textContent = `User ID: ${userDetails.id}`;
-    </script>
+    <script type="module" src="./profile.js"></script>
   </body>
 </html>

@@ -1,26 +1,46 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+import {
+  getDatabase,
+  ref,
+  onValue,
+} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCsiU9XD7qDGK-iHW2TxSAg4k57Nz6mXGY",
+  authDomain: "fsd23b.firebaseapp.com",
+  projectId: "fsd23b",
+  storageBucket: "fsd23b.appspot.com",
+  messagingSenderId: "86482132216",
+  appId: "1:86482132216:web:6508dff5e9bff7b38daf0d",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const signInBtn = document.querySelector("#signin-btn");
 
 signInBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log(email);
-  console.log(password);
-  console.log(signInBtn);
-  const allUsers = Object.values(localStorage);
-  const allUsersObj = allUsers.map((user) => JSON.parse(user));
-  console.log(allUsersObj);
-
-  const findUser = allUsersObj.find((user) => {
-    if (user.email === email.value && user.password === password.value) {
-      return user;
-    }
-  });
-  findUser ? console.log(findUser) : console.log("No user found");
-  if (findUser) {
-    const { id } = findUser;
-    window.location.href = `./profile.html?id=${id}`;
+  if (email.value !== "" && password.value !== "") {
+    signInWithEmailAndPassword(auth, email.value, password.value)
+      .then((userDetails) => {
+        console.log(userDetails.user);
+        alert("User loggedin successfully");
+        window.location.href = `./profile.html?id=${userDetails.user.uid}`;
+      })
+      .catch((error) => console.log(error));
   } else {
-    alert("Invalid credentials");
+    alert("All fields are mandatory");
   }
 });

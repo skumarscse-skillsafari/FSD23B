@@ -47,6 +47,7 @@
       async function fetchData(url) {
         try {
           let req = await fetch(url);
+          console.log(req);
           let products = await req.json();
           console.log(products);
           const container = document.querySelector("#container");
@@ -64,7 +65,7 @@
             </div>
                 `;
           });
-          //   console.log(productsArr.join(" "));
+          console.log(productsArr.join(""));
           container.innerHTML = productsArr.join("");
         } catch (error) {
           console.log(error);

@@ -4,6 +4,12 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
+
+import {
+  getDatabase,
+  ref,
+  set,
+} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -30,17 +36,27 @@ const signUpBtn = document.querySelector("#signup-btn");
 signUpBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (
-    username.value !== "" ||
-    email.value !== "" ||
-    password.value !== "" ||
+    username.value !== "" &&
+    email.value !== "" &&
+    password.value !== "" &&
     confirmPassword.value !== ""
   ) {
     if (password.value === confirmPassword.value) {
       createUserWithEmailAndPassword(auth, email.value, password.value)
         .then((userDetails) => {
           // const user = userDetails.user;
-          console.log(userDetails.user);
+          console.log(userDetails.user.uid);
+          const db = getDatabase();
+          set(ref(db, "userDetails/" + userDetails.user.uid), {
+            username: username.value,
+            email: email.value,
+            password: password.value,
+            userId: userDetails.user.uid,
+          });
           alert("User created successfully");
+          setTimeout(() => {
+            window.location.href = "./index.html";
+          }, 3000);
         })
         .catch((error) => {
           console.log(error);
