@@ -2,12 +2,13 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
 import {
   getAuth,
-  signInWithEmailAndPassword,
+  deleteUser,
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import {
   getDatabase,
   ref,
   onValue,
+  update,
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-database.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -33,25 +34,27 @@ console.log(idUrl);
 const [id] = idUrl.values();
 console.log(id);
 
+const welcome = document.querySelector("#welcome");
+const username = document.querySelector("#username");
+const email = document.querySelector("#email");
+const userID = document.querySelector("#userID");
+const userPassword = document.querySelector("#userPassword");
+
 const db = getDatabase();
 const userRef = ref(db, "userDetails/" + id);
 onValue(userRef, (snapshot) => {
   //   const data = snapshot.val();
   let userData = snapshot.val();
   console.log(userData);
-  const welcome = document.querySelector("#welcome");
-  const username = document.querySelector("#username");
-  const email = document.querySelector("#email");
-  const userID = document.querySelector("#userID");
-
   welcome.textContent = `Welcome, ${userData?.username}`;
   username.textContent = `Username: ${userData?.username}`;
   email.textContent = `Email: ${userData?.email}`;
   userID.textContent = `User ID: ${userData?.userId}`;
+  userPassword.textContent = `User Password: ${userData?.password}`;
   let sessionData = {
-    username: userData.username,
-    userId: userData.userId,
-    email: userData.email,
+    username: userData?.username,
+    userId: userData?.userId,
+    email: userData?.email,
   };
   sessionStorage.setItem(id, JSON.stringify(sessionData));
 });
@@ -61,4 +64,59 @@ signOutBtn.addEventListener("click", (e) => {
   e.preventDefault();
   sessionStorage.removeItem(id);
   window.location.href = "./";
+});
+
+const usernameModal = document.querySelector("#username-modal");
+const editBtn = document.querySelector("#edit-user");
+const openModal = document.querySelector("#open-modal");
+
+openModal.addEventListener("click", (e) => {
+  e.preventDefault();
+  onValue(userRef, (snapshot) => {
+    const userData = snapshot.val();
+    console.log(userData);
+    usernameModal.value = userData?.username;
+  });
+});
+
+editBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (confirm("Are you sure to edit the details?")) {
+    let newUserDetails = {
+      username: usernameModal?.value,
+      userId: id,
+      email: email?.textContent.split(" ").at(-1),
+      password: userPassword?.textContent.split(" ").at(-1),
+    };
+    console.log(newUserDetails);
+    let updates = {};
+    updates["/userDetails/" + id] = newUserDetails;
+    update(ref(db), updates);
+    window.location.reload();
+  }
+});
+
+const deleteUserBtn = document.querySelector("#delete-user");
+deleteUserBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (confirm("Are you sure to delete the user?")) {
+    let updates = {};
+    updates["/userDetails/" + id] = null;
+    update(ref(db), updates);
+    const auth = getAuth();
+    const user = auth?.currentUser;
+
+    deleteUser(user)
+      .then(() => {
+        alert("User deleted successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    sessionStorage.removeItem(id);
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 3000);
+  }
 });
