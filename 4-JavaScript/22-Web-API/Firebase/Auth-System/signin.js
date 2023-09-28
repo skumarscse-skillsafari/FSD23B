@@ -29,6 +29,7 @@ const auth = getAuth(app);
 const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const signInBtn = document.querySelector("#signin-btn");
+const alertMsg = document.querySelector("#alert");
 
 signInBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -36,11 +37,29 @@ signInBtn.addEventListener("click", (e) => {
     signInWithEmailAndPassword(auth, email.value, password.value)
       .then((userDetails) => {
         console.log(userDetails.user);
-        alert("User loggedin successfully");
-        window.location.href = `./profile.html?id=${userDetails.user.uid}`;
+        // alert("User loggedin successfully");
+        alertMsg.classList.add("alert-primary");
+        alertMsg.textContent = "User Logged-in successfully";
+        setTimeout(() => {
+          alertMsg.classList.remove("alert-primary");
+          alertMsg.textContent = "";
+          window.location.href = `./profile.html?id=${userDetails.user.uid}`;
+        }, 2000);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        alertMsg.classList.add("alert-danger");
+        alertMsg.textContent = error.message;
+        setTimeout(() => {
+          alertMsg.classList.remove("alert-danger");
+          alertMsg.textContent = "";
+        }, 2000);
+      });
   } else {
-    alert("All fields are mandatory");
+    alertMsg.classList.add("alert-danger");
+    alertMsg.textContent = "All fields are mandatory";
+    setTimeout(() => {
+      alertMsg.classList.remove("alert-danger");
+      alertMsg.textContent = "";
+    }, 2000);
   }
 });

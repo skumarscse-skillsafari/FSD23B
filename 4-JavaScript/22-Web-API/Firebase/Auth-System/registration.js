@@ -32,6 +32,10 @@ const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const confirmPassword = document.querySelector("#confirmPassword");
 const signUpBtn = document.querySelector("#signup-btn");
+const alertMsg = document.querySelector("#alert");
+const state = document.querySelector("#state");
+const country = document.querySelector("#country");
+const comment = document.querySelector("#comment");
 
 signUpBtn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -39,7 +43,10 @@ signUpBtn.addEventListener("click", (e) => {
     username.value !== "" &&
     email.value !== "" &&
     password.value !== "" &&
-    confirmPassword.value !== ""
+    confirmPassword.value !== "" &&
+    state.value !== "" &&
+    country.value !== "" &&
+    comment.value !== ""
   ) {
     if (password.value === confirmPassword.value) {
       createUserWithEmailAndPassword(auth, email.value, password.value)
@@ -52,9 +59,16 @@ signUpBtn.addEventListener("click", (e) => {
             email: email.value,
             password: password.value,
             userId: userDetails.user.uid,
+            state: state.value,
+            country: country.value,
+            comments: comment.value,
           });
-          alert("User created successfully");
+          alertMsg.classList.add("alert-primary");
+          alertMsg.textContent = "User created successfully";
+          // alert("User created successfully");
           setTimeout(() => {
+            alertMsg.classList.remove("alert-primary");
+            alertMsg.textContent = "";
             window.location.href = "./index.html";
           }, 3000);
         })
@@ -62,9 +76,21 @@ signUpBtn.addEventListener("click", (e) => {
           console.log(error);
         });
     } else {
-      alert("Password and confirm password must be same");
+      alertMsg.classList.add("alert-danger");
+      alertMsg.textContent = "Password and confirm password must be same";
+      setTimeout(() => {
+        alertMsg.classList.remove("alert-danger");
+        alertMsg.textContent = "";
+      }, 3000);
+      // alert("Password and confirm password must be same");
     }
   } else {
-    alert("All fields are mandatory");
+    alertMsg.classList.add("alert-danger");
+    alertMsg.textContent = "All fields are mandatory";
+    setTimeout(() => {
+      alertMsg.classList.remove("alert-danger");
+      alertMsg.textContent = "";
+    }, 3000);
+    // alert("All fields are mandatory");
   }
 });

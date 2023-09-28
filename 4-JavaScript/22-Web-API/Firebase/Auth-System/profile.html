@@ -90,6 +90,9 @@
       <h2 class="display-6" id="email"></h2>
       <h2 class="display-6" id="userID"></h2>
       <h2 class="display-6" id="userPassword"></h2>
+      <h2 class="display-6" id="state"></h2>
+      <h2 class="display-6" id="country"></h2>
+      <h2 class="display-6" id="comment"></h2>
 
       <!-- Button trigger modal -->
       <button
@@ -132,10 +135,70 @@
                   <input
                     type="text"
                     class="form-control"
-                    id="username-modal"
-                    placeholder="Enter new username"
+                    id="usernameM"
+                    placeholder="username"
+                    name="username"
                   />
-                  <label for="floatingInput">Enter new username</label>
+                  <label for="floatingText">Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailM"
+                    placeholder="name@example.com"
+                    name="email"
+                  />
+                  <label for="floatingInput">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="passwordM"
+                    placeholder="Password"
+                    name="password"
+                  />
+                  <label for="floatingPassword">Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmPasswordM"
+                    placeholder="Confirm Password"
+                    name="confirmPassword"
+                  />
+                  <label for="confirmPassword">Confirm Password</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="stateM"
+                    placeholder="state"
+                    name="state"
+                  />
+                  <label for="floatingText">State</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="countryM"
+                    placeholder="country"
+                    name="country"
+                  />
+                  <label for="floatingText">Country</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="commentM"
+                    style="height: 100px"
+                  ></textarea>
+                  <label for="floatingTextarea2">Comments</label>
                 </div>
               </form>
             </div>

@@ -29,10 +29,11 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body class="h-auto">
     <div class="text-center container-fluid">
       <h3 class="display-5 text-center">Auth System Registration Page</h3>
-      <main class="form-signin">
+      <div id="alert" class="alert" style="width: 50%; margin: 0 auto"></div>
+      <main class="w-50 m-auto">
         <form>
           <img
             class="mb-4"
@@ -83,6 +84,35 @@
             />
             <label for="confirmPassword">Confirm Password</label>
           </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="state"
+              placeholder="state"
+              name="state"
+            />
+            <label for="floatingText">State</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="country"
+              placeholder="country"
+              name="country"
+            />
+            <label for="floatingText">Country</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea
+              class="form-control"
+              placeholder="Leave a comment here"
+              id="comment"
+              style="height: 100px"
+            ></textarea>
+            <label for="floatingTextarea2">Comments</label>
+          </div>
 
           <button
             class="w-100 btn btn-lg btn-primary"
@@ -91,6 +121,13 @@
           >
             Sign up
           </button>
+
+          <input
+            type="reset"
+            class="w-100 btn btn-lg btn-success mt-3"
+            value="Clear"
+          />
+
           <button type="button" class="w-100 btn btn-lg btn-secondary mt-3">
             <a href="./index.html" class="text-white text-decoration-none"
               >Already registered? Click here</a

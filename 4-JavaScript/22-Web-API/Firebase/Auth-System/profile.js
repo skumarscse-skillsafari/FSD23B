@@ -3,6 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebas
 import {
   getAuth,
   deleteUser,
+  updateEmail,
 } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 import {
   getDatabase,
@@ -39,6 +40,9 @@ const username = document.querySelector("#username");
 const email = document.querySelector("#email");
 const userID = document.querySelector("#userID");
 const userPassword = document.querySelector("#userPassword");
+const state = document.querySelector("#state");
+const country = document.querySelector("#country");
+const comment = document.querySelector("#comment");
 
 const db = getDatabase();
 const userRef = ref(db, "userDetails/" + id);
@@ -51,6 +55,10 @@ onValue(userRef, (snapshot) => {
   email.textContent = `Email: ${userData?.email}`;
   userID.textContent = `User ID: ${userData?.userId}`;
   userPassword.textContent = `User Password: ${userData?.password}`;
+  state.textContent = `User State: ${userData?.state}`;
+  country.textContent = `User Country: ${userData?.country}`;
+  comment.textContent = `Comment: ${userData?.comments}`;
+
   let sessionData = {
     username: userData?.username,
     userId: userData?.userId,
@@ -66,7 +74,13 @@ signOutBtn.addEventListener("click", (e) => {
   window.location.href = "./";
 });
 
-const usernameModal = document.querySelector("#username-modal");
+const usernameM = document.querySelector("#usernameM");
+const emailM = document.querySelector("#emailM");
+const passwordM = document.querySelector("#passwordM");
+const confirmPasswordM = document.querySelector("#confirmPasswordM");
+const stateM = document.querySelector("#stateM");
+const countryM = document.querySelector("#countryM");
+const commentM = document.querySelector("#commentM");
 const editBtn = document.querySelector("#edit-user");
 const openModal = document.querySelector("#open-modal");
 
@@ -75,7 +89,13 @@ openModal.addEventListener("click", (e) => {
   onValue(userRef, (snapshot) => {
     const userData = snapshot.val();
     console.log(userData);
-    usernameModal.value = userData?.username;
+    usernameM.value = userData?.username;
+    emailM.value = userData?.email;
+    passwordM.value = userData?.password;
+    confirmPasswordM.value = userData?.confirmPassword;
+    stateM.value = userData?.state;
+    countryM.value = userData?.country;
+    commentM.value = userData?.comments;
   });
 });
 
@@ -83,15 +103,19 @@ editBtn.addEventListener("click", (e) => {
   e.preventDefault();
   if (confirm("Are you sure to edit the details?")) {
     let newUserDetails = {
-      username: usernameModal?.value,
+      username: usernameM?.value,
       userId: id,
-      email: email?.textContent.split(" ").at(-1),
-      password: userPassword?.textContent.split(" ").at(-1),
+      email: emailM?.value,
+      password: passwordM?.value,
+      state: stateM?.value,
+      country: countryM.value,
+      comments: commentM.value,
     };
     console.log(newUserDetails);
     let updates = {};
     updates["/userDetails/" + id] = newUserDetails;
     update(ref(db), updates);
+
     window.location.reload();
   }
 });
