@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Selectors" />
+    <title>jQuery - Selectors</title>
+  </head>
+  <body>
+    <h2>jQuery - Selectors</h2>
+    <p id="para"></p>
+
+    <div id="container">
+      <h2 id="head"></h2>
+    </div>
+    <!-- jQuery - CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Internal JS -->
+    <script>
+      // Set-up jQuery env.,
+
+      $("document").ready(function () {
+        // Selectors
+        console.log($("#para"));
+        $("#para").append("This is a paragraph");
+
+        $("#container #head").append("This is head two");
+      });
+
+      const para = document.querySelector("#para");
+      //   para.textContent = "This is new para content";
+    </script>
+  </body>
+</html>
