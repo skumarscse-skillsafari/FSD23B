@@ -8,6 +8,12 @@
   </head>
   <body>
     <h2>jQuery - Methods</h2>
+    <p id="para"></p>
+    <h3>Heading three</h3>
+
+    <div class="one">One</div>
+    <div class="two">Two</div>
+    <div class="three">Three</div>
 
     <!-- jQuery - CDN -->
     <script
@@ -27,6 +33,36 @@
         // Effects => animate(), fandeIn(), fadeOut(), show(), hide(),...
         // Dimensions => height(), width(), innerHeight(), innerWidth(),...
         // Forms => blur(), change(), val(), submit(),...
+        // DOM Manipulation
+        // append()
+        // insert content to the end of the targeted element
+        // $("#para").append("This is a paragraph");
+        // $("#para").append(" This text is append by jQuery append method");
+        // after() / before()
+        // insert content or element after/before target element
+        // $("#para").after("This is added by after method");
+        // $("#para").after(
+        //   "<h2 style='color: red'>This is added by after method</h2>"
+        // );
+        // $("#para").before(
+        //   "<h2 style='color: red'>This is added by after method</h2>"
+        // );
+        // prepend()
+        // insert content at the beginning of the element
+        // $("#para").append("This is append content");
+        // $("#para").prepend("This is prepend content ");
+        // remove()
+        // remove the element selected
+        // $("h3").remove();
+        // replaceAll()
+        // replace all the targeted element(s) with specified element(s)
+        // $("<span>New content</span>").replaceAll(".two");
+        // wrap()
+        // wrap targeted element with specified content element
+
+        $("h3").wrap(
+          "<div style='height: 20px; width: 300px; background: red'></div>"
+        );
       });
     </script>
   </body>

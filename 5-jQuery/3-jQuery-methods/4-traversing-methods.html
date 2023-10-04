@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - traversing methods" />
+    <title>jQuery - traversing methods</title>
+  </head>
+  <body>
+    <h2>jQuery - traversing methods</h2>
+    <ul>
+      <li>Home</li>
+      <li class="special">About</li>
+      <li>Projects</li>
+      <li class="special">Services</li>
+      <li class="special">Contact</li>
+    </ul>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Internal JS -->
+
+    <script>
+      $("document").ready(function () {
+        // each()
+        // iterates over each specified element and
+        // executes callback function for each elements
+        // console.log($("ul li"));
+        // $("ul li").each(function (i, e) {
+        //   console.log(e.textContent);
+        // });
+        // children()
+        // get the child of the parent element
+        // console.log($("ul").children());
+        // $("ul")
+        //   .children()
+        //   .each(function (i, e) {
+        //     console.log(e.textContent);
+        //   });
+        // find()
+        // return all the matching child elements of the specified element
+        // console.log($("ul").find(".special"));
+        // $("ul")
+        //   .find(".special")
+        //   .each(function (i, e) {
+        //     console.log(e.textContent);
+        //   });
+
+        // next()
+        // get the immediate sibling
+        console.log($("ul li:nth-child(2)").next().text());
+        console.log($("ul li:nth-child(2)").parent().html());
+        console.log($("ul li:nth-child(2)").siblings());
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - attribute methods" />
+    <title>jQuery - attribute methods</title>
+  </head>
+  <body>
+    <h2>jQuery - attribute methods</h2>
+    <p id="para" style="background-color: green; color: white">
+      This is a paragraph
+    </p>
+
+    <div class="container">
+      <h2>Heading two</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore,
+        itaque.
+      </p>
+    </div>
+
+    <input type="text" name="username" id="username" />
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Internal JS -->
+    <script>
+      $("document").ready(function () {
+        // attr(), prop(), html(), text(), val()
+        // attr()
+        // get or set the value of selected element attribute
+        // get the selected element attr value
+        // console.log($("#para").attr("id"));
+        // $("#para").attr("id", "para-id");
+        // $("#para").attr("class", "para-class");
+        // console.log($("#para").attr("class"));
+        // prop()
+        // get or set the value of specified property of the selected element
+        // let styleProp = $("#para").prop("style");
+        // console.log(styleProp);
+        // console.log(styleProp.color);
+        // console.log(styleProp.backgroundColor);
+        // console.log($("#para").prop("id"));
+        // $("#para").prop("style", "color: red; background-color: black");
+        // html()
+        // get or set html content/element to the selected element
+        // $("#para").html("This is new content");
+        // console.log($("#para").html());
+        // console.log($(".container").html());
+        // text()
+        // set or get the textContent
+        // console.log($("#para").text());
+        // $("#para").text("This is text content");
+        // val()
+        // get or set the value property
+
+        console.log($("#username").val());
+        $("#username").val("John");
+        console.log($("#username").val());
+      });
+    </script>
+  </body>
+</html>
