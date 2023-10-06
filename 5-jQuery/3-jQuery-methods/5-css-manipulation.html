@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - CSS manipulation" />
+    <title>jQuery - CSS manipulation</title>
+    <style>
+      .para-1 {
+        color: white;
+        background-color: cornflowerblue;
+      }
+
+      .para-2 {
+        padding: 20px;
+        border: 1px solid green;
+        border-radius: 5px;
+      }
+
+      .para-class {
+        color: white;
+        background-color: cornflowerblue;
+        padding: 20px;
+        border: 1px solid green;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery - CSS manipulation</h2>
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit,
+      aperiam! Culpa nobis obcaecati laudantium, error similique at quas
+      accusamus exercitationem?
+    </p>
+
+    <button id="btn">Click</button>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Internal JS -->
+    <script>
+      $("document").ready(function () {
+        // css()
+        // get or set the style properties to the selected element
+        // $("#para").css({
+        //   color: "white",
+        //   width: "90%",
+        //   margin: "0 auto",
+        //   border: "1px solid green",
+        //   borderRadius: "5px",
+        //   padding: "20px",
+        //   backgroundColor: "grey",
+        // });
+        // console.log($("#para").css("padding"));
+        // addClass()
+        // add, one or more classes to the selected element
+        // $("#para").addClass("para-1");
+        // $("#para").addClass("para-1 para-2");
+        // toggleClass()
+        // toggles between adding/removing the classes to the selected elements
+
+        $("#btn").click(function () {
+          $("#para").toggleClass("para-class");
+        });
+      });
+    </script>
+  </body>
+</html>

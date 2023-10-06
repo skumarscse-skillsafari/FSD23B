@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="jQuery - Animation" />
+    <title>jQuery - Animation</title>
+    <style>
+      #para {
+        border: 2px solid red;
+        border-radius: 5px;
+        padding: 20px;
+        background-color: coral;
+        color: white;
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery - Animation</h2>
+    <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores numquam
+      modi temporibus eos laborum esse fuga id reiciendis tempora explicabo?
+    </p>
+    <p id="msg"></p>
+    <button id="btn">Click</button>
+
+    <!-- jQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Internal JS -->
+    <script>
+      $("document").ready(function () {
+        // animate()
+        // add animation css properties to the selected element
+        // $("#para").animate(
+        //   {
+        //     padding: "40px",
+        //     minHeight: "50px",
+        //     width: "500px",
+        //   },
+        //   2000,
+        //   function () {
+        //     alert("Animation completed");
+        //   }
+        // );
+        // $("#para").fadeOut(5000, function () {
+        //   $("#msg").append("FadeOut animation completed");
+        // });
+        // $("#para").fadeIn(5000, function () {
+        //   $("#msg").append("FadeIn animation completed");
+        // });
+        // $("#para").show(5000, function () {
+        //   $("#msg").append("Show animation completed");
+        // });
+        // $("#para").hide(5000, function () {
+        //   $("#msg").append("Hide animation completed");
+        // });
+        // $("#btn").click(function () {
+        //   $("#para").toggle(3000, function () {
+        //     $("#msg").text("Toggle completed");
+        //   });
+        // });
+        // click()
+        // hover()
+        // $("#para").hover(function () {
+        //   $("#para").hide(3000, function () {
+        //     $("#msg").text("Hide animation completed");
+        //   });
+        // });
+
+        $("#btn").click(function (e) {
+          $(this).css({
+            border: "none",
+            padding: "5px",
+            background: "green",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
