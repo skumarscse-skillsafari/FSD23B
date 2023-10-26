@@ -3,13 +3,17 @@ import "./App.css";
 import Timer from "./Components/Timer";
 import UserDetails from "./Components/UserDetails";
 import Toggle from "./Components/Toggle";
+import Counter from "./Components/Counter";
+import DataReducer from "./Components/DataReducer";
 
 function App() {
   return (
     <div className="App">
       {/* <Timer /> */}
       {/* <UserDetails /> */}
-      <Toggle />
+      {/* <Toggle /> */}
+      {/* <Counter /> */}
+      <DataReducer />
     </div>
   );
 }
