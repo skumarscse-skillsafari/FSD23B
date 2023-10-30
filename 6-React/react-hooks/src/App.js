@@ -5,6 +5,8 @@ import UserDetails from "./Components/UserDetails";
 import Toggle from "./Components/Toggle";
 import Counter from "./Components/Counter";
 import DataReducer from "./Components/DataReducer";
+import FetchProducts from "./Components/FetchProducts";
+import Products from "./Components/ProductListing/Products";
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       {/* <UserDetails /> */}
       {/* <Toggle /> */}
       {/* <Counter /> */}
-      <DataReducer />
+      {/* <DataReducer /> */}
+      {/* <FetchProducts /> */}
+      <Products />
     </div>
   );
 }

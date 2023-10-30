@@ -39,7 +39,7 @@ const DataReducer = () => {
         return users.filter((user) => user.id !== action.payload.id);
 
       default:
-        console.log(users);
+        return users;
     }
   };
   const [users, dispatchFun] = useReducer(reducerFun, initialValue);
