@@ -1,16 +1,15 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 const ProducDetails = () => {
   console.log(useParams());
   const { productId } = useParams();
   const [product, setProduct] = useState();
   useEffect(() => {
-    axios
-      .get(`https://fakestoreapi.com/products/${productId}`)
-      .then((res) => setProduct(res?.data))
-      .catch((err) => console.log(err));
+    let storedProducts = JSON.parse(sessionStorage.getItem("products"));
+    console.log(storedProducts);
+    let findProduct = storedProducts.find((p) => p.id === Number(productId));
+    setProduct(findProduct);
   }, [productId]);
   return (
     <div className="product-details">

@@ -8,7 +8,10 @@ const Products = () => {
   useEffect(() => {
     axios
       .get("https://fakestoreapi.com/products")
-      .then((res) => setProducts(res.data))
+      .then((res) => {
+        setProducts(res.data);
+        sessionStorage.setItem("products", JSON.stringify(res.data));
+      })
       .catch((err) => console.log(err));
   }, []);
 
