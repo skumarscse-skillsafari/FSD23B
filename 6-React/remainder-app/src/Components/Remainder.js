@@ -1,51 +1,64 @@
 import Card from "react-bootstrap/Card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
+import EditRemainder from "./EditRemainder";
+import {
+  collection,
+  addDoc,
+  serverTimestamp,
+  getDocs,
+} from "firebase/firestore";
+import { db } from "../Config/firebase-config";
 
 const Remainder = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  let sampleData = [
-    {
-      id: 10001,
-      remainder: "Study HTML",
-      isChecked: false,
-      timestamp: new Date(),
-    },
-    {
-      id: 10002,
-      remainder: "Study CSS",
-      isChecked: true,
-      timestamp: new Date(),
-    },
-    {
-      id: 10003,
-      remainder: "Study React",
-      isChecked: false,
-      timestamp: new Date(),
-    },
-    {
-      id: 10004,
-      remainder: "Study Node",
-      isChecked: true,
-      timestamp: new Date(),
-    },
-    {
-      id: 10005,
-      remainder: "Study Express",
-      isChecked: false,
-      timestamp: new Date(),
-    },
-  ];
+
+  const [createRemainder, setCreateRemainder] = useState("");
+  const [getRemainders, setGetRemainders] = useState([]);
+  const [checked, setChecked] = useState([]);
+
+  const handleCreateRemainder = async (e) => {
+    try {
+      e.preventDefault();
+      // console.log(createRemainder);
+      const docRef = await addDoc(collection(db, "remainders"), {
+        remainder: createRemainder,
+        isChecked: false,
+        timestamp: serverTimestamp(),
+      });
+      alert("Remainder created successfully");
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    async function getRemaindersFun() {
+      const remainderSnapShot = await getDocs(collection(db, "remainders"));
+      console.log(remainderSnapShot);
+      const dataArr = remainderSnapShot.docs.map((doc) => {
+        return {
+          ...doc.data(),
+          id: doc.id,
+        };
+      });
+      console.log(dataArr);
+      setGetRemainders(dataArr);
+      setChecked(dataArr);
+    }
+    getRemaindersFun();
+  }, []);
   return (
     <>
       <div className="container">
         <h2 className="display-3 text-center">REMAINDER APP</h2>
-        <div className="row">
+        <div className="row mb-4">
           <Card>
             <Card.Body>
               <>
@@ -68,14 +81,21 @@ const Remainder = () => {
                       label="Add remainder"
                       className="mb-3"
                     >
-                      <Form.Control type="text" placeholder="Add remainder" />
+                      <Form.Control
+                        type="text"
+                        placeholder="Add remainder"
+                        value={createRemainder}
+                        onChange={(e) => setCreateRemainder(e.target.value)}
+                      />
                     </FloatingLabel>
                   </Modal.Body>
                   <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                       Close
                     </Button>
-                    <Button variant="primary">Create Remainder</Button>
+                    <Button variant="primary" onClick={handleCreateRemainder}>
+                      Create Remainder
+                    </Button>
                   </Modal.Footer>
                 </Modal>
               </>
@@ -83,9 +103,8 @@ const Remainder = () => {
           </Card>
         </div>
         <div className="container">
-          {sampleData.map(({ id, remainder, isChecked, timestamp }) => (
+          {getRemainders.map(({ id, remainder, isChecked, timestamp }) => (
             <div className="row" key={id}>
-              <hr />
               <div className="col-8">
                 <span className="done">
                   <div className="checker">
@@ -95,14 +114,18 @@ const Remainder = () => {
                   </div>
                   {remainder}
                   <div>
-                    <i>{String(timestamp)}</i>
+                    <i>{new Date(timestamp.seconds * 1000).toLocaleString()}</i>
                   </div>
                 </span>
               </div>
-              <div className="col-4 pt-3">
-                <button className="btn btn-primary">Edit</button>
-                <button className="btn btn-danger ms-3">Delete</button>
+              <div className="col-4 d-flex pt-3">
+                <EditRemainder editRemainder={remainder} id={id} />
+                <div>
+                  <button className="btn btn-danger">Delete</button>
+                </div>
               </div>
+
+              <hr />
             </div>
           ))}
         </div>
