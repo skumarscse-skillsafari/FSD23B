@@ -3,6 +3,8 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
+import { doc, updateDoc } from "firebase/firestore";
+import { db } from "../Config/firebase-config";
 
 const EditRemainder = ({ editRemainder, id }) => {
   const [remainder, setRemainder] = useState(editRemainder);
@@ -10,6 +12,23 @@ const EditRemainder = ({ editRemainder, id }) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleEditRemainder = async (e) => {
+    try {
+      e.preventDefault();
+      if (window.confirm("Are you sure to update the data?")) {
+        const remainderRef = doc(db, "remainders", id);
+        // console.log(remainderRef);
+        await updateDoc(remainderRef, {
+          remainder: remainder,
+          timestamp: new Date(),
+        });
+        window.location.reload();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div className="container">
@@ -36,6 +55,7 @@ const EditRemainder = ({ editRemainder, id }) => {
               type="text"
               placeholder="Edit remainder"
               value={remainder}
+              onChange={(e) => setRemainder(e.target.value)}
             />
           </FloatingLabel>
         </Modal.Body>
@@ -43,7 +63,9 @@ const EditRemainder = ({ editRemainder, id }) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary">Edit</Button>
+          <Button variant="primary" onClick={handleEditRemainder}>
+            Edit
+          </Button>
         </Modal.Footer>
       </Modal>
     </div>
