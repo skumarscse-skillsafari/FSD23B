@@ -16,6 +16,7 @@ const Header = () => {
   const {
     cartState: { cart },
     cartDispatch,
+    productsDispatch,
   } = CartState();
   console.log(cart);
   // console.log(cartDispatch);
@@ -25,10 +26,16 @@ const Header = () => {
         <Navbar.Brand href="/">ProductListing App</Navbar.Brand>
         <Form className="d-flex">
           <Form.Control
-            type="search"
+            type="text"
             placeholder="Search"
             className="me-2"
             aria-label="Search"
+            onChange={(e) =>
+              productsDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: e.target.value,
+              })
+            }
           />
           <Button className="btn btn-success">Search</Button>
         </Form>
@@ -43,7 +50,7 @@ const Header = () => {
           drop="start"
         >
           {cart.map((prod) => (
-            <NavDropdown.Item style={{ width: "500px" }}>
+            <NavDropdown.Item style={{ width: "500px" }} key={prod.id}>
               <Row className="d-flex align-items-center justify-content-around">
                 <Col className="text-center">
                   <img

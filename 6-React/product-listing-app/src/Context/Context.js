@@ -19,35 +19,7 @@ const Context = ({ children }) => {
   console.log(products);
   const [cartState, cartDispatch] = useReducer(cartReducer, {
     products: products,
-    cart: [
-      {
-        id: "ab7ddb0b-c39f-4490-98fd-06c4ba6775e9",
-        name: "Fantastic Frozen Gloves",
-        price: "525.00",
-        image: "https://picsum.photos/seed/GOkdp/640/480",
-        inStock: 5,
-        quickDelivery: false,
-        ratings: 1,
-      },
-      {
-        id: "bd4de36a-9106-4914-8213-8711c3502e18",
-        name: "Intelligent Metal Sausages",
-        price: "378.00",
-        image: "https://picsum.photos/seed/2cwWDn/640/480",
-        inStock: 7,
-        quickDelivery: false,
-        ratings: 5,
-      },
-      {
-        id: "54fff724-c806-493f-9eaf-ed364b6d2186",
-        name: "Generic Concrete Chips",
-        price: "971.00",
-        image: "https://picsum.photos/seed/DMcHi/640/480",
-        inStock: 5,
-        quickDelivery: true,
-        ratings: 3,
-      },
-    ],
+    cart: [],
   });
   const [productsState, productsDispatch] = useReducer(productsReducer, {
     byStock: false,
