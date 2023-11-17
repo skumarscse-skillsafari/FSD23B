@@ -21,6 +21,22 @@ const Home = () => {
     if (byRating) {
       newProducts = newProducts.filter((p) => p.ratings === byRating);
     }
+
+    if (sort) {
+      newProducts = newProducts.sort((a, b) =>
+        sort === "lowToHigh" ? a.price - b.price : b.price - a.price
+      );
+    }
+
+    if (!byStock) {
+      newProducts = newProducts.filter((prod) => prod.inStock);
+    }
+
+    if (byQuickDelivery) {
+      newProducts = newProducts.filter(
+        (prod) => prod.quickDelivery === byQuickDelivery
+      );
+    }
     return newProducts;
   };
   return (

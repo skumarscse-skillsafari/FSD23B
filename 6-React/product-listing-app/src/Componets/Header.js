@@ -67,7 +67,7 @@ const Header = () => {
                 </Col>
                 <Col className="text-center">
                   <AiFillDelete
-                    color="red"
+                    className="text-danger"
                     fontSize={25}
                     onClick={() => {
                       if (window.confirm("Are you sure to remove the product?"))
