@@ -1,0 +1,20 @@
+{
+  "name": "1-express-basics",
+  "version": "1.0.0",
+  "description": "This is my first express application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "first-express",
+    "backend"
+  ],
+  "author": "SkillSafari",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

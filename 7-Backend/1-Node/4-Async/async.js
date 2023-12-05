@@ -7,12 +7,14 @@ setTimeout(() => {
 console.log("Middle");
 
 const demoFun = function () {
-  console.log("demoFunction");
+  setTimeout(() => {
+    console.log("demoFunction");
+  }, 0);
 };
 
-const demo = async (demoFun) => {
+const demo = (demoFun) => {
   console.log("Inside Function");
-  await demoFun();
+  demoFun();
 };
 
 demo(demoFun);
