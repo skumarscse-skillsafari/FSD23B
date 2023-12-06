@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.status(200).send({ success: true, message: "About page" });
+  res.status(200).json({ success: true, message: "About page" });
 });
 
 app.get("/projects", (req, res) => {
