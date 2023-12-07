@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
 });
 
 // products
+// http://localhost:5000/products
 app.get("/products", (req, res) => {
   const limitedDetails = products.map(({ id, title, price, image }) => {
     return {
@@ -26,6 +27,7 @@ app.get("/products", (req, res) => {
 
 // products/:id
 // req => params : {}
+// http://localhost:5000/products/1
 app.get("/products/:id", (req, res) => {
   //   console.log(req.params);
   const { id } = req.params;
@@ -48,6 +50,7 @@ app.get("/products/:id", (req, res) => {
 // query
 // req => query : {}
 // req => /api/v1/products?search="mens"&limit="5"
+// http://localhost:5000/products?search=mens&limit=5
 app.get("/api/v1/products", (req, res) => {
   //   console.log(req.query);
   const { search, limit } = req.query;
