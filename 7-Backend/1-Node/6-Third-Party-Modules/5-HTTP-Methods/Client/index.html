@@ -67,11 +67,22 @@
     <script>
       const form = document.querySelector("#form");
       const submitBtn = document.querySelector("#submit-btn");
+      const username = document.querySelector("#username");
+      const age = document.querySelector("#age");
+      const city = document.querySelector("#city");
       submitBtn.addEventListener("click", (e) => {
         e.preventDefault();
+        console.log("Hello");
         fetch("http://localhost:5000/create", {
           method: "POST",
-          body: new FormData(form),
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username: username.value,
+            age: age.value,
+            city: city.value,
+          }),
         });
       });
     </script>
