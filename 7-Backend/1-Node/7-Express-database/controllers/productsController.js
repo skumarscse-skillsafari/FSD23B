@@ -1,8 +1,16 @@
 import Products from "../models/productsModels.js";
 
 // Getting all the products
-export const getAllProducts = (req, res) => {
-  res.status(200).json({ success: true, message: "getAllProducts" });
+export const getAllProducts = async (req, res) => {
+  try {
+    const allProducts = await Products.find();
+    res.status(200).json({ success: true, data: allProducts });
+  } catch (err) {
+    res.status(400).json({
+      sucess: false,
+      message: `Something went wrong. Error: ${err}`,
+    });
+  }
 };
 
 // Getting single product
@@ -17,13 +25,11 @@ export const createProduct = (req, res) => {
   new Products(req.body)
     .save()
     .then((product) => {
-      res
-        .status(201)
-        .json({
-          success: true,
-          message: "User created successfully",
-          data: product,
-        });
+      res.status(201).json({
+        success: true,
+        message: "User created successfully",
+        data: product,
+      });
     })
     .catch((err) => {
       res.status(400).json({
@@ -39,6 +45,19 @@ export const updateProduct = (req, res) => {
 };
 
 // Delete product
-export const deleteProduct = (req, res) => {
-  res.status(200).json({ success: true, message: "deleteProduct" });
+export const deleteProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const res = await Products.findByIdAndDelete(id);
+    if (res) {
+      res
+        .status(200)
+        .json({ success: true, message: "Product deleted successfully" });
+    }
+  } catch (err) {
+    res.status(400).json({
+      sucess: false,
+      message: `Something went wrong. Error: ${err}`,
+    });
+  }
 };

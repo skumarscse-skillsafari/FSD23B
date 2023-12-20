@@ -6,6 +6,9 @@ const app = express();
 dotenv.config();
 const CONNECTION_URL = process.env.CONNECTION_URL;
 const PORT = process.env.PORT;
+
+app.use(express.static("./client"));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/api/v1/products", productsRouter);
 
