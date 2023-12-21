@@ -14,8 +14,17 @@ export const getAllProducts = async (req, res) => {
 };
 
 // Getting single product
-export const getSingleProduct = (req, res) => {
-  res.status(200).json({ success: true, message: "getSingleProduct" });
+export const getSingleProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    let product = await Products.findById(id);
+    res.status(200).json({ success: true, data: product });
+  } catch (err) {
+    res.status(400).json({
+      sucess: false,
+      message: `Something went wrong. Error: ${err}`,
+    });
+  }
 };
 
 // Create product
@@ -40,8 +49,20 @@ export const createProduct = (req, res) => {
 };
 
 // Update product
-export const updateProduct = (req, res) => {
-  res.status(200).json({ success: true, message: "updateProduct" });
+export const updateProduct = async (req, res) => {
+  try {
+    const { id } = req.params;
+    let result = await Products.findByIdAndUpdate(id, req.body);
+    // console.log(result);
+    res
+      .status(200)
+      .json({ success: true, message: "Product updated successfully" });
+  } catch (err) {
+    res.status(400).json({
+      sucess: false,
+      message: `Something went wrong. Error: ${err}`,
+    });
+  }
 };
 
 // Delete product
