@@ -29,7 +29,9 @@
       const container = document.querySelector(".container");
       async function getAllProducts() {
         try {
-          let res = await fetch("http://localhost:5000/api/v1/products");
+          let res = await fetch(
+            "https://hilarious-fish-overshirt.cyclic.app/api/v1/products"
+          );
           let products = await res.json();
           console.log(products.data);
           let productsEle = products.data.map((product) => {
@@ -128,7 +130,7 @@
                   ></button>
                 </div>
                 <div class="modal-body">
-                  <form action="#" id="form-update">
+                  <form action="#" id="form-update-${product._id}">
               <div class="form-floating mb-3">
                 <input
                   type="text"
@@ -209,7 +211,7 @@
         console.log(event.target.id);
         if (confirm("Are you sure to delete the product?")) {
           await fetch(
-            `http://localhost:5000/api/v1/products/delete/${event.target.id}`,
+            `https://hilarious-fish-overshirt.cyclic.app/api/v1/products/delete/${event.target.id}`,
             {
               method: "DELETE",
             }
@@ -221,7 +223,7 @@
       async function displayProduct(event) {
         event.preventDefault();
         let res = await fetch(
-          `http://localhost:5000/api/v1/products/${event.target.id}`
+          `https://hilarious-fish-overshirt.cyclic.app/api/v1/products/${event.target.id}`
         );
         let product = await res.json();
         console.log(product);
@@ -229,10 +231,11 @@
 
       async function updateProduct(event) {
         event.preventDefault();
-        console.log(event.target);
-        let updateForm = document.querySelector("#form-update");
+        const { id } = event.target;
+        // console.log(event.target);
+        let updateForm = document.querySelector(`#form-update-${id}`);
         let res = await fetch(
-          `http://localhost:5000/api/v1/products/update/${event.target.id}`,
+          `https://hilarious-fish-overshirt.cyclic.app/api/v1/products/update/${id}`,
           {
             method: "PUT",
             headers: {

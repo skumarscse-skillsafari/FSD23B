@@ -4,13 +4,16 @@ const allProducts = document.querySelector("#products");
 
 create.addEventListener("click", async (e) => {
   e.preventDefault();
-  let res = await fetch("http://localhost:5000/api/v1/products/create", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: new URLSearchParams(new FormData(form)),
-  });
+  let res = await fetch(
+    "https://hilarious-fish-overshirt.cyclic.app/api/v1/products/create",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams(new FormData(form)),
+    }
+  );
   if (res.status === 201) {
     alert("Product added successfully");
     window.location.reload();
