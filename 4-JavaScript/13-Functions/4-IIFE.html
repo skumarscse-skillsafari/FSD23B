@@ -37,17 +37,31 @@
       //   addNum(2, 5);
 
       // IIFE
-      (function addNum(a, b) {
-        console.log(a + b);
-      })(2, 6);
+      // (function addNum(a, b) {
+      //   console.log(a + b);
+      // })(2, 6);
 
-      (function displayMessage() {
-        console.log("Welcome...");
-      })();
+      // (function displayMessage() {
+      //   console.log("Welcome...");
+      // })();
 
-      (() => {
-        console.log("IIFE");
-      })();
+      // (() => {
+      //   console.log("IIFE");
+      // })();
+
+      // There was roaringgg and gustty wind allll nightna
+      function removeDuplicate(str) {
+        return str
+          .split(" ")
+          .map((wordArr) => wordArr.split(""))
+          .map((charArr) => [...new Set(charArr)])
+          .map((resArr) => resArr.join(""))
+          .join(" ");
+      }
+      const res = removeDuplicate(
+        "There was roaringgg and gustty wind allll nightna"
+      );
+      console.log(res);
     </script>
   </body>
 </html>
