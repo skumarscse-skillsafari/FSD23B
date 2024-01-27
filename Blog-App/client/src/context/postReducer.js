@@ -8,10 +8,22 @@ const postReducer = (state, action) => {
       return action.payload.data;
 
     case "CREATE_POST":
-      break;
+      axios
+        .post("http://localhost:5000/api/v1/blog", action.payload)
+        .then((res) => console.log(res.data))
+        .catch((error) => console.log(error));
 
     case "UPDATE_POST":
-      break;
+      axios
+        .put(
+          `http://localhost:5000/api/v1/blog/${action.payload._id}`,
+          action.payload
+        )
+        .then((res) => console.log(res.data.message))
+        .catch((error) => console.log(error));
+      return state.map((post) =>
+        post._id === action.payload._id ? action.payload : post
+      );
 
     case "DELETE_POST":
       axios
