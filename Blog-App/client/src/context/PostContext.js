@@ -7,7 +7,7 @@ const Post = createContext();
 const PostContext = ({ children }) => {
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/v1/blog")
+      .get("https://clumsy-kerchief-colt.cyclic.app/api/v1/blog")
       .then((res) => {
         // console.log(res)
         dispatch({

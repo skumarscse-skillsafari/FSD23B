@@ -7,7 +7,7 @@ const UpdatePost = () => {
   const { id } = useParams();
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/v1/blog/${id}`)
+      .get(`https://clumsy-kerchief-colt.cyclic.app/api/v1/blog/${id}`)
       .then((res) => setUpdatePost(res?.data?.data))
       .catch((error) => console.log(error));
   }, []);

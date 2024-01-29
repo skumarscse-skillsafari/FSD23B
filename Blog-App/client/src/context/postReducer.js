@@ -9,14 +9,17 @@ const postReducer = (state, action) => {
 
     case "CREATE_POST":
       axios
-        .post("http://localhost:5000/api/v1/blog", action.payload)
+        .post(
+          "https://clumsy-kerchief-colt.cyclic.app/api/v1/blog",
+          action.payload
+        )
         .then((res) => console.log(res.data))
         .catch((error) => console.log(error));
 
     case "UPDATE_POST":
       axios
         .put(
-          `http://localhost:5000/api/v1/blog/${action.payload._id}`,
+          `https://clumsy-kerchief-colt.cyclic.app/api/v1/blog/${action.payload._id}`,
           action.payload
         )
         .then((res) => console.log(res.data.message))
@@ -27,7 +30,9 @@ const postReducer = (state, action) => {
 
     case "DELETE_POST":
       axios
-        .delete(`http://localhost:5000/api/v1/blog/${action.payload}`)
+        .delete(
+          `https://clumsy-kerchief-colt.cyclic.app/api/v1/blog/${action.payload}`
+        )
         .then((res) => console.log(res))
         .catch((error) => console.log(error));
       return state.filter((post) => post._id !== action.payload);
